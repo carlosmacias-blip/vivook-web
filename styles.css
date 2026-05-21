@@ -1925,3 +1925,126 @@ body.menu-open { overflow: hidden; }
   .footer__col ul { padding-left: 0; }
   .footer__legal { text-align: right; }
 }
+
+/* ==================================================================
+   21. FAQ ACORDEÓN (página de precios)
+================================================================== */
+.pricing-faq { padding: 0 0 96px; background: #fff; }
+.faq-panel {
+  background: #fff;
+  border: 1px solid var(--ink-200);
+  border-radius: var(--radius-lg);
+  padding: 16px 40px 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+.faq-title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  text-align: center;
+  color: var(--dark);
+  letter-spacing: -.02em;
+  padding: 24px 0 8px;
+  margin-bottom: 0;
+}
+
+.faq-item {
+  border-top: 1px solid var(--ink-100);
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 4px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: color .2s ease;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--blue); }
+
+/* Icono ✚ que rota 45° al abrir → se vuelve × */
+.faq-item summary::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background:
+    linear-gradient(var(--blue), var(--blue)) center / 14px 2px no-repeat,
+    linear-gradient(var(--blue), var(--blue)) center / 2px 14px no-repeat;
+  transition: transform .3s cubic-bezier(.2, .7, .2, 1);
+}
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  padding: 0 28px 22px;
+  color: var(--ink-700);
+  line-height: 1.65;
+  font-size: 14.5px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .faq-panel { padding: 8px 20px 16px; }
+  .faq-item summary { font-size: 15px; }
+  .faq-item p { padding: 0 0 18px; font-size: 14px; text-align: left; }
+}
+
+/* ==================================================================
+   22. TRUST SIGNALS (debajo de los planes)
+================================================================== */
+.trust-signals {
+  padding: 0 0 56px;
+  background: #fff;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 22px 28px;
+  background: var(--ink-50);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius-md);
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark);
+  line-height: 1.3;
+}
+.trust-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(7, 161, 194, .12);
+  color: var(--blue);
+}
+.trust-icon svg { width: 20px; height: 20px; }
+/* Cada item con un acento distinto de la paleta */
+.trust-item:nth-child(1) .trust-icon { background: rgba(7, 161, 194, .12);  color: var(--blue); }
+.trust-item:nth-child(2) .trust-icon { background: rgba(101, 176, 59, .12); color: var(--green); }
+.trust-item:nth-child(3) .trust-icon { background: rgba(242, 162, 62, .12); color: var(--orange); }
+.trust-item:nth-child(4) .trust-icon { background: rgba(7, 105, 125, .12);  color: var(--mid); }
+
+@media (max-width: 900px) {
+  .trust-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+}
+@media (max-width: 480px) {
+  .trust-grid { grid-template-columns: 1fr; padding: 20px; }
+}
