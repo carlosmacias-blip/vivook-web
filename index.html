@@ -20,7 +20,15 @@
         <img src="assets/logo.png" alt="" aria-hidden="true" class="logo__img logo__img--dark" />
       </a>
 
-      <nav class="nav" aria-label="Principal">
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Principal">
+        <button class="nav__close" aria-label="Cerrar menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
         <div class="nav-item has-dropdown">
           <a href="#caracteristicas" class="nav-trigger">
             Características
@@ -36,7 +44,7 @@
           </div>
         </div>
 
-        <a href="#precios">Precios</a>
+        <a href="precios.html">Precios</a>
         <a href="#partners">Partners</a>
 
         <div class="nav-item has-dropdown">
@@ -670,7 +678,7 @@
           <li><a href="#">Administración</a></li>
           <li><a href="#">Comunicación</a></li>
           <li><a href="#">Seguridad</a></li>
-          <li><a href="#">Precios</a></li>
+          <li><a href="precios.html">Precios</a></li>
         </ul>
       </div>
 
