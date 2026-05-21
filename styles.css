@@ -1085,6 +1085,10 @@ button:focus-visible,
   left: 0;
   z-index: 100;
 
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
   background: var(--orange);
   color: #fff;
   font-family: var(--font-display);
@@ -1110,6 +1114,11 @@ button:focus-visible,
 .sticky-cta:focus-visible {
   outline: 3px solid rgba(7, 161, 194, .5);
   outline-offset: 3px;
+}
+.sticky-cta .sticky-cta__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {
@@ -2057,9 +2066,10 @@ body.menu-open { overflow: hidden; }
 svg use {
   pointer-events: none;
 }
-/* Default: si el SVG no tiene dimensiones específicas via CSS del padre,
-   ocupa 1em × 1em y usa currentColor. */
-svg:not([width]):not([height]) {
+/* Default para SVGs: heredan currentColor y 1em si nadie les define tamaño.
+   Especificidad baja (0,0,1) para que CUALQUIER clase del padre o del svg
+   gane (ej. .feature-card__icon svg, .sticky-cta__icon, .nav-caret, etc.). */
+svg {
   width: 1em;
   height: 1em;
   fill: none;
@@ -2067,3 +2077,338 @@ svg:not([width]):not([height]) {
 }
 /* El caret-down es un fill icon, no stroke */
 .nav-caret { fill: currentColor; stroke: none; }
+
+/* ==================================================================
+   24. Includes "FLAT" (beneficios informativos sin card)
+================================================================== */
+.includes-flat {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px 20px;
+  max-width: 1080px;
+  margin: 64px auto 0;
+}
+.include-flat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 8px;
+}
+.include-flat__icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  color: var(--ink-400);
+  opacity: .75;
+  transition: opacity .25s ease, color .25s ease;
+}
+.include-flat__icon svg {
+  width: 48px;
+  height: 48px;
+}
+.include-flat:hover .include-flat__icon {
+  color: var(--mid);
+  opacity: 1;
+}
+.include-flat h3 {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-700);
+  line-height: 1.4;
+  max-width: 180px;
+}
+
+@media (max-width: 980px) {
+  .includes-flat { grid-template-columns: repeat(3, 1fr); gap: 28px 16px; }
+}
+@media (max-width: 640px) {
+  .includes-flat { grid-template-columns: 1fr 1fr; gap: 24px 12px; margin-top: 40px; }
+}
+
+/* ==================================================================
+   25. TESTIMONIAL DESTACADO (página de precios)
+================================================================== */
+.pricing-testimonial {
+  padding: 56px 0 24px;
+  background: #fff;
+}
+.testimonial-spot {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 36px 42px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(7, 161, 194, .04) 0%, rgba(7, 105, 125, .07) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(7, 161, 194, .15);
+  position: relative;
+}
+.testimonial-spot__mark {
+  width: 30px;
+  height: 30px;
+  color: var(--blue);
+  opacity: .35;
+  margin: 0 auto 14px;
+}
+.testimonial-spot__quote {
+  font-family: var(--font-display);
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--dark);
+  letter-spacing: -.01em;
+  margin: 0 auto 24px;
+  max-width: 540px;
+}
+.testimonial-spot__attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.testimonial-spot__logo {
+  height: 42px;
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+}
+.testimonial-spot__person {
+  text-align: left;
+}
+.testimonial-spot__name {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+.testimonial-spot__role {
+  font-size: 12px;
+  color: var(--ink-500);
+}
+
+@media (max-width: 640px) {
+  .testimonial-spot { padding: 32px 24px; }
+  .testimonial-spot__attribution { flex-direction: column; gap: 14px; }
+  .testimonial-spot__person { text-align: center; }
+}
+
+/* ==================================================================
+   26. FAQ + CTA WhatsApp (grid de 2 columnas)
+================================================================== */
+.faq-wrap {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 24px;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+/* faq-panel ya tiene su propio margin auto; lo reseteo dentro del wrap */
+.faq-wrap .faq-panel { max-width: none; margin: 0; }
+
+/* Wrapper sticky para los 2 CTAs (WhatsApp + Email) apilados */
+.faq-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 96px;
+}
+.faq-cta {
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 20px 18px;
+  text-align: center;
+}
+.faq-cta--whatsapp {
+  background: linear-gradient(160deg, #25D366 0%, #128C7E 100%);
+  box-shadow: 0 16px 32px -12px rgba(18, 140, 126, .35);
+}
+.faq-cta--email {
+  background: linear-gradient(160deg, var(--blue) 0%, var(--mid) 100%);
+  box-shadow: 0 16px 32px -12px rgba(7, 105, 125, .35);
+}
+.faq-cta__icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, .15);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 10px;
+  color: #fff;
+}
+.faq-cta__icon svg {
+  width: 22px;
+  height: 22px;
+}
+.faq-cta__title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  margin-bottom: 4px;
+  color: #fff;
+}
+.faq-cta__desc {
+  font-size: 12.5px;
+  line-height: 1.5;
+  opacity: .92;
+  margin-bottom: 14px;
+}
+.faq-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #fff;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.faq-cta--whatsapp .faq-cta__btn { color: #128C7E; }
+.faq-cta--email    .faq-cta__btn { color: var(--mid); }
+.faq-cta__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+}
+.faq-cta__btn svg {
+  width: 14px;
+  height: 14px;
+}
+.faq-cta--whatsapp .faq-cta__btn svg { color: #25D366; }
+.faq-cta--email    .faq-cta__btn svg { color: var(--blue); }
+
+@media (max-width: 900px) {
+  .faq-wrap { grid-template-columns: 1fr; gap: 20px; }
+  .faq-side { position: static; }
+}
+
+/* ==================================================================
+   27. LOGOS DE CLIENTES (página de precios)
+================================================================== */
+.pricing-logos {
+  padding: 56px 0 16px;
+  background: #fff;
+}
+.pricing-logos__head {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  margin-bottom: 28px;
+}
+.pricing-logos__grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 32px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.pricing-logos__grid img {
+  max-height: 38px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+  opacity: .65;
+  filter: grayscale(.4);
+  transition: opacity .25s ease, filter .25s ease;
+}
+.pricing-logos__grid img:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+@media (max-width: 980px) {
+  .pricing-logos__grid { grid-template-columns: repeat(4, 1fr); row-gap: 28px; }
+}
+@media (max-width: 560px) {
+  .pricing-logos__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ==================================================================
+   28. MOCKUP DEL PRODUCTO (página de precios)
+================================================================== */
+.pricing-product {
+  padding: 24px 0 56px;
+  background: #fff;
+}
+.pricing-product__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.pricing-product__title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--dark);
+  margin: 4px 0 12px;
+  line-height: 1.2;
+}
+.pricing-product__desc {
+  font-size: 15px;
+  color: var(--ink-500);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+.pricing-product__bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pricing-product__bullets li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--dark);
+  font-weight: 500;
+}
+.pricing-product__bullets .check {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='12' fill='%2365B03B'/><path d='M7 12.5l3.2 3.2L17 9' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.pricing-product__visual img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 60px -20px rgba(10, 61, 79, .25);
+}
+
+@media (max-width: 900px) {
+  .pricing-product__grid { grid-template-columns: 1fr; gap: 32px; }
+  .pricing-product__visual { order: -1; }
+}
+
+/* ==================================================================
+   29. PULSE ANIMATION al cambiar plan recomendado
+================================================================== */
+@keyframes plan-pulse {
+  0%   { box-shadow: 0 24px 48px -16px color-mix(in srgb, var(--plan-color, var(--orange)) 35%, transparent), 0 0 0 0 color-mix(in srgb, var(--plan-color, var(--orange)) 50%, transparent); }
+  50%  { box-shadow: 0 24px 48px -16px color-mix(in srgb, var(--plan-color, var(--orange)) 35%, transparent), 0 0 0 14px color-mix(in srgb, var(--plan-color, var(--orange)) 0%, transparent); }
+  100% { box-shadow: 0 24px 48px -16px color-mix(in srgb, var(--plan-color, var(--orange)) 35%, transparent), 0 0 0 0 color-mix(in srgb, var(--plan-color, var(--orange)) 0%, transparent); }
+}
+.plan.is-recommended {
+  animation: plan-pulse .85s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .plan.is-recommended { animation: none; }
+}
