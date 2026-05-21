@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivook · El software #1 en administración de condominios</title>
+  <meta name="description" content="Vivook es la plataforma líder en LATAM para administración, comunicación y seguridad de condominios y residenciales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="Vivook">
+        <img src="assets/logo-blanco.png" alt="Vivook" class="logo__img logo__img--light" />
+        <img src="assets/logo.png" alt="" aria-hidden="true" class="logo__img logo__img--dark" />
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <div class="nav-item has-dropdown">
+          <a href="#caracteristicas" class="nav-trigger">
+            Características
+            <svg class="nav-caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.5 7.5l4.5 4.5 4.5-4.5"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="#comunicacion"   role="menuitem">Comunicación</a>
+            <a href="#administrativo" role="menuitem">Administrativo</a>
+            <a href="#seguridad"      role="menuitem">Seguridad</a>
+            <a href="#diferenciador"  role="menuitem">¿Qué nos hace diferentes?</a>
+            <a href="#facturacion"    role="menuitem">Facturación</a>
+            <a href="#pagos"          role="menuitem">Pagos en línea</a>
+          </div>
+        </div>
+
+        <a href="#precios">Precios</a>
+        <a href="#partners">Partners</a>
+
+        <div class="nav-item has-dropdown">
+          <a href="#aprende" class="nav-trigger">
+            Aprende
+            <svg class="nav-caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.5 7.5l4.5 4.5 4.5-4.5"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="#capacitaciones" role="menuitem">Capacitaciones</a>
+            <a href="#academia"       role="menuitem">Academia Vivook</a>
+          </div>
+        </div>
+
+        <a href="#contacto">Contáctanos</a>
+        <a href="#blog">Blog</a>
+      </nav>
+
+      <a href="#login" class="btn btn--primary btn--sm">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="container hero__inner">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        El <span class="text-orange">software #1</span><br />
+        <span class="text-orange">en la administración</span><br />
+        de condominios y residenciales<br />
+        en Latinoamérica
+      </h1>
+
+      <div class="hero__actions">
+        <a href="#trial" class="btn btn--primary">
+          Prueba 15 días gratis
+          <span class="btn__arrow">→</span>
+        </a>
+        <a href="#demo" class="btn btn--ghost">
+          Agendar una Demo
+        </a>
+      </div>
+
+      <ul class="hero__bullets">
+        <li>✓ Sin tarjeta de crédito</li>
+        <li>✓ Configuración en 1 día</li>
+        <li>✓ Soporte en español</li>
+      </ul>
+
+      <div class="hero__stores">
+        <a href="#appstore" class="store-badge" aria-label="Descargar en App Store">
+          <img src="assets/app-store-dark.png" alt="" />
+        </a>
+        <a href="#googleplay" class="store-badge" aria-label="Disponible en Google Play">
+          <img src="assets/google-play-dark.png" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Mockup del producto -->
+    <div class="hero__mockup" aria-hidden="true">
+      <img src="assets/panel-comunicacion.png" alt="" class="hero__mockup-img" />
+      <div class="hero__mockup-badge">
+        <span class="hero__mockup-badge-icon">✓</span>
+        <div>
+          <strong>Pago recibido</strong>
+          <span class="hero__mockup-badge-sub">$3,950 MXN — Carlos M.</span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ============== STATS ============== -->
+  <section class="stats">
+    <div class="container stats__grid reveal-group">
+      <div class="stat reveal">
+        <div class="stat__num text-blue" data-count="3000" data-suffix="+">0</div>
+        <div class="stat__label">Condominios Activos</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num text-mid" data-count="13">0</div>
+        <div class="stat__label">Países en LATAM</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num text-orange" data-count="15" data-suffix="+">0</div>
+        <div class="stat__label">Años de Experiencia</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num text-red">24/7</div>
+        <div class="stat__label">Plataforma Disponible</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TODO LO QUE NECESITAS ============== -->
+  <section id="caracteristicas" class="features">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Todo lo que necesitas<br />
+          <span class="text-blue">en un solo lugar</span>
+        </h2>
+        <p class="section-sub">
+          Administración, comunicación y seguridad unificadas para tu condominio.
+        </p>
+      </header>
+
+      <div class="features__grid reveal-group">
+        <article class="feature-card reveal">
+          <div class="feature-card__icon">
+            <img src="assets/admin-naranja.png" alt="" />
+          </div>
+          <h3 class="feature-card__title">Administración</h3>
+          <p class="feature-card__desc">
+            Gestiona las finanzas de tu condominio con precisión y transparencia total.
+          </p>
+          <ul class="feature-card__list">
+            <li>Cuotas y cobranza automática</li>
+            <li>Ingresos, pagos y presupuestos</li>
+            <li>Fondos y reservas</li>
+            <li>Reportes en tiempo real</li>
+            <li>Panel del administrador</li>
+          </ul>
+          <a href="#administrativo" class="feature-card__link">
+            Ver más
+            <span class="feature-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon">
+            <img src="assets/com-azul.png" alt="" />
+          </div>
+          <h3 class="feature-card__title">Comunicación</h3>
+          <p class="feature-card__desc">
+            Conecta administradores y residentes con canales claros y eficientes.
+          </p>
+          <ul class="feature-card__list">
+            <li>Avisos y comunicación directa</li>
+            <li>Chats y notificaciones</li>
+            <li>Documentos compartidos</li>
+            <li>Calendario de eventos</li>
+            <li>Ofertas y espacios libres</li>
+          </ul>
+          <a href="#comunicacion" class="feature-card__link">
+            Ver más
+            <span class="feature-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon">
+            <img src="assets/seg-verde.png" alt="" />
+          </div>
+          <h3 class="feature-card__title">Seguridad</h3>
+          <p class="feature-card__desc">
+            Controla accesos y protege la comunidad con tecnología moderna.
+          </p>
+          <ul class="feature-card__list">
+            <li>Control de accesos con QR</li>
+            <li>Visitas y proveedores</li>
+            <li>Cámaras en tiempo real</li>
+            <li>Panel doméstico</li>
+            <li>Control de rondas</li>
+          </ul>
+          <a href="#seguridad" class="feature-card__link">
+            Ver más
+            <span class="feature-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SOLUCIONES PARA CADA ROL (tabs) ============== -->
+  <section class="roles" id="producto">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Soluciones para<br />
+          <span class="text-red">cada rol</span>
+        </h2>
+        <p class="section-sub">
+          Herramientas diseñadas específicamente para administradores, residentes y comité.
+        </p>
+      </header>
+
+      <div class="role-tabs-wrap reveal">
+        <div class="role-tabs" role="tablist">
+          <button class="role-tab is-active" data-role="admin"     role="tab">Administradores</button>
+          <button class="role-tab"           data-role="resident"  role="tab">Residentes</button>
+          <button class="role-tab"           data-role="committee" role="tab">Comité / Mesa directiva</button>
+        </div>
+      </div>
+
+      <!-- TAB: Administradores -->
+      <div class="role-content is-active" id="role-admin">
+        <div class="role-content__text">
+          <span class="badge">El más completo del mercado</span>
+          <h3 class="role-content__title">Todo lo que necesitas para administrar, en un solo lugar</h3>
+          <p class="role-content__desc">
+            Gestiona cuotas, adeudos, comunicación, seguridad y reportes desde una plataforma intuitiva que reduce tu carga operativa diaria.
+          </p>
+          <ul class="role-feats">
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/><path d="M6 14h2"/><path d="M12 14h4"/></svg>
+              </span>
+              Cuotas, adeudos e ingresos
+            </li>
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </span>
+              Control de accesos con QR en tiempo real
+            </li>
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              </span>
+              Comunicación y avisos al instante
+            </li>
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></svg>
+              </span>
+              Reportes y exportación a Excel
+            </li>
+          </ul>
+          <div class="role-content__cta">
+            <a href="https://webapp.vivook.com/2025/sessions/signup" class="btn btn--primary">Prueba gratis como administrador</a>
+          </div>
+        </div>
+        <div class="role-content__image">
+          <img src="assets/reporte-ingresos-lap.png" alt="Panel de reportes de Vivook" />
+        </div>
+      </div>
+
+      <!-- TAB: Residentes -->
+      <div class="role-content" id="role-resident">
+        <div class="role-content__text">
+          <span class="badge">App iOS y Android</span>
+          <h3 class="role-content__title">Todo tu condominio en la palma de tu mano</h3>
+          <p class="role-content__desc">
+            Los residentes pueden pagar cuotas, recibir avisos, registrar visitas y más, todo desde la app móvil.
+          </p>
+          <ul class="role-feats">
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </span>
+              Pago de cuotas en línea
+            </li>
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              </span>
+              Avisos y comunicados del condominio
+            </li>
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              </span>
+              Registro de visitas con código QR
+            </li>
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </span>
+              Documentos, reglamentos y minutas
+            </li>
+          </ul>
+          <div class="role-content__cta">
+            <a href="https://apps.apple.com/mx/app/vivook/id1449471008" target="_blank" rel="noopener" class="store-badge" aria-label="Descargar en App Store">
+              <img src="assets/app-store-dark.png" alt="" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.vivook" target="_blank" rel="noopener" class="store-badge" aria-label="Disponible en Google Play">
+              <img src="assets/google-play-dark.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="role-content__image">
+          <img src="assets/vivook-app.png" alt="App móvil de Vivook" />
+        </div>
+      </div>
+
+      <!-- TAB: Comité -->
+      <div class="role-content" id="role-committee">
+        <div class="role-content__text">
+          <span class="badge">Transparencia total</span>
+          <h3 class="role-content__title">Supervisión en tiempo real, sin depender del administrador</h3>
+          <p class="role-content__desc">
+            El comité de administración o mesa directiva puede revisar finanzas, aprobar gastos y comunicarse con los condóminos.
+          </p>
+          <ul class="role-feats">
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+              </span>
+              Visibilidad total de finanzas e ingresos
+            </li>
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              Reportes en tiempo real
+            </li>
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              Canal de comunicación con residentes
+            </li>
+            <li class="role-feat">
+              <span class="role-feat__icon role-feat__icon--red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              </span>
+              Historial completo de movimientos
+            </li>
+          </ul>
+          <div class="role-content__cta">
+            <a href="https://webapp.vivook.com/2025/sessions/signup" class="btn btn--primary">Conoce cómo funciona</a>
+          </div>
+        </div>
+        <div class="role-content__image">
+          <img src="assets/graficas-mac.png" alt="Gráficas de fondos de Vivook" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== POTENCIA TU ADMINISTRACIÓN ============== -->
+  <section class="boost">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Potencia tu<br />
+          <span class="text-green">administración</span>
+        </h2>
+        <p class="section-sub">
+          Servicios profesionales que complementan la plataforma.
+        </p>
+      </header>
+
+      <div class="boost__grid reveal-group">
+        <article class="boost-card reveal">
+          <div class="boost-card__img boost-card__img--1">
+            <img src="assets/pagos-en-linea-anim.png" alt="Pagos en línea de Vivook" />
+          </div>
+          <h3 class="boost-card__title">Pagos en Línea</h3>
+          <p class="boost-card__desc">
+            Acepta Stripe y transferencias SPEI integradas.
+          </p>
+          <a href="#pagos" class="boost-card__link">
+            Ver más
+            <span class="boost-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="boost-card reveal">
+          <div class="boost-card__img boost-card__img--2">
+            <img src="assets/factura-anim.png" alt="Facturación CFDI con Vivook" />
+          </div>
+          <h3 class="boost-card__title">Facturación CFDI</h3>
+          <p class="boost-card__desc">
+            Genera facturas en cumplimiento al SAT directo desde Vivook.
+          </p>
+          <a href="#facturacion" class="boost-card__link">
+            Ver más
+            <span class="boost-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="boost-card reveal">
+          <div class="boost-card__img boost-card__img--3">
+            <img src="assets/academia-anim.png" alt="Academia Vivook" />
+          </div>
+          <h3 class="boost-card__title">Academia Vivook</h3>
+          <p class="boost-card__desc">
+            Cursos y certificaciones para tu equipo.
+          </p>
+          <a href="#academia" class="boost-card__link">
+            Ver más
+            <span class="boost-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CONFIGURACIÓN EN 24H ============== -->
+  <section class="setup">
+    <div class="container">
+      <div class="setup__panel reveal">
+        <header class="setup__head">
+          <h2 class="setup__title">
+            Configuración en 24 horas,<br />
+            acompañamiento real
+          </h2>
+          <p class="setup__sub">La transición es simple y acompañada.</p>
+        </header>
+
+        <ol class="setup__steps">
+          <li class="setup-step setup-step--1">
+            <div class="setup-step__num">01</div>
+            <div class="setup-step__name">Crea tu cuenta</div>
+            <p class="setup-step__desc">Regístrate en 2 minutos, sin tarjeta.</p>
+          </li>
+          <li class="setup-step setup-step--2">
+            <div class="setup-step__num">02</div>
+            <div class="setup-step__name">Carga la información</div>
+            <p class="setup-step__desc">Ayudamos a migrar tus datos.</p>
+          </li>
+          <li class="setup-step setup-step--3">
+            <div class="setup-step__num">03</div>
+            <div class="setup-step__name">Capacitación personalizada</div>
+            <p class="setup-step__desc">Sesión 1:1 con tu equipo.</p>
+          </li>
+          <li class="setup-step setup-step--4">
+            <div class="setup-step__num">04</div>
+            <div class="setup-step__name">Apoyo de soporte</div>
+            <p class="setup-step__desc">Te acompañamos los días que necesites para entrar al rol.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TESTIMONIOS ============== -->
+  <section class="testimonials">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">TESTIMONIOS</span>
+        <h2 class="section-title">
+          Lo que dicen<br />
+          <span class="text-red">nuestros clientes</span>
+        </h2>
+        <p class="section-sub">
+          Más de 3,000 condominios han transformado su administración con Vivook.
+        </p>
+      </header>
+
+      <div class="testimonials__grid reveal-group">
+        <article class="testimonial reveal">
+          <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonial__quote">
+            "Vivook para nosotros ya es indispensable, y con el módulo financiero es aún mejor"
+          </p>
+          <div class="testimonial__author">
+            <img class="testimonial__avatar" src="assets/logos/BE.jpg" alt="Bo Wallsten" />
+            <div>
+              <div class="testimonial__name">Bo Wallsten</div>
+              <div class="testimonial__role">Administrador de Bosques de los Encinos · Ex director Century 21 México · Ex presidente nacional AMPI</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial reveal">
+          <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonial__quote">
+            «Con Vivook llevamos toda la información de nuestros proyectos, convirtiéndola en una herramienta indispensable para nuestra empresa, muy completa, de fácil uso e intuitiva.»
+          </p>
+          <div class="testimonial__author">
+            <img class="testimonial__avatar" src="assets/logos/dg-rubrik.jpg" alt="Arq. Ricardo Barbosa" />
+            <div>
+              <div class="testimonial__name">Arq. Ricardo Barbosa</div>
+              <div class="testimonial__role">Director General · Rubrik, administración de inmuebles</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial reveal">
+          <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonial__quote">
+            "Vivook se ha convertido en una herramienta fundamental para nosotros, la cual es de gran ayuda y con la que todos están muy contentos."
+          </p>
+          <div class="testimonial__author">
+            <img class="testimonial__avatar" src="assets/logos/beatriz.jpg" alt="Ing. Beatriz Padrés Pérez-Verdía" />
+            <div>
+              <div class="testimonial__name">Ing. Beatriz Padrés Pérez-Verdía</div>
+              <div class="testimonial__role">CEO · ACS Administración de Condominios y Servicios</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== LOGOS (carrusel infinito) ============== -->
+  <section id="partners" class="logos">
+    <div class="container">
+      <p class="logos__head">Empresas que confían en Vivook</p>
+
+      <div class="logos-marquee" role="region" aria-label="Logotipos de empresas asociadas">
+        <div class="logos-marquee__track">
+          <!-- Set 1 -->
+          <div class="logos-marquee__item"><img src="assets/logos/ALS.png"                          alt="ALS" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/Arcano.png"                       alt="Arcano" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/Grupo-kap.png"                    alt="Grupo Kap" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/JH.png"                           alt="JH" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/REB.png"                          alt="REB" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/RM.png"                           alt="RM" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/RUBA.png"                         alt="RUBA" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/Rokkina-1.png"                    alt="Rokkina" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/SPARC.png"                        alt="SPARC" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/Sigma-Logo.png"                   alt="Sigma" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/adcco.png"                        alt="ADCCO" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/admiconed.png"                    alt="Admiconed" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/adminmuebles.png"                 alt="Adminmuebles" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/adymco.png"                       alt="Adymco" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/byga-2.png"                       alt="Byga" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/condominnia.png"                  alt="Condominnia" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/dri.png"                          alt="DRI" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/grupo-inmobiliario-mariscal.png"  alt="Grupo Inmobiliario Mariscal" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/habitia.png"                      alt="Habitia" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/harmony-1.png"                    alt="Harmony" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/inhouse.png"                      alt="Inhouse" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/ir.png"                           alt="IR" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/kli.png"                          alt="KLI" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/kuma-logo.png"                    alt="Kuma" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/logo-adma.png"                    alt="ADMA" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/m2.png"                           alt="M2" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/pach-1.png"                       alt="Pach" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/pp-1.png"                         alt="PP" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/tellez-group.png"                 alt="Tellez Group" /></div>
+          <!-- Set 2 (duplicado, aria-hidden para que no se lea dos veces) -->
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/ALS.png"                          alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Arcano.png"                       alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Grupo-kap.png"                    alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/JH.png"                           alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/REB.png"                          alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/RM.png"                           alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/RUBA.png"                         alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Rokkina-1.png"                    alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/SPARC.png"                        alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Sigma-Logo.png"                   alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/adcco.png"                        alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/admiconed.png"                    alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/adminmuebles.png"                 alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/adymco.png"                       alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/byga-2.png"                       alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/condominnia.png"                  alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/dri.png"                          alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/grupo-inmobiliario-mariscal.png"  alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/habitia.png"                      alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/harmony-1.png"                    alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/inhouse.png"                      alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/ir.png"                           alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/kli.png"                          alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/kuma-logo.png"                    alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/logo-adma.png"                    alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/m2.png"                           alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/pach-1.png"                       alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/pp-1.png"                         alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/tellez-group.png"                 alt="" /></div>
+        </div>
+      </div>
+
+      <div class="logos__cta">
+        <a href="#" class="btn btn--outline btn--sm">Ver más →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CTA FINAL ============== -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-final__panel reveal">
+        <h2 class="cta-final__title">
+          ¿Listo para transformar tu<br />condominio?
+        </h2>
+        <p class="cta-final__sub">
+          Únete a más de 3,000 condominios en 13 países de LATAM que ya confían en VIVOOK.
+        </p>
+
+        <div class="cta-final__stats">
+          <div class="cta-stat">
+            <div class="cta-stat__num">15 días</div>
+            <div class="cta-stat__label">Prueba Gratuita</div>
+          </div>
+          <div class="cta-stat">
+            <div class="cta-stat__num">24/7</div>
+            <div class="cta-stat__label">Soporte Premium<br />Chat, WhatsApp, Teléfono</div>
+          </div>
+          <div class="cta-stat">
+            <div class="cta-stat__num">$0</div>
+            <div class="cta-stat__label">Costo de Implementación</div>
+          </div>
+        </div>
+
+        <div class="cta-final__actions">
+          <a href="#trial" class="btn btn--primary">Prueba 15 días gratis →</a>
+          <a href="#demo" class="btn btn--white">Agendar una Demo</a>
+        </div>
+
+        <ul class="cta-final__bullets">
+          <li>✓ Sin tarjeta de crédito</li>
+          <li>✓ Configuración en 24 horas</li>
+          <li>✓ Cancela cuando quieras</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="logo logo--footer" aria-label="Vivook">
+          <img src="assets/logo-web.png" alt="Vivook" />
+        </a>
+        <ul class="footer__contact">
+          <li>📍 CDMX, México</li>
+          <li>📧 contacto@vivook.com</li>
+          <li>📞 +52 55 1234 5678</li>
+        </ul>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/fb.png" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="" /></a>
+          <a href="#" aria-label="TikTok"><img src="assets/tiktok.png" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/youtube.png" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#">Administración</a></li>
+          <li><a href="#">Comunicación</a></li>
+          <li><a href="#">Seguridad</a></li>
+          <li><a href="#">Precios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a href="#">Administradores</a></li>
+          <li><a href="#">Residentes</a></li>
+          <li><a href="#">Mesa Directiva</a></li>
+          <li><a href="#">Academia Vivook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__legal">
+      <p>© 2026 Vivook. Todos los derechos reservados.</p>
+      <p><a href="#">Política de Privacidad</a> · <a href="#">Términos de Servicio</a></p>
+    </div>
+  </footer>
+
+  <!-- CTA flotante lateral -->
+  <a href="#trial" class="sticky-cta" aria-label="Comienza tu prueba gratis">
+    Comienza tu prueba
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

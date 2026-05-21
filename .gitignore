@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node / build (si más adelante agregas tooling)
+node_modules/
+dist/
+build/
+
+# Logs y temporales
+*.log
+*.tmp
+.cache/
+
+# Variables de entorno
+.env
+.env.local
+
+# Configs locales de Claude Code (no se suben al repo)
+.claude/launch.json
