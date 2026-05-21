@@ -185,8 +185,18 @@
     };
 
     if (currencySelect) {
+      // Restaurar preferencia guardada
+      try {
+        const saved = localStorage.getItem('vivook-currency');
+        if (saved && (saved === 'mxn' || saved === 'usd')) {
+          currencySelect.value = saved;
+          updateCurrency(saved);
+        }
+      } catch (_) { /* localStorage bloqueado (ej. modo privado) */ }
+
       currencySelect.addEventListener('change', (e) => {
         updateCurrency(e.target.value);
+        try { localStorage.setItem('vivook-currency', e.target.value); } catch (_) {}
       });
     }
   }

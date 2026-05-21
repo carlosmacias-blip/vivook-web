@@ -3,12 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Precios · Vivook</title>
-  <meta name="description" content="Planes pensados para condominios de cualquier tamaño. Desde 1 hasta más de 250 viviendas. Prueba gratis 15 días sin tarjeta de crédito." />
+  <title>Precios Vivook desde $460 MXN/mes · 15 días gratis para condominios</title>
+  <meta name="description" content="Plan Básico desde $460 MXN ($27 USD) al mes. Software de administración de condominios para 1 a +250 viviendas. Prueba 15 días gratis sin tarjeta de crédito. 5 planes para LATAM." />
+  <meta name="keywords" content="software condominios, administración condominios, precios Vivook, cuotas residenciales, administración residencial LATAM" />
+  <meta property="og:title" content="Precios Vivook · Planes desde $460 MXN/mes" />
+  <meta property="og:description" content="5 planes para condominios de 1 a +250 viviendas. 15 días de prueba gratis sin tarjeta." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=11" />
+
+  <!-- Datos estructurados para Google (rich results de precios) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Vivook · Software de administración de condominios",
+    "description": "Plataforma todo-en-uno para administración, comunicación y seguridad de condominios y residenciales en LATAM.",
+    "brand": { "@type": "Brand", "name": "Vivook" },
+    "offers": [
+      { "@type": "Offer", "name": "Plan Básico",   "description": "Para condominios de 1 a 15 viviendas",   "price": "460",  "priceCurrency": "MXN", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Plan Estándar", "description": "Para condominios de 16 a 50 viviendas",  "price": "709",  "priceCurrency": "MXN", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Plan Pro",      "description": "Para condominios de 51 a 100 viviendas", "price": "989",  "priceCurrency": "MXN", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Plan Class",    "description": "Para condominios de 101 a 250 viviendas","price": "2199", "priceCurrency": "MXN", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Plan Elite",    "description": "Para condominios de +251 viviendas. Precios personalizados", "availability": "https://schema.org/InStock" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "3000", "bestRating": "5" }
+  }
+  </script>
 </head>
 <body>
 
@@ -232,6 +255,63 @@
     </div>
   </section>
 
+  <!-- ============== LOGOS DE CLIENTES ============== -->
+  <section class="pricing-logos">
+    <div class="container">
+      <p class="pricing-logos__head">Empresas que ya confían en Vivook</p>
+      <div class="pricing-logos__grid reveal">
+        <img src="assets/logos/SPARC.png"       alt="SPARC" />
+        <img src="assets/logos/ALS.png"          alt="ALS" />
+        <img src="assets/logos/Arcano.png"       alt="Arcano" />
+        <img src="assets/logos/Grupo-kap.png"    alt="Grupo Kap" />
+        <img src="assets/logos/Sigma-Logo.png"   alt="Sigma" />
+        <img src="assets/logos/harmony-1.png"    alt="Harmony" />
+        <img src="assets/logos/kuma-logo.png"    alt="Kuma" />
+        <img src="assets/logos/m2.png"           alt="M2" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TESTIMONIAL DESTACADO ============== -->
+  <section class="pricing-testimonial">
+    <div class="container">
+      <figure class="testimonial-spot reveal">
+        <svg class="testimonial-spot__mark" aria-hidden="true"><use href="assets/icons.svg#quote"/></svg>
+        <blockquote class="testimonial-spot__quote">
+          "Gracias a Vivook la administración de condominios es transparente, fácil y práctica. Se resuelven fácilmente los problemas gracias a esta herramienta que facilita la comunicación entre condóminos y la administración."
+        </blockquote>
+        <figcaption class="testimonial-spot__attribution">
+          <img src="assets/logos/SPARC.png" alt="Administración Sparc" class="testimonial-spot__logo" />
+          <div class="testimonial-spot__person">
+            <div class="testimonial-spot__name">Eduardo G. Curiel y Caballero</div>
+            <div class="testimonial-spot__role">Director General · Administración Sparc</div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============== MOCKUP DEL PRODUCTO ============== -->
+  <section class="pricing-product">
+    <div class="container">
+      <div class="pricing-product__grid reveal">
+        <div class="pricing-product__text">
+          <span class="pill">ASÍ ES VIVOOK</span>
+          <h2 class="pricing-product__title">El producto que estás pagando</h2>
+          <p class="pricing-product__desc">Cuotas, comunicación, accesos y reportes desde un solo panel. Diseñado para administradores de condominios reales — no software gringo traducido.</p>
+          <ul class="pricing-product__bullets">
+            <li><span class="check" aria-hidden="true"></span> Panel intuitivo en español</li>
+            <li><span class="check" aria-hidden="true"></span> App móvil para residentes (iOS y Android)</li>
+            <li><span class="check" aria-hidden="true"></span> Reportes exportables a Excel y PDF</li>
+          </ul>
+        </div>
+        <div class="pricing-product__visual">
+          <img src="assets/reporte-ingresos-lap.png" alt="Panel de administración de Vivook" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============== TRUST SIGNALS ============== -->
   <section class="trust-signals">
     <div class="container">
@@ -323,44 +403,43 @@
           <span class="include__more">Ver detalle →</span>
         </button>
 
-        <div class="include reveal">
-          <div class="include__icon" style="--icon-bg: rgba(7,161,194,.12); color: var(--blue);">
+      </div>
+
+      <!-- Beneficios extras (informativos, sin card) -->
+      <div class="includes-flat reveal-group">
+        <div class="include-flat reveal">
+          <div class="include-flat__icon">
             <svg aria-hidden="true"><use href="assets/icons.svg#users-add"/></svg>
           </div>
-          <h3>Inscripción asistida</h3>
-          <p>Te ayudamos a configurar tu residencial al inicio.</p>
+          <h3>Asistencia en inscripción del residencial</h3>
         </div>
 
-        <div class="include reveal">
-          <div class="include__icon" style="--icon-bg: rgba(101,176,59,.12); color: var(--green);">
+        <div class="include-flat reveal">
+          <div class="include-flat__icon">
             <svg aria-hidden="true"><use href="assets/icons.svg#folder-multi"/></svg>
           </div>
-          <h3>Espacio ilimitado</h3>
-          <p>Sube todos los documentos, fotos y archivos que necesites.</p>
+          <h3>Espacio ilimitado para tus archivos</h3>
         </div>
 
-        <div class="include reveal">
-          <div class="include__icon" style="--icon-bg: rgba(242,162,62,.12); color: var(--orange);">
-            <svg aria-hidden="true"><use href="assets/icons.svg#bell"/></svg>
+        <div class="include-flat reveal">
+          <div class="include-flat__icon">
+            <svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>
           </div>
-          <h3>Información segura</h3>
-          <p>Tus datos en servidores AWS, con respaldo automático.</p>
+          <h3>Información 100% segura en servidores de Amazon (AWS)</h3>
         </div>
 
-        <div class="include reveal">
-          <div class="include__icon" style="--icon-bg: rgba(228,70,52,.12); color: var(--red);">
+        <div class="include-flat reveal">
+          <div class="include-flat__icon">
             <svg aria-hidden="true"><use href="assets/icons.svg#video"/></svg>
           </div>
-          <h3>Webinars y capacitaciones</h3>
-          <p>Capacitaciones en vivo sin costo cada mes.</p>
+          <h3>Webinar y capacitaciones sin costo</h3>
         </div>
 
-        <div class="include reveal">
-          <div class="include__icon" style="--icon-bg: rgba(7,105,125,.12); color: var(--mid);">
+        <div class="include-flat reveal">
+          <div class="include-flat__icon">
             <svg aria-hidden="true"><use href="assets/icons.svg#message-circle"/></svg>
           </div>
-          <h3>Soporte personalizado</h3>
-          <p>Equipo dedicado para resolver tus dudas.</p>
+          <h3>Soporte técnico personalizado</h3>
         </div>
       </div>
     </div>
@@ -483,9 +562,10 @@
     </div>
   </section>
 
-  <!-- ============== FAQ ============== -->
+  <!-- ============== FAQ + CTA WhatsApp ============== -->
   <section class="pricing-faq">
     <div class="container">
+      <div class="faq-wrap">
       <div class="faq-panel reveal">
         <h2 class="faq-title">Preguntas frecuentes</h2>
 
@@ -518,6 +598,37 @@
           <summary>¿Incluyen capacitación y soporte?</summary>
           <p>Sí, todos los planes incluyen capacitación inicial gratuita y soporte continuo. Los planes Pro y Class incluyen soporte prioritario y un ejecutivo dedicado.</p>
         </details>
+      </div>
+
+      <!-- CTAs de contacto (WhatsApp + Correo) -->
+      <aside class="faq-side reveal">
+        <div class="faq-cta faq-cta--whatsapp">
+          <div class="faq-cta__icon">
+            <svg aria-hidden="true"><use href="assets/icons.svg#whatsapp"/></svg>
+          </div>
+          <h3 class="faq-cta__title">¿Prefieres WhatsApp?</h3>
+          <p class="faq-cta__desc">Resolvemos tus dudas al instante.</p>
+          <a href="https://wa.me/525512345678?text=Hola%20Vivook%2C%20me%20interesa%20conocer%20más"
+             target="_blank" rel="noopener"
+             class="faq-cta__btn">
+            <svg aria-hidden="true"><use href="assets/icons.svg#whatsapp"/></svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+
+        <div class="faq-cta faq-cta--email">
+          <div class="faq-cta__icon">
+            <svg aria-hidden="true"><use href="assets/icons.svg#mail"/></svg>
+          </div>
+          <h3 class="faq-cta__title">¿Prefieres correo?</h3>
+          <p class="faq-cta__desc">Te respondemos en menos de 24 horas.</p>
+          <a href="mailto:contacto@vivook.com?subject=Información%20sobre%20Vivook"
+             class="faq-cta__btn">
+            <svg aria-hidden="true"><use href="assets/icons.svg#mail"/></svg>
+            Escribir por correo
+          </a>
+        </div>
+      </aside>
       </div>
     </div>
   </section>
@@ -581,6 +692,7 @@
   <!-- CTA flotante lateral -->
   <a href="#trial" class="sticky-cta" aria-label="Comienza tu prueba gratis">
     Comienza tu prueba
+    <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
   </a>
 
   <!-- ============== MODALES DE FUNCIONALIDADES ============== -->
@@ -799,6 +911,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=4" defer></script>
+  <script src="script.js?v=11" defer></script>
 </body>
 </html>
