@@ -1455,7 +1455,7 @@ button:focus-visible,
   color: var(--dark);
   margin-bottom: 2px;
 }
-.addon__list span {
+.addon__list span:not(.addon__icon) {
   display: block;
   font-size: 13px;
   color: var(--ink-500);
@@ -2048,3 +2048,22 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 480px) {
   .trust-grid { grid-template-columns: 1fr; padding: 20px; }
 }
+
+/* ==================================================================
+   23. SPRITE SVG (iconos referenciados con <use href="assets/icons.svg#name"/>)
+================================================================== */
+/* Los SVGs ahora son envolventes vacíos con un <use>. Necesitan
+   stroke + fill heredados y respetar el tamaño del contenedor padre. */
+svg use {
+  pointer-events: none;
+}
+/* Default: si el SVG no tiene dimensiones específicas via CSS del padre,
+   ocupa 1em × 1em y usa currentColor. */
+svg:not([width]):not([height]) {
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+}
+/* El caret-down es un fill icon, no stroke */
+.nav-caret { fill: currentColor; stroke: none; }
