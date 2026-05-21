@@ -101,20 +101,28 @@
 
   /* ---------- 4. Sticky header ---------- */
   const header = document.querySelector('.site-header');
+  // `.hero` es el hero oscuro del index. En páginas sin él (precios, etc.)
+  // el header arranca siempre en estado "scrolled" para que el logo dark sea visible.
+  const hasDarkHero = document.querySelector('.hero');
+
   if (header) {
-    const threshold = 80;
-    let ticking = false;
-    const update = () => {
-      header.classList.toggle('is-scrolled', window.scrollY > threshold);
-      ticking = false;
-    };
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(update);
-        ticking = true;
-      }
-    }, { passive: true });
-    update();
+    if (!hasDarkHero) {
+      header.classList.add('is-scrolled');
+    } else {
+      const threshold = 80;
+      let ticking = false;
+      const update = () => {
+        header.classList.toggle('is-scrolled', window.scrollY > threshold);
+        ticking = false;
+      };
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(update);
+          ticking = true;
+        }
+      }, { passive: true });
+      update();
+    }
   }
 
   /* ---------- 5. Pricing calculator (viviendas + moneda) ---------- */
