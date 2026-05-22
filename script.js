@@ -10,6 +10,7 @@
      5. Pricing calculator (resalta el plan según viviendas)
      6. Feature modals (popups con tablas comparativas)
      7. Mobile menu (hamburger + dropdowns en acordeón)
+     8. Contact form (submit AJAX a Web3Forms)
 ================================================================== */
 
 (function () {
@@ -344,6 +345,57 @@
         const item = trigger.closest('.nav-item');
         item.classList.toggle('is-open');
       });
+    });
+  }
+
+  /* ---------- 8. Contact form (Web3Forms via AJAX) ---------- */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    const submitBtn = document.getElementById('contact-submit');
+    const submitLabel = contactForm.querySelector('.contact-form__submit-label');
+    const successBox = contactForm.querySelector('.contact-form__status--success');
+    const errorBox = contactForm.querySelector('.contact-form__status--error');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Reset UI
+      if (successBox) successBox.hidden = true;
+      if (errorBox) errorBox.hidden = true;
+
+      // Disable + show loading
+      submitBtn.disabled = true;
+      const originalLabel = submitLabel.textContent;
+      submitLabel.textContent = 'Enviando...';
+
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' },
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && data.success !== false) {
+          contactForm.reset();
+          if (successBox) successBox.hidden = false;
+          submitLabel.textContent = 'Enviado ✓';
+          // Volver al estado normal después de 3 segundos
+          setTimeout(() => {
+            submitLabel.textContent = originalLabel;
+            submitBtn.disabled = false;
+          }, 3000);
+        } else {
+          throw new Error(data.message || 'Error en el envío');
+        }
+      } catch (err) {
+        if (errorBox) errorBox.hidden = false;
+        submitLabel.textContent = originalLabel;
+        submitBtn.disabled = false;
+        console.error('Contact form error:', err);
+      }
     });
   }
 })();
