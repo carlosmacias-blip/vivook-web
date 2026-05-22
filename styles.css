@@ -2412,3 +2412,308 @@ svg {
 @media (prefers-reduced-motion: reduce) {
   .plan.is-recommended { animation: none; }
 }
+
+/* ==================================================================
+   30. PÁGINA DE CONTACTO
+================================================================== */
+
+/* ---------- Hero ---------- */
+.contact-hero {
+  padding: 160px 0 48px;
+  background: linear-gradient(180deg, var(--ink-50) 0%, #fff 100%);
+}
+.contact-hero .section-head { margin-bottom: 0; }
+
+/* ---------- 3 cards de canales ---------- */
+.contact-channels {
+  padding: 16px 0 80px;
+  background: #fff;
+}
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.channel {
+  background: #fff;
+  border: 1px solid var(--ink-200);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.channel:hover {
+  transform: translateY(-4px);
+  border-color: var(--channel-color, var(--blue));
+  box-shadow: 0 24px 48px -16px color-mix(in srgb, var(--channel-color, var(--blue)) 30%, transparent);
+}
+.channel--whatsapp { --channel-color: #25D366; }
+.channel--call     { --channel-color: var(--blue); }
+.channel--email    { --channel-color: var(--mid); }
+
+.channel__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  background: color-mix(in srgb, var(--channel-color, var(--blue)) 14%, transparent);
+  color: var(--channel-color, var(--blue));
+}
+.channel__icon svg {
+  width: 30px;
+  height: 30px;
+}
+.channel__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.channel__desc {
+  font-size: 14px;
+  color: var(--ink-500);
+  line-height: 1.55;
+  margin-bottom: 22px;
+  flex: 1;
+}
+.channel__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--channel-color, var(--blue));
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  box-shadow: 0 8px 20px -6px color-mix(in srgb, var(--channel-color, var(--blue)) 50%, transparent);
+}
+.channel__btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(.95);
+  box-shadow: 0 12px 28px -6px color-mix(in srgb, var(--channel-color, var(--blue)) 60%, transparent);
+}
+.channel__btn svg {
+  width: 16px;
+  height: 16px;
+}
+.channel__hint {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--ink-500);
+  font-weight: 500;
+}
+
+/* ---------- Formulario ---------- */
+.contact-form-section {
+  padding: 0 0 96px;
+  background: var(--ink-50);
+}
+.contact-form-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 96px;
+}
+.contact-form-intro {
+  padding-top: 8px;
+}
+.contact-form__title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--dark);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.contact-form__desc {
+  font-size: 15px;
+  color: var(--ink-500);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.contact-form__bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form__bullets li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--dark);
+  font-weight: 500;
+}
+.contact-form__bullets .check {
+  width: 22px; height: 22px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='12' fill='%2365B03B'/><path d='M7 12.5l3.2 3.2L17 9' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contact-form {
+  background: #fff;
+  border: 1px solid var(--ink-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 14px;
+  box-shadow: var(--shadow-sm);
+}
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-form__field--full {
+  grid-column: 1 / -1;
+}
+.contact-form__field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+}
+.contact-form__field .optional {
+  color: var(--ink-500);
+  font-weight: 400;
+  font-size: 12px;
+}
+.contact-form__field input,
+.contact-form__field select,
+.contact-form__field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 14.5px;
+  color: var(--dark);
+  background: #fff;
+  border: 1px solid var(--ink-200);
+  border-radius: 10px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+  resize: vertical;
+}
+.contact-form__field input:focus,
+.contact-form__field select:focus,
+.contact-form__field textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(7, 161, 194, .12);
+}
+.contact-form__field textarea {
+  min-height: 120px;
+  font-family: inherit;
+}
+.contact-form__submit {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 6px;
+}
+.contact-form__legal {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  color: var(--ink-500);
+  line-height: 1.5;
+  margin: 0;
+}
+.contact-form__legal a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .channels-grid { grid-template-columns: 1fr; gap: 16px; }
+  .contact-form-wrap { grid-template-columns: 1fr; gap: 32px; padding-top: 56px; }
+  .contact-form { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .contact-hero { padding: 130px 0 32px; }
+  .contact-form { padding: 24px 20px; }
+}
+
+/* Mensajes de estado del formulario (éxito / error) */
+.contact-form__status {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.contact-form__status svg {
+  width: 28px; height: 28px;
+  flex-shrink: 0;
+}
+.contact-form__status strong {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.contact-form__status p {
+  font-size: 13px;
+  margin: 0;
+  opacity: .9;
+}
+.contact-form__status--success {
+  background: rgba(101, 176, 59, .12);
+  color: #3F6F1F;
+  border: 1px solid rgba(101, 176, 59, .3);
+}
+.contact-form__status--success svg { color: var(--green); }
+
+.contact-form__status--error {
+  background: rgba(228, 70, 52, .1);
+  color: #8B2418;
+  border: 1px solid rgba(228, 70, 52, .3);
+}
+.contact-form__status--error svg { color: var(--red); }
+
+/* Submit deshabilitado */
+.contact-form__submit:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+/* ---------- Badge de tiempo de respuesta en cards de canal ---------- */
+.channel__time {
+  display: inline-block;
+  padding: 4px 12px;
+  background: color-mix(in srgb, var(--channel-color, var(--blue)) 14%, transparent);
+  color: var(--channel-color, var(--blue));
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* ---------- FAQ de contacto ---------- */
+.contact-faq {
+  padding: 0 0 96px;
+  background: var(--ink-50);
+}
+.contact-faq .faq-panel {
+  max-width: 720px;
+}
