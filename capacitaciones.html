@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capacitaciones Vivook · Webinars en vivo y videos para administradores</title>
+  <meta name="description" content="Aprende a dominar Vivook con webinars semanales en vivo y más de 50 videos grabados. Acceso gratis para todos los clientes. Capacitaciones prácticas en español." />
+  <meta property="og:title" content="Capacitaciones Vivook · Aprende a dominar el software" />
+  <meta property="og:description" content="Webinars en vivo, videos grabados y la Academia Vivook. Aprende todo lo que necesitas, gratis." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=19" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Vivook">
+        <img src="assets/logo-blanco.png" alt="Vivook" class="logo__img logo__img--light" />
+        <img src="assets/logo.png" alt="" aria-hidden="true" class="logo__img logo__img--dark" />
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Principal">
+        <button class="nav__close" aria-label="Cerrar menú">
+          <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
+        </button>
+
+        <div class="nav-item has-dropdown">
+          <a href="index.html#caracteristicas" class="nav-trigger">
+            Características
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="index.html#comunicacion"   role="menuitem">Comunicación</a>
+            <a href="index.html#administrativo" role="menuitem">Administrativo</a>
+            <a href="index.html#seguridad"      role="menuitem">Seguridad</a>
+            <a href="index.html#diferenciador"  role="menuitem">¿Qué nos hace diferentes?</a>
+            <a href="index.html#facturacion"    role="menuitem">Facturación</a>
+            <a href="index.html#pagos"          role="menuitem">Pagos en línea</a>
+          </div>
+        </div>
+
+        <a href="precios.html">Precios</a>
+        <a href="index.html#partners">Partners</a>
+
+        <div class="nav-item has-dropdown">
+          <a href="capacitaciones.html" class="nav-trigger" aria-current="page">
+            Aprende
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="capacitaciones.html" role="menuitem">Capacitaciones</a>
+            <a href="#academia"           role="menuitem">Academia Vivook</a>
+          </div>
+        </div>
+
+        <a href="contacto.html">Contáctanos</a>
+        <a href="#blog">Blog</a>
+      </nav>
+
+      <a href="#login" class="btn btn--primary btn--sm">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="learn-hero">
+    <div class="container">
+      <header class="section-head reveal">
+        <h1 class="section-title">
+          Aprende a dominar<br />
+          <span class="text-blue">Vivook</span>
+        </h1>
+        <p class="section-sub">
+          Webinars en vivo, videos grabados y la Academia Vivook. Capacitaciones prácticas para que aproveches al máximo la plataforma.
+        </p>
+      </header>
+    </div>
+  </section>
+
+  <!-- ============== STATS / HIGHLIGHTS ============== -->
+  <section class="learn-stats">
+    <div class="container">
+      <ul class="learn-stats__grid reveal">
+        <li class="learn-stat">
+          <span class="learn-stat__icon" style="--icon-bg: rgba(7,161,194,.12); color: var(--blue);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#calendar-check"/></svg>
+          </span>
+          <span class="learn-stat__text">Webinars semanales</span>
+        </li>
+        <li class="learn-stat">
+          <span class="learn-stat__icon" style="--icon-bg: rgba(228,70,52,.12); color: var(--red);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#video"/></svg>
+          </span>
+          <span class="learn-stat__text">+50 videos grabados</span>
+        </li>
+        <li class="learn-stat">
+          <span class="learn-stat__icon" style="--icon-bg: rgba(101,176,59,.12); color: var(--green);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>
+          </span>
+          <span class="learn-stat__text">Gratis para clientes</span>
+        </li>
+        <li class="learn-stat">
+          <span class="learn-stat__icon" style="--icon-bg: rgba(242,162,62,.12); color: var(--orange);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#message-circle"/></svg>
+          </span>
+          <span class="learn-stat__text">Soporte en español</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============== PRÓXIMAS CAPACITACIONES (protagonista) ============== -->
+  <section class="learn-next">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Próximas <span class="text-blue">capacitaciones</span>
+        </h2>
+        <p class="section-sub">
+          Apúntate a los siguientes webinars en vivo. Aprende directamente del equipo de Vivook.
+        </p>
+      </header>
+
+      <!-- Grid de cards dinámicas (se llena con Google Calendar API) -->
+      <div class="next-grid reveal-group" id="upcoming-list">
+        <!-- Placeholders mientras carga (se reemplazan con JS) -->
+        <article class="next-card next-card--skeleton reveal">
+          <div class="next-card__date">
+            <span class="next-card__day">—</span>
+            <span class="next-card__month">—</span>
+          </div>
+          <div class="next-card__body">
+            <p class="next-card__time">Cargando...</p>
+            <h3 class="next-card__title">Capacitación próximamente</h3>
+            <p class="next-card__desc">Pronto verás aquí los próximos webinars.</p>
+          </div>
+          <span class="next-card__cta">Apuntarme →</span>
+        </article>
+        <article class="next-card next-card--skeleton reveal">
+          <div class="next-card__date">
+            <span class="next-card__day">—</span>
+            <span class="next-card__month">—</span>
+          </div>
+          <div class="next-card__body">
+            <p class="next-card__time">Cargando...</p>
+            <h3 class="next-card__title">Capacitación próximamente</h3>
+            <p class="next-card__desc">Pronto verás aquí los próximos webinars.</p>
+          </div>
+          <span class="next-card__cta">Apuntarme →</span>
+        </article>
+        <article class="next-card next-card--skeleton reveal">
+          <div class="next-card__date">
+            <span class="next-card__day">—</span>
+            <span class="next-card__month">—</span>
+          </div>
+          <div class="next-card__body">
+            <p class="next-card__time">Cargando...</p>
+            <h3 class="next-card__title">Capacitación próximamente</h3>
+            <p class="next-card__desc">Pronto verás aquí los próximos webinars.</p>
+          </div>
+          <span class="next-card__cta">Apuntarme →</span>
+        </article>
+      </div>
+
+      <!-- Toggle para ver calendario completo -->
+      <div class="learn-next__toggle">
+        <button type="button" class="btn btn--outline" id="toggle-calendar" aria-expanded="false" aria-controls="full-calendar">
+          Ver calendario completo
+          <span class="toggle-arrow" aria-hidden="true">↓</span>
+        </button>
+      </div>
+
+      <!-- Calendar completo (oculto por default, expandible) -->
+      <div class="full-calendar" id="full-calendar" hidden>
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=abits.com_pm2aj26u62lbr2fck2i9343khk%40group.calendar.google.com&title=Calendario%20de%20Webinars%20de%20Vivook&showPrint=0&height=600&wkst=2&bgcolor=%23ccccff&ctz=America%2FMexico_City"
+          title="Calendario completo de Webinars de Vivook"
+          frameborder="0"
+          scrolling="no"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CAPACITACIONES GRABADAS ============== -->
+  <section class="learn-recorded">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Capacitaciones <span class="text-red">grabadas</span>
+        </h2>
+        <p class="section-sub">
+          ¿No pudiste asistir en vivo? Mira los videos cuando tú quieras, desde donde quieras.
+        </p>
+      </header>
+
+      <div class="recorded-grid reveal-group">
+        <a href="https://www.youtube.com/watch?v=EKJriNh_bRY" target="_blank" rel="noopener" class="recorded-card reveal">
+          <div class="recorded-card__thumb">
+            <img src="https://img.youtube.com/vi/EKJriNh_bRY/hqdefault.jpg" alt="Configurar blogs" loading="lazy" />
+            <span class="recorded-card__play" aria-hidden="true">▶</span>
+            <span class="recorded-card__duration">3:28</span>
+          </div>
+          <div class="recorded-card__body">
+            <span class="recorded-card__tag">Comunicación</span>
+            <h3 class="recorded-card__title">Configurar blogs</h3>
+            <span class="recorded-card__level recorded-card__level--basic">Básico</span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=tIZg93_Gv3g" target="_blank" rel="noopener" class="recorded-card reveal">
+          <div class="recorded-card__thumb">
+            <img src="https://img.youtube.com/vi/tIZg93_Gv3g/hqdefault.jpg" alt="Activar y configurar Control de Accesos" loading="lazy" />
+            <span class="recorded-card__play" aria-hidden="true">▶</span>
+            <span class="recorded-card__duration">10:29</span>
+          </div>
+          <div class="recorded-card__body">
+            <span class="recorded-card__tag">Seguridad</span>
+            <h3 class="recorded-card__title">Activar y configurar Control de Accesos</h3>
+            <span class="recorded-card__level recorded-card__level--mid">Intermedio</span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=V5Y3alfzvtM" target="_blank" rel="noopener" class="recorded-card reveal">
+          <div class="recorded-card__thumb">
+            <img src="https://img.youtube.com/vi/V5Y3alfzvtM/hqdefault.jpg" alt="Leer códigos QR y crear entradas manuales" loading="lazy" />
+            <span class="recorded-card__play" aria-hidden="true">▶</span>
+            <span class="recorded-card__duration">5:12</span>
+          </div>
+          <div class="recorded-card__body">
+            <span class="recorded-card__tag">Seguridad</span>
+            <h3 class="recorded-card__title">Leer códigos QR y crear entradas manuales</h3>
+            <span class="recorded-card__level recorded-card__level--basic">Básico</span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=VMhn30HQCKk" target="_blank" rel="noopener" class="recorded-card reveal">
+          <div class="recorded-card__thumb">
+            <img src="https://img.youtube.com/vi/VMhn30HQCKk/hqdefault.jpg" alt="Configurar tus reportes para los condóminos" loading="lazy" />
+            <span class="recorded-card__play" aria-hidden="true">▶</span>
+            <span class="recorded-card__duration">1:38</span>
+          </div>
+          <div class="recorded-card__body">
+            <span class="recorded-card__tag">Administración</span>
+            <h3 class="recorded-card__title">Configurar tus reportes para los condóminos</h3>
+            <span class="recorded-card__level recorded-card__level--advanced">Avanzado</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="learn-recorded__cta">
+        <a href="https://www.youtube.com/@vivook4214" target="_blank" rel="noopener" class="btn btn--outline">
+          Visita nuestro canal de YouTube
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MANUAL + ACADEMIA (split sobrio) ============== -->
+  <section class="learn-resources">
+    <div class="container">
+      <div class="resources-grid reveal-group">
+
+        <a href="#manual" class="resource-card reveal" style="--card-color: var(--blue);">
+          <div class="resource-card__img resource-card__img--manual">
+            <img src="assets/manual.png" alt="" />
+          </div>
+          <h3 class="resource-card__title">Manual de Vivook</h3>
+          <p class="resource-card__desc">
+            PDF completo con todos los módulos explicados paso a paso. Ideal para consultar offline o compartir con tu equipo.
+          </p>
+          <span class="resource-card__cta">Descargar PDF →</span>
+        </a>
+
+        <a href="#academia" class="resource-card reveal" style="--card-color: var(--orange);">
+          <div class="resource-card__img resource-card__img--academy">
+            <img src="assets/academia-anim.png" alt="" />
+          </div>
+          <h3 class="resource-card__title">Academia Vivook</h3>
+          <p class="resource-card__desc">
+            Cursos completos, videotutoriales y certificaciones. Conviértete en el mejor administrador de tu ciudad. Gratis para clientes.
+          </p>
+          <span class="resource-card__cta">Ir a la Academia →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer" aria-label="Vivook">
+          <img src="assets/logo-web.png" alt="Vivook" />
+        </a>
+        <ul class="footer__contact">
+          <li>📍 CDMX, México</li>
+          <li>📧 ventas@vivook.com</li>
+          <li>📞 +52 55 1234 5678</li>
+        </ul>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/fb.png" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="" /></a>
+          <a href="#" aria-label="TikTok"><img src="assets/tiktok.png" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/youtube.png" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="index.html#administrativo">Administración</a></li>
+          <li><a href="index.html#comunicacion">Comunicación</a></li>
+          <li><a href="index.html#seguridad">Seguridad</a></li>
+          <li><a href="precios.html">Precios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a href="index.html#producto">Administradores</a></li>
+          <li><a href="index.html#producto">Residentes</a></li>
+          <li><a href="index.html#producto">Mesa Directiva</a></li>
+          <li><a href="#academia">Academia Vivook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__legal">
+      <p>© 2026 Vivook. Todos los derechos reservados.</p>
+      <p><a href="#">Política de Privacidad</a> · <a href="#">Términos de Servicio</a></p>
+    </div>
+  </footer>
+
+  <!-- CTA flotante lateral -->
+  <a href="#trial" class="sticky-cta" aria-label="Comienza tu prueba gratis">
+    Comienza tu prueba
+    <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
+  </a>
+
+  <script src="script.js?v=19" defer></script>
+</body>
+</html>
