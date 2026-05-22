@@ -11,6 +11,7 @@
      6. Feature modals (popups con tablas comparativas)
      7. Mobile menu (hamburger + dropdowns en acordeón)
      8. Contact form (submit AJAX a Web3Forms)
+     9. Upcoming events (próximas capacitaciones desde Google Calendar)
 ================================================================== */
 
 (function () {
@@ -397,5 +398,112 @@
         console.error('Contact form error:', err);
       }
     });
+  }
+
+  /* ---------- 9a. Toggle "Ver calendario completo" ---------- */
+  const calendarToggle = document.getElementById('toggle-calendar');
+  const fullCalendar = document.getElementById('full-calendar');
+  if (calendarToggle && fullCalendar) {
+    calendarToggle.addEventListener('click', () => {
+      const isOpen = !fullCalendar.hidden;
+      fullCalendar.hidden = isOpen;
+      calendarToggle.setAttribute('aria-expanded', String(!isOpen));
+      const label = calendarToggle.querySelector(':not(.toggle-arrow)');
+      // El label es el primer text node + el span flecha. Cambio solo el text:
+      calendarToggle.childNodes[0].nodeValue = isOpen ? 'Ver calendario completo ' : 'Ocultar calendario ';
+      if (!isOpen) {
+        fullCalendar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
+  /* ---------- 9. Upcoming events (Google Calendar API) ----------
+     Carga los próximos N eventos del Google Calendar público.
+     Necesita:
+       - GOOGLE_API_KEY: API key de Google Cloud (Calendar API habilitada)
+       - CALENDAR_ID: ID del calendario público
+     Si la API key no está configurada, deja el placeholder visible.
+  -------------------------------------------------------------- */
+  const upcomingList = document.getElementById('upcoming-list');
+  if (upcomingList) {
+    const GOOGLE_API_KEY = 'YOUR_GOOGLE_API_KEY_HERE';
+    const CALENDAR_ID = 'abits.com_pm2aj26u62lbr2fck2i9343khk@group.calendar.google.com';
+    const MAX_EVENTS = 3;
+
+    // Si aún no se configuró la key, no llamar al API
+    if (GOOGLE_API_KEY === 'YOUR_GOOGLE_API_KEY_HERE') return;
+
+    const months = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
+
+    const formatTime = (date) => {
+      const h = date.getHours();
+      const m = String(date.getMinutes()).padStart(2, '0');
+      const ampm = h >= 12 ? 'pm' : 'am';
+      const hour12 = h % 12 || 12;
+      return `${hour12}:${m} ${ampm}`;
+    };
+
+    const renderEvent = (event) => {
+      const start = event.start.dateTime ? new Date(event.start.dateTime) : new Date(event.start.date);
+      const day = start.getDate();
+      const month = months[start.getMonth()];
+      const time = event.start.dateTime ? formatTime(start) : 'Todo el día';
+      const title = event.summary || '(sin título)';
+      const desc = event.description
+        ? event.description.replace(/<[^>]*>/g, '').slice(0, 120) + (event.description.length > 120 ? '...' : '')
+        : 'Únete a este webinar en vivo.';
+      const link = event.htmlLink || '#';
+
+      return `
+        <a href="${link}" target="_blank" rel="noopener" class="next-card">
+          <div class="next-card__date">
+            <span class="next-card__day">${day}</span>
+            <span class="next-card__month">${month}</span>
+          </div>
+          <div class="next-card__body">
+            <p class="next-card__time">${time}</p>
+            <h3 class="next-card__title">${title}</h3>
+            <p class="next-card__desc">${desc}</p>
+          </div>
+          <span class="next-card__cta">Apuntarme →</span>
+        </a>
+      `;
+    };
+
+    const renderEmpty = () => `
+      <div class="next-card next-card--skeleton" style="grid-column: 1 / -1; text-align: center; padding: 32px;">
+        <p style="color: var(--ink-500); font-size: 14px; margin: 0;">
+          No hay capacitaciones agendadas próximamente. Revisa el calendario o vuelve pronto.
+        </p>
+      </div>
+    `;
+
+    const fetchEvents = async () => {
+      const timeMin = new Date().toISOString();
+      const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events`
+        + `?key=${GOOGLE_API_KEY}`
+        + `&timeMin=${encodeURIComponent(timeMin)}`
+        + `&maxResults=${MAX_EVENTS}`
+        + `&singleEvents=true`
+        + `&orderBy=startTime`;
+
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const events = data.items || [];
+
+        if (events.length === 0) {
+          upcomingList.innerHTML = renderEmpty();
+        } else {
+          upcomingList.innerHTML = events.map(renderEvent).join('');
+        }
+      } catch (err) {
+        console.warn('No se pudieron cargar las próximas capacitaciones:', err);
+        upcomingList.innerHTML = renderEmpty();
+      }
+    };
+
+    fetchEvents();
   }
 })();
