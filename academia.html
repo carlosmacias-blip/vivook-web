@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20" />
+  <link rel="stylesheet" href="styles.css?v=25" />
 </head>
 <body>
 
@@ -51,13 +51,13 @@
         <a href="index.html#partners">Partners</a>
 
         <div class="nav-item has-dropdown">
-          <a href="capacitaciones.html" class="nav-trigger" aria-current="page">
+          <a href="capacitaciones.html" class="nav-trigger">
             Aprende
             <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
           </a>
           <div class="nav-dropdown" role="menu">
             <a href="capacitaciones.html" role="menuitem">Capacitaciones</a>
-            <a href="academia.html"       role="menuitem">Academia Vivook</a>
+            <a href="academia.html"       role="menuitem" aria-current="page">Academia Vivook</a>
           </div>
         </div>
 
@@ -69,26 +69,41 @@
     </div>
   </header>
 
-  <!-- ============== 1. HERO ============== -->
-  <section class="learn-hero">
-    <div class="container">
-      <header class="section-head reveal">
-        <span class="pill">ACADEMIA VIVOOK</span>
+  <!-- ============== 1. HERO (split con mock de progreso) ============== -->
+  <section class="academy-hero">
+    <div class="academy-hero__bg" aria-hidden="true"></div>
+    <div class="container academy-hero__inner">
+
+      <div class="academy-hero__content reveal">
         <h1 class="section-title">
           Conviértete en experto<br />
           <span class="text-orange">administrando condominios</span>
         </h1>
         <p class="section-sub">
-          La academia ideal para potenciar tus habilidades con formación práctica, innovadora y enfocada en resultados. Cursos diseñados para tu crecimiento profesional.
+          4 niveles de aprendizaje, certificaciones verificables y comunidad activa en 13 países de LATAM. 100% gratis para clientes Vivook.
         </p>
-        <div class="learn-hero__actions">
-          <a href="#niveles" class="btn btn--primary">
-            Ver los 4 niveles
+        <div class="academy-hero__actions">
+          <a href="https://vivook.teachlr.com/" target="_blank" rel="noopener" class="btn btn--primary">
+            Acceder a la Academia
             <span class="btn__arrow">→</span>
           </a>
-          <a href="#trial" class="btn btn--outline">Acceder gratis</a>
         </div>
-      </header>
+      </div>
+
+      <!-- Video promocional de la Academia -->
+      <div class="academy-hero__mock reveal">
+        <div class="academy-hero__video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/_T5db3FL5xo?rel=0&modestbranding=1"
+            title="Academia Vivook · Video promocional"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -124,70 +139,7 @@
     </div>
   </section>
 
-  <!-- ============== 3. ¿QUÉ ES LA ACADEMIA? + 3 beneficios ============== -->
-  <section class="features">
-    <div class="container">
-      <header class="section-head reveal">
-        <span class="pill">¿QUÉ ES LA ACADEMIA VIVOOK?</span>
-        <h2 class="section-title">
-          Aprende a administrar<br />
-          condominios como un <span class="text-blue">profesional</span>
-        </h2>
-        <p class="section-sub">
-          La Academia Vivook es una plataforma para administradores que buscan incrementar sus habilidades. Desde cursos básicos hasta los más avanzados, además de temas legales, marketing, asambleas y mucho más.
-        </p>
-      </header>
-
-      <div class="features__grid reveal-group">
-        <article class="feature-card reveal">
-          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(101,176,59,.12); color: var(--green);">
-            <svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>
-          </div>
-          <h3 class="feature-card__title">Sin costo</h3>
-          <p class="feature-card__desc">
-            Conviértete en experto en Vivook completamente gratis. Sin tarjeta de crédito, sin letras chiquitas.
-          </p>
-          <ul class="feature-card__list">
-            <li>Acceso ilimitado a todos los niveles</li>
-            <li>Sin límite de tiempo</li>
-            <li>Materiales descargables incluidos</li>
-          </ul>
-        </article>
-
-        <article class="feature-card reveal">
-          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(242,162,62,.12); color: var(--orange);">
-            <svg aria-hidden="true"><use href="assets/icons.svg#target"/></svg>
-          </div>
-          <h3 class="feature-card__title">Certifícate</h3>
-          <p class="feature-card__desc">
-            Recibe una certificación digital por cada nivel que completes. Validada por Vivook, reconocida en LATAM.
-          </p>
-          <ul class="feature-card__list">
-            <li>4 niveles de certificación</li>
-            <li>Verificable con código único</li>
-            <li>Descargable en PDF</li>
-          </ul>
-        </article>
-
-        <article class="feature-card reveal">
-          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(7,161,194,.12); color: var(--blue);">
-            <svg aria-hidden="true"><use href="assets/icons.svg#users-add"/></svg>
-          </div>
-          <h3 class="feature-card__title">Compártelo</h3>
-          <p class="feature-card__desc">
-            Presume tu certificación en LinkedIn y demuestra que eres un administrador profesional con preparación.
-          </p>
-          <ul class="feature-card__list">
-            <li>Badge listo para LinkedIn</li>
-            <li>Perfil de egresado público</li>
-            <li>Red de profesionales certificados</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============== 4. ¿POR QUÉ UNIRTE? (6 razones, white bg) ============== -->
+  <!-- ============== 3. POR QUÉ ACADEMIA (6 razones fusionadas) ============== -->
   <section class="features features--alt">
     <div class="container">
       <header class="section-head reveal">
@@ -208,7 +160,7 @@
           </div>
           <h3 class="feature-card__title">Cursos especializados</h3>
           <p class="feature-card__desc">
-            Desde aspectos legales y financieros hasta gestión de conflictos y mantenimiento. Cubrimos todo lo fundamental.
+            Aspectos legales, finanzas, asambleas, gestión de conflictos, marketing y mantenimiento. Cubrimos todo lo fundamental.
           </p>
         </article>
 
@@ -218,7 +170,7 @@
           </div>
           <h3 class="feature-card__title">Profesores experimentados</h3>
           <p class="feature-card__desc">
-            Equipo docente con sólida formación académica y amplia experiencia práctica en administración de condominios.
+            Equipo docente con formación académica sólida y años de experiencia práctica administrando condominios reales en LATAM.
           </p>
         </article>
 
@@ -228,7 +180,7 @@
           </div>
           <h3 class="feature-card__title">Actualización constante</h3>
           <p class="feature-card__desc">
-            El mundo de los condominios evoluciona. Mantenemos los cursos al día con programas de actualización regulares.
+            El mundo de los condominios evoluciona. Mantenemos los cursos al día con programas de actualización regulares y nuevos módulos.
           </p>
         </article>
 
@@ -248,7 +200,7 @@
           </div>
           <h3 class="feature-card__title">Comunidad en LATAM</h3>
           <p class="feature-card__desc">
-            Conéctate con administradores de 13 países. Comparte experiencias, resuelve dudas y crece profesionalmente.
+            Conéctate con administradores de 13 países. Comparte experiencias, resuelve dudas y crece profesionalmente con tu red.
           </p>
         </article>
 
@@ -258,55 +210,214 @@
           </div>
           <h3 class="feature-card__title">Contenido práctico</h3>
           <p class="feature-card__desc">
-            Cada módulo incluye ejercicios con casos reales de condominios. Aprendes haciendo, no sólo leyendo.
+            Cada módulo incluye ejercicios con casos reales de condominios. Aprendes haciendo, no sólo leyendo teoría.
           </p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============== 5. 4 NIVELES (setup panel + steps) ============== -->
-  <section class="setup" id="niveles">
+  <!-- ============== 4. 4 NIVELES (cards rediseñadas con módulos) ============== -->
+  <section class="levels" id="niveles">
     <div class="container">
-      <div class="setup__panel reveal">
-        <header class="setup__head">
-          <span class="pill">RUTAS DE APRENDIZAJE</span>
-          <h2 class="setup__title">
-            4 niveles para dominar<br />
-            la <span class="text-blue">administración de condominios</span>
-          </h2>
-          <p class="setup__sub">
-            Empieza desde cero o continúa donde lo dejaste. Cada nivel te da herramientas más avanzadas y un certificado al completarlo.
-          </p>
-        </header>
+      <header class="section-head reveal">
+        <span class="pill">RUTAS DE APRENDIZAJE</span>
+        <h2 class="section-title">
+          4 niveles para dominar<br />
+          la <span class="text-blue">administración de condominios</span>
+        </h2>
+        <p class="section-sub">
+          Empieza desde cero o continúa donde lo dejaste. Cada nivel te da un certificado al completarlo.
+        </p>
+      </header>
 
-        <ol class="setup__steps">
-          <li class="setup-step setup-step--1">
-            <div class="setup-step__num">01</div>
-            <div class="setup-step__name">Introductorio</div>
-            <p class="setup-step__desc">Conoce Vivook desde cero. Configura tu condominio, agrega residentes y haz tus primeras operaciones.</p>
-          </li>
-          <li class="setup-step setup-step--2">
-            <div class="setup-step__num">02</div>
-            <div class="setup-step__name">Fundamentos</div>
-            <p class="setup-step__desc">Domina cobranza, comunicación con residentes, reservas de amenidades y control de accesos.</p>
-          </li>
-          <li class="setup-step setup-step--3">
-            <div class="setup-step__num">03</div>
-            <div class="setup-step__name">Avanzado</div>
-            <p class="setup-step__desc">Finanzas avanzadas, reportes automáticos, pagos en línea y gestión de múltiples condominios.</p>
-          </li>
-          <li class="setup-step setup-step--4">
-            <div class="setup-step__num">04</div>
-            <div class="setup-step__name">Maestría</div>
-            <p class="setup-step__desc">Legal, asambleas, marketing y liderazgo. El nivel más alto de certificación Vivook.</p>
-          </li>
-        </ol>
+      <div class="levels__grid reveal-group">
+        <figure class="nivel-card nivel-card--1 reveal">
+          <img src="assets/niveles-insignias_Mesa-de-trabajo-1.png" alt="Nivel 1 · Introductorio" />
+        </figure>
+        <figure class="nivel-card nivel-card--2 reveal">
+          <img src="assets/niveles-insignias-02.png" alt="Nivel 2 · Fundamentos" />
+        </figure>
+        <figure class="nivel-card nivel-card--3 reveal">
+          <img src="assets/niveles-insignias-03.png" alt="Nivel 3 · Avanzado" />
+        </figure>
+        <figure class="nivel-card nivel-card--4 reveal">
+          <img src="assets/niveles-insignias-04.png" alt="Nivel 4 · Maestría" />
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- ============== 6. CTA FINAL ============== -->
+  <!-- ============== 5. CERTIFICADO (preview visual) ============== -->
+  <section class="certificate-section">
+    <div class="container certificate-grid">
+
+      <div class="certificate-text reveal">
+        <span class="pill">CERTIFICACIÓN</span>
+        <h2 class="section-title">
+          Un certificado <span class="text-orange">verificable</span><br />
+          por cada nivel completado
+        </h2>
+        <p class="section-sub">
+          Al terminar cada nivel recibes una certificación digital con código único, verificable en línea y lista para compartir en LinkedIn.
+        </p>
+        <ul class="certificate-list">
+          <li>
+            <svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>
+            Verificable con código único
+          </li>
+          <li>
+            <svg aria-hidden="true"><use href="assets/icons.svg#document"/></svg>
+            Descargable en PDF de alta calidad
+          </li>
+          <li>
+            <svg aria-hidden="true"><use href="assets/icons.svg#users-add"/></svg>
+            Badge listo para LinkedIn y CV
+          </li>
+          <li>
+            <svg aria-hidden="true"><use href="assets/icons.svg#layers"/></svg>
+            Perfil público de egresado
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mock del certificado -->
+      <div class="certificate-mock reveal" aria-hidden="true">
+        <div class="cert">
+          <div class="cert__corner cert__corner--tl"></div>
+          <div class="cert__corner cert__corner--tr"></div>
+          <div class="cert__corner cert__corner--bl"></div>
+          <div class="cert__corner cert__corner--br"></div>
+
+          <p class="cert__brand">ACADEMIA VIVOOK</p>
+          <p class="cert__label">Certifica que</p>
+          <p class="cert__name">Carlos Macías</p>
+          <p class="cert__desc">ha completado satisfactoriamente el nivel</p>
+          <p class="cert__level">Fundamentos · Nivel 02</p>
+
+          <div class="cert__footer">
+            <div class="cert__sig">
+              <span class="cert__sig-line"></span>
+              <span class="cert__sig-label">Director Académico</span>
+            </div>
+            <div class="cert__seal">
+              <svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>
+            </div>
+            <div class="cert__sig">
+              <span class="cert__sig-line"></span>
+              <span class="cert__sig-label">CEO Vivook</span>
+            </div>
+          </div>
+
+          <p class="cert__code">Código: VVK-A2-0427-MX</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============== 6. TESTIMONIOS DE ALUMNOS ============== -->
+  <section class="testimonials">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">TESTIMONIOS</span>
+        <h2 class="section-title">
+          Lo que dicen<br />
+          <span class="text-red">nuestros alumnos</span>
+        </h2>
+        <p class="section-sub">
+          Administradores de toda LATAM ya están potenciando su carrera con la Academia.
+        </p>
+      </header>
+
+      <div class="testimonials__grid reveal-group">
+        <article class="testimonial reveal">
+          <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonial__quote">
+            "Los cursos están muy bien estructurados. Aprendí cosas de aspectos legales que nadie me había explicado en 8 años administrando."
+          </p>
+          <div class="testimonial__author">
+            <span class="testimonial__avatar testimonial__avatar--initials">MR</span>
+            <div>
+              <div class="testimonial__name">María Rodríguez</div>
+              <div class="testimonial__role">Administradora · Residencial Polanco · Nivel Maestría completado</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial reveal">
+          <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonial__quote">
+            "Me certifiqué en los 4 niveles en 3 meses. El contenido práctico marca la diferencia, no es teoría vacía como en otras escuelas."
+          </p>
+          <div class="testimonial__author">
+            <span class="testimonial__avatar testimonial__avatar--initials">JS</span>
+            <div>
+              <div class="testimonial__name">Jorge Salazar</div>
+              <div class="testimonial__role">Administrador · 6 condominios · Guadalajara, Jalisco</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial reveal">
+          <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonial__quote">
+            "Como recién egresada esto fue la diferencia entre conseguir mi primer cliente y no. Los módulos de asambleas y comité son oro puro."
+          </p>
+          <div class="testimonial__author">
+            <span class="testimonial__avatar testimonial__avatar--initials">AP</span>
+            <div>
+              <div class="testimonial__name">Ana Patricia López</div>
+              <div class="testimonial__role">Administradora independiente · CDMX</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 7. ¿YA ERES CLIENTE? (split de cierre) ============== -->
+  <section class="learn-resources">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          ¿Ya eres cliente?<br />
+          <span class="text-blue">Sigue aprendiendo</span>
+        </h2>
+        <p class="section-sub">
+          Complementa la Academia con nuestros webinars en vivo y el manual completo.
+        </p>
+      </header>
+
+      <div class="resources-grid reveal-group">
+
+        <a href="capacitaciones.html" class="resource-card reveal" style="--card-color: var(--blue);">
+          <div class="resource-card__img resource-card__img--academy">
+            <img src="assets/academia-anim.png" alt="" />
+          </div>
+          <h3 class="resource-card__title">Capacitaciones en vivo</h3>
+          <p class="resource-card__desc">
+            Webinars semanales con el equipo de Vivook. Pregunta en tiempo real, conoce a otros administradores y resuelve dudas específicas.
+          </p>
+          <span class="resource-card__cta">Ver calendario →</span>
+        </a>
+
+        <a href="#manual" class="resource-card reveal" style="--card-color: var(--orange);">
+          <div class="resource-card__img resource-card__img--manual">
+            <img src="assets/manual.png" alt="" />
+          </div>
+          <h3 class="resource-card__title">Manual de Vivook</h3>
+          <p class="resource-card__desc">
+            PDF completo con todos los módulos explicados paso a paso. Ideal para consultar offline o compartir con tu equipo.
+          </p>
+          <span class="resource-card__cta">Descargar PDF →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 8. CTA FINAL ============== -->
   <section class="cta-final">
     <div class="container">
       <div class="cta-final__panel reveal">
@@ -318,7 +429,7 @@
         </p>
 
         <div class="cta-final__actions">
-          <a href="#trial" class="btn btn--primary">Acceder gratis a la Academia →</a>
+          <a href="https://vivook.teachlr.com/" target="_blank" rel="noopener" class="btn btn--primary">Acceder gratis a la Academia →</a>
           <a href="contacto.html" class="btn btn--white">Hablar con un asesor</a>
         </div>
 
@@ -388,11 +499,11 @@
   </footer>
 
   <!-- CTA flotante lateral -->
-  <a href="#trial" class="sticky-cta" aria-label="Comienza tu prueba gratis">
-    Comienza tu prueba
+  <a href="https://vivook.teachlr.com/" target="_blank" rel="noopener" class="sticky-cta" aria-label="Acceder a la Academia Vivook">
+    Acceder a la Academia
     <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
   </a>
 
-  <script src="script.js?v=20" defer></script>
+  <script src="script.js?v=25" defer></script>
 </body>
 </html>
