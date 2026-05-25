@@ -3112,3 +3112,37 @@ svg {
   .learn-stat { padding: 8px 12px; font-size: 12.5px; }
   .recorded-grid { grid-template-columns: 1fr; }
 }
+
+/* =====================================================================
+   ACADEMIA (extensiones mínimas — el resto reutiliza clases existentes)
+   ===================================================================== */
+
+/* Botones centrados dentro del learn-hero (academia.html) */
+.learn-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+/* Variante de feature-card__icon para SVG (alternativa al <img>) */
+.feature-card__icon--svg {
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--icon-bg, rgba(7, 105, 125, .12));
+}
+.feature-card__icon--svg svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+/* Variante de .features con fondo blanco (sin decoraciones) */
+.features--alt { background: #fff; }
+.features--alt::before,
+.features--alt::after { display: none; }
+@media (max-width: 560px) {
+  .learn-hero__actions { gap: 10px; }
+}

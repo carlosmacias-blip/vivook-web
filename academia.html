@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academia Vivook · Conviértete en experto administrando condominios</title>
+  <meta name="description" content="Academia gratuita para administradores de condominios. 4 niveles de aprendizaje, certificaciones verificables y +200 alumnos activos en 13 países. Sin costo." />
+  <meta property="og:title" content="Academia Vivook · Conviértete en experto" />
+  <meta property="og:description" content="Cursos gratis, certificaciones y 4 niveles para dominar la administración de condominios. Únete a +200 administradores en LATAM." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Vivook">
+        <img src="assets/logo-blanco.png" alt="Vivook" class="logo__img logo__img--light" />
+        <img src="assets/logo.png" alt="" aria-hidden="true" class="logo__img logo__img--dark" />
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Principal">
+        <button class="nav__close" aria-label="Cerrar menú">
+          <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
+        </button>
+
+        <div class="nav-item has-dropdown">
+          <a href="index.html#caracteristicas" class="nav-trigger">
+            Características
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="index.html#comunicacion"   role="menuitem">Comunicación</a>
+            <a href="index.html#administrativo" role="menuitem">Administrativo</a>
+            <a href="index.html#seguridad"      role="menuitem">Seguridad</a>
+            <a href="index.html#diferenciador"  role="menuitem">¿Qué nos hace diferentes?</a>
+            <a href="index.html#facturacion"    role="menuitem">Facturación</a>
+            <a href="index.html#pagos"          role="menuitem">Pagos en línea</a>
+          </div>
+        </div>
+
+        <a href="precios.html">Precios</a>
+        <a href="index.html#partners">Partners</a>
+
+        <div class="nav-item has-dropdown">
+          <a href="capacitaciones.html" class="nav-trigger" aria-current="page">
+            Aprende
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="capacitaciones.html" role="menuitem">Capacitaciones</a>
+            <a href="academia.html"       role="menuitem">Academia Vivook</a>
+          </div>
+        </div>
+
+        <a href="contacto.html">Contáctanos</a>
+        <a href="#blog">Blog</a>
+      </nav>
+
+      <a href="#login" class="btn btn--primary btn--sm">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- ============== 1. HERO ============== -->
+  <section class="learn-hero">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">ACADEMIA VIVOOK</span>
+        <h1 class="section-title">
+          Conviértete en experto<br />
+          <span class="text-orange">administrando condominios</span>
+        </h1>
+        <p class="section-sub">
+          La academia ideal para potenciar tus habilidades con formación práctica, innovadora y enfocada en resultados. Cursos diseñados para tu crecimiento profesional.
+        </p>
+        <div class="learn-hero__actions">
+          <a href="#niveles" class="btn btn--primary">
+            Ver los 4 niveles
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="#trial" class="btn btn--outline">Acceder gratis</a>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- ============== 2. STATS / HIGHLIGHTS ============== -->
+  <section class="learn-stats">
+    <div class="container">
+      <ul class="learn-stats__grid reveal">
+        <li class="learn-stat">
+          <span class="learn-stat__icon" style="--icon-bg: rgba(101,176,59,.12); color: var(--green);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>
+          </span>
+          <span class="learn-stat__text">100% gratis</span>
+        </li>
+        <li class="learn-stat">
+          <span class="learn-stat__icon" style="--icon-bg: rgba(242,162,62,.12); color: var(--orange);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#target"/></svg>
+          </span>
+          <span class="learn-stat__text">Certificado al completar</span>
+        </li>
+        <li class="learn-stat">
+          <span class="learn-stat__icon" style="--icon-bg: rgba(7,161,194,.12); color: var(--blue);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#users-add"/></svg>
+          </span>
+          <span class="learn-stat__text">+200 alumnos activos</span>
+        </li>
+        <li class="learn-stat">
+          <span class="learn-stat__icon" style="--icon-bg: rgba(228,70,52,.12); color: var(--red);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#document-play"/></svg>
+          </span>
+          <span class="learn-stat__text">Cursos en vivo y grabados</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============== 3. ¿QUÉ ES LA ACADEMIA? + 3 beneficios ============== -->
+  <section class="features">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">¿QUÉ ES LA ACADEMIA VIVOOK?</span>
+        <h2 class="section-title">
+          Aprende a administrar<br />
+          condominios como un <span class="text-blue">profesional</span>
+        </h2>
+        <p class="section-sub">
+          La Academia Vivook es una plataforma para administradores que buscan incrementar sus habilidades. Desde cursos básicos hasta los más avanzados, además de temas legales, marketing, asambleas y mucho más.
+        </p>
+      </header>
+
+      <div class="features__grid reveal-group">
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(101,176,59,.12); color: var(--green);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>
+          </div>
+          <h3 class="feature-card__title">Sin costo</h3>
+          <p class="feature-card__desc">
+            Conviértete en experto en Vivook completamente gratis. Sin tarjeta de crédito, sin letras chiquitas.
+          </p>
+          <ul class="feature-card__list">
+            <li>Acceso ilimitado a todos los niveles</li>
+            <li>Sin límite de tiempo</li>
+            <li>Materiales descargables incluidos</li>
+          </ul>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(242,162,62,.12); color: var(--orange);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#target"/></svg>
+          </div>
+          <h3 class="feature-card__title">Certifícate</h3>
+          <p class="feature-card__desc">
+            Recibe una certificación digital por cada nivel que completes. Validada por Vivook, reconocida en LATAM.
+          </p>
+          <ul class="feature-card__list">
+            <li>4 niveles de certificación</li>
+            <li>Verificable con código único</li>
+            <li>Descargable en PDF</li>
+          </ul>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(7,161,194,.12); color: var(--blue);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#users-add"/></svg>
+          </div>
+          <h3 class="feature-card__title">Compártelo</h3>
+          <p class="feature-card__desc">
+            Presume tu certificación en LinkedIn y demuestra que eres un administrador profesional con preparación.
+          </p>
+          <ul class="feature-card__list">
+            <li>Badge listo para LinkedIn</li>
+            <li>Perfil de egresado público</li>
+            <li>Red de profesionales certificados</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 4. ¿POR QUÉ UNIRTE? (6 razones, white bg) ============== -->
+  <section class="features features--alt">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">¿POR QUÉ UNIRTE?</span>
+        <h2 class="section-title">
+          La academia pensada para<br />
+          <span class="text-red">administradores de verdad</span>
+        </h2>
+        <p class="section-sub">
+          No son cursos genéricos. Todo el contenido está diseñado específicamente para las necesidades del día a día de un administrador de condominios.
+        </p>
+      </header>
+
+      <div class="features__grid reveal-group">
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(7,161,194,.12); color: var(--blue);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#document-lines"/></svg>
+          </div>
+          <h3 class="feature-card__title">Cursos especializados</h3>
+          <p class="feature-card__desc">
+            Desde aspectos legales y financieros hasta gestión de conflictos y mantenimiento. Cubrimos todo lo fundamental.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(101,176,59,.12); color: var(--green);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#users-add"/></svg>
+          </div>
+          <h3 class="feature-card__title">Profesores experimentados</h3>
+          <p class="feature-card__desc">
+            Equipo docente con sólida formación académica y amplia experiencia práctica en administración de condominios.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(242,162,62,.12); color: var(--orange);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#transfer"/></svg>
+          </div>
+          <h3 class="feature-card__title">Actualización constante</h3>
+          <p class="feature-card__desc">
+            El mundo de los condominios evoluciona. Mantenemos los cursos al día con programas de actualización regulares.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(228,70,52,.12); color: var(--red);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#clock"/></svg>
+          </div>
+          <h3 class="feature-card__title">Aprende a tu ritmo</h3>
+          <p class="feature-card__desc">
+            Accede cuando quieras, desde cualquier dispositivo. Sin horarios fijos, sin presión, sin clases obligatorias.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(7,105,125,.12); color: var(--mid);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#chat"/></svg>
+          </div>
+          <h3 class="feature-card__title">Comunidad en LATAM</h3>
+          <p class="feature-card__desc">
+            Conéctate con administradores de 13 países. Comparte experiencias, resuelve dudas y crece profesionalmente.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(242,162,62,.12); color: var(--orange);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#target"/></svg>
+          </div>
+          <h3 class="feature-card__title">Contenido práctico</h3>
+          <p class="feature-card__desc">
+            Cada módulo incluye ejercicios con casos reales de condominios. Aprendes haciendo, no sólo leyendo.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 5. 4 NIVELES (setup panel + steps) ============== -->
+  <section class="setup" id="niveles">
+    <div class="container">
+      <div class="setup__panel reveal">
+        <header class="setup__head">
+          <span class="pill">RUTAS DE APRENDIZAJE</span>
+          <h2 class="setup__title">
+            4 niveles para dominar<br />
+            la <span class="text-blue">administración de condominios</span>
+          </h2>
+          <p class="setup__sub">
+            Empieza desde cero o continúa donde lo dejaste. Cada nivel te da herramientas más avanzadas y un certificado al completarlo.
+          </p>
+        </header>
+
+        <ol class="setup__steps">
+          <li class="setup-step setup-step--1">
+            <div class="setup-step__num">01</div>
+            <div class="setup-step__name">Introductorio</div>
+            <p class="setup-step__desc">Conoce Vivook desde cero. Configura tu condominio, agrega residentes y haz tus primeras operaciones.</p>
+          </li>
+          <li class="setup-step setup-step--2">
+            <div class="setup-step__num">02</div>
+            <div class="setup-step__name">Fundamentos</div>
+            <p class="setup-step__desc">Domina cobranza, comunicación con residentes, reservas de amenidades y control de accesos.</p>
+          </li>
+          <li class="setup-step setup-step--3">
+            <div class="setup-step__num">03</div>
+            <div class="setup-step__name">Avanzado</div>
+            <p class="setup-step__desc">Finanzas avanzadas, reportes automáticos, pagos en línea y gestión de múltiples condominios.</p>
+          </li>
+          <li class="setup-step setup-step--4">
+            <div class="setup-step__num">04</div>
+            <div class="setup-step__name">Maestría</div>
+            <p class="setup-step__desc">Legal, asambleas, marketing y liderazgo. El nivel más alto de certificación Vivook.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 6. CTA FINAL ============== -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-final__panel reveal">
+        <h2 class="cta-final__title">
+          Únete a una comunidad de<br />administradores comprometidos
+        </h2>
+        <p class="cta-final__sub">
+          Más de 200 administradores en 13 países de LATAM ya están mejorando sus habilidades con la Academia Vivook. Sin costo, sin compromiso.
+        </p>
+
+        <div class="cta-final__actions">
+          <a href="#trial" class="btn btn--primary">Acceder gratis a la Academia →</a>
+          <a href="contacto.html" class="btn btn--white">Hablar con un asesor</a>
+        </div>
+
+        <ul class="cta-final__bullets">
+          <li>✓ 100% gratis</li>
+          <li>✓ 4 niveles de certificación</li>
+          <li>✓ Comunidad en LATAM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer" aria-label="Vivook">
+          <img src="assets/logo-web.png" alt="Vivook" />
+        </a>
+        <ul class="footer__contact">
+          <li>📍 CDMX, México</li>
+          <li>📧 ventas@vivook.com</li>
+          <li>📞 +52 55 1234 5678</li>
+        </ul>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/fb.png" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="" /></a>
+          <a href="#" aria-label="TikTok"><img src="assets/tiktok.png" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/youtube.png" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="index.html#administrativo">Administración</a></li>
+          <li><a href="index.html#comunicacion">Comunicación</a></li>
+          <li><a href="index.html#seguridad">Seguridad</a></li>
+          <li><a href="precios.html">Precios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a href="index.html#producto">Administradores</a></li>
+          <li><a href="index.html#producto">Residentes</a></li>
+          <li><a href="index.html#producto">Mesa Directiva</a></li>
+          <li><a href="academia.html">Academia Vivook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__legal">
+      <p>© 2026 Vivook. Todos los derechos reservados.</p>
+      <p><a href="#">Política de Privacidad</a> · <a href="#">Términos de Servicio</a></p>
+    </div>
+  </footer>
+
+  <!-- CTA flotante lateral -->
+  <a href="#trial" class="sticky-cta" aria-label="Comienza tu prueba gratis">
+    Comienza tu prueba
+    <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
+  </a>
+
+  <script src="script.js?v=20" defer></script>
+</body>
+</html>
