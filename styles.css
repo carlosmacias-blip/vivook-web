@@ -3011,7 +3011,7 @@ svg {
 
 /* ---------- Manual + Academia (split sobrio) ---------- */
 .learn-resources {
-  padding: 0 0 96px;
+  padding: 96px 0;
   background: #fff;
 }
 .resources-grid {
@@ -3057,6 +3057,10 @@ svg {
 }
 .resource-card__img--academy {
   background: linear-gradient(135deg, rgba(242, 162, 62, .15), rgba(228, 70, 52, .20));
+}
+.resource-card__img--webinars {
+  background: linear-gradient(135deg, rgba(101, 176, 59, .15), rgba(7, 105, 125, .20));
+  color: var(--green);
 }
 .resource-card__img img {
   max-width: 100%;
@@ -3145,8 +3149,7 @@ svg {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 600px 400px at 85% 30%, rgba(242, 162, 62, .12), transparent 60%),
-    radial-gradient(ellipse 500px 360px at 10% 70%, rgba(7, 161, 194, .10), transparent 60%);
+    radial-gradient(ellipse 600px 400px at 85% 30%, rgba(242, 162, 62, .12), transparent 60%);
 }
 .academy-hero__inner {
   position: relative;
@@ -3219,6 +3222,7 @@ svg {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 24px;
 }
 
 /* ---------- Sección de certificado (split) ---------- */
@@ -3264,116 +3268,20 @@ svg {
   border-radius: 8px;
 }
 
-/* Mock visual del certificado */
+/* Imagen del certificado */
 .certificate-mock {
   display: grid;
   place-items: center;
 }
-.cert {
-  position: relative;
-  background: linear-gradient(135deg, #FFFEFC, #FFF8EE);
-  border: 1px solid rgba(242, 162, 62, .25);
-  border-radius: 18px;
-  padding: 48px 40px 36px;
+.certificate-image {
   width: 100%;
-  max-width: 500px;
-  aspect-ratio: 4 / 3;
-  box-shadow: 0 30px 60px -20px rgba(10, 61, 79, .20), 0 8px 16px -8px rgba(10, 61, 79, .08);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  transform: rotate(-1.5deg);
+  max-width: 540px;
+  height: auto;
+  display: block;
   transition: transform .4s cubic-bezier(.2, .7, .2, 1);
 }
-.cert:hover { transform: rotate(0); }
-.cert__corner {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  border-color: rgba(242, 162, 62, .55);
-  border-style: solid;
-  border-width: 0;
-}
-.cert__corner--tl { top: 14px; left: 14px;  border-top-width: 2px; border-left-width: 2px; }
-.cert__corner--tr { top: 14px; right: 14px; border-top-width: 2px; border-right-width: 2px; }
-.cert__corner--bl { bottom: 14px; left: 14px;  border-bottom-width: 2px; border-left-width: 2px; }
-.cert__corner--br { bottom: 14px; right: 14px; border-bottom-width: 2px; border-right-width: 2px; }
-.cert__brand {
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .25em;
-  color: var(--orange);
-  margin: 0 0 18px;
-}
-.cert__label {
-  font-size: 12px;
-  color: var(--ink-500);
-  font-style: italic;
-  margin: 0 0 6px;
-}
-.cert__name {
-  font-family: var(--font-display);
-  font-size: clamp(20px, 2.6vw, 28px);
-  font-weight: 800;
-  color: var(--dark);
-  letter-spacing: -.02em;
-  margin: 0 0 6px;
-}
-.cert__desc {
-  font-size: 12px;
-  color: var(--ink-500);
-  margin: 0 0 8px;
-}
-.cert__level {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--blue);
-  margin: 0;
-}
-.cert__footer {
-  margin-top: auto;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 16px;
-  align-items: end;
-}
-.cert__sig { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.cert__sig-line {
-  width: 100%;
-  max-width: 110px;
-  height: 1px;
-  background: var(--ink-300);
-}
-.cert__sig-label {
-  font-size: 9.5px;
-  color: var(--ink-500);
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  font-weight: 600;
-}
-.cert__seal {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--orange), var(--red));
-  color: #fff;
-  display: grid;
-  place-items: center;
-  box-shadow: 0 8px 18px -4px rgba(242, 162, 62, .45);
-}
-.cert__seal svg { width: 24px; height: 24px; }
-.cert__code {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 9.5px;
-  font-family: 'Courier New', monospace;
-  color: var(--ink-400);
-  letter-spacing: .08em;
-  margin: 0;
+.certificate-image:hover {
+  transform: translateY(-4px);
 }
 
 /* Variante de avatar con iniciales (testimonios sin foto) */
