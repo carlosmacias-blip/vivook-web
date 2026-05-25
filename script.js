@@ -506,4 +506,175 @@
 
     fetchEvents();
   }
+
+  /* ---------- 10. Partners (filtro por país + modal) ---------- */
+  const partnersGrid = document.getElementById('partners-grid');
+  const partnerModal = document.getElementById('partner-modal');
+
+  if (partnersGrid && partnerModal) {
+    // Orden aleatorio en cada carga para que ningún partner quede siempre primero
+    const shuffleGrid = () => {
+      const items = Array.from(partnersGrid.children);
+      // Fisher-Yates shuffle
+      for (let i = items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]];
+      }
+      // Re-append en el nuevo orden (appendChild mueve nodos existentes)
+      items.forEach((item) => partnersGrid.appendChild(item));
+    };
+    shuffleGrid();
+
+    const cards = partnersGrid.querySelectorAll('.partner-card');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const emptyMsg = document.getElementById('partners-empty');
+
+    // --- Filtro ---
+    const applyFilter = (filter) => {
+      let visible = 0;
+      cards.forEach((card) => {
+        const matches = filter === 'all' || card.dataset.country === filter;
+        card.classList.toggle('is-hidden', !matches);
+        if (matches) visible++;
+      });
+      if (emptyMsg) emptyMsg.hidden = visible > 0;
+    };
+
+    filterTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach((t) => {
+          const active = t === tab;
+          t.classList.toggle('is-active', active);
+          t.setAttribute('aria-selected', String(active));
+        });
+        applyFilter(tab.dataset.filter);
+      });
+    });
+
+    // --- Modal ---
+    const modalLogo     = document.getElementById('partner-modal-logo');
+    const modalName     = document.getElementById('partner-modal-name');
+    const modalCountry  = document.getElementById('partner-modal-country');
+    const modalCity     = document.getElementById('partner-modal-city');
+    const modalCitySep  = partnerModal.querySelector('.partner-modal__city-sep');
+    const modalContacts = document.getElementById('partner-modal-contacts');
+
+    const COUNTRY_LABEL = {
+      mexico: 'México', dominicana: 'República Dominicana', ecuador: 'Ecuador',
+      panama: 'Panamá', 'costa-rica': 'Costa Rica', guatemala: 'Guatemala',
+      bolivia: 'Bolivia', otros: 'Otros',
+    };
+
+    let lastFocused = null;
+
+    const buildContact = (variant, iconId, label, value, href) => {
+      const tagOpen  = href ? `<a class="partner-contact partner-contact--${variant}" href="${href}" target="_blank" rel="noopener">` : `<div class="partner-contact partner-contact--${variant}">`;
+      const tagClose = href ? '</a>' : '</div>';
+      return `${tagOpen}
+        <span class="partner-contact__icon">
+          <svg aria-hidden="true"><use href="assets/icons.svg#${iconId}"/></svg>
+        </span>
+        <div class="partner-contact__body">
+          <span class="partner-contact__label">${label}</span>
+          <span class="partner-contact__value">${value}</span>
+        </div>
+        ${href ? '<span class="partner-contact__arrow" aria-hidden="true">→</span>' : ''}
+      ${tagClose}`;
+    };
+
+    const modalContact = document.getElementById('partner-modal-contact');
+
+    const openModal = (card) => {
+      lastFocused = document.activeElement;
+      const data = card.dataset;
+      const img = card.querySelector('img');
+
+      modalLogo.src = img ? img.src : '';
+      modalLogo.alt = img ? img.alt : '';
+      modalName.textContent = data.name || '—';
+      modalCountry.textContent = COUNTRY_LABEL[data.country] || data.country || '';
+      if (data.city) {
+        modalCity.textContent = data.city;
+        modalCitySep.hidden = false;
+      } else {
+        modalCity.textContent = '';
+        modalCitySep.hidden = true;
+      }
+      // Contacto principal (persona) — opcional
+      if (modalContact) {
+        if (data.contact) {
+          modalContact.textContent = data.contact;
+          modalContact.hidden = false;
+        } else {
+          modalContact.hidden = true;
+        }
+      }
+
+      const parts = [];
+      // Phones: pueden ser uno o varios separados por |
+      if (data.phones) {
+        const list = data.phones.split('|').map((p) => p.trim()).filter(Boolean);
+        list.forEach((display) => {
+          const tel = display.replace(/[^\d+]/g, '');
+          parts.push(buildContact('phone', 'message-circle', 'Teléfono', display, `tel:${tel}`));
+        });
+      }
+      if (data.whatsapp) {
+        parts.push(buildContact('wa', 'whatsapp', 'WhatsApp', '+' + data.whatsapp, `https://wa.me/${data.whatsapp}`));
+      }
+      // Emails: pueden ser uno o varios separados por |
+      if (data.emails) {
+        const list = data.emails.split('|').map((e) => e.trim()).filter(Boolean);
+        list.forEach((em) => {
+          parts.push(buildContact('email', 'mail', 'Email', em, `mailto:${em}`));
+        });
+      }
+      if (data.website) {
+        const displayUrl = data.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+        parts.push(buildContact('web', 'document', 'Sitio web', displayUrl, data.website));
+      }
+      modalContacts.innerHTML = parts.join('');
+
+      partnerModal.hidden = false;
+      // Force reflow for transition
+      // eslint-disable-next-line no-unused-expressions
+      partnerModal.offsetHeight;
+      partnerModal.classList.add('is-open');
+      document.body.classList.add('partner-modal-open');
+
+      const closeBtn = partnerModal.querySelector('.partner-modal__close');
+      if (closeBtn) closeBtn.focus();
+    };
+
+    const closeModal = () => {
+      partnerModal.classList.remove('is-open');
+      document.body.classList.remove('partner-modal-open');
+      setTimeout(() => {
+        partnerModal.hidden = true;
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        }
+      }, 250);
+    };
+
+    cards.forEach((card) => {
+      card.addEventListener('click', () => openModal(card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal(card);
+        }
+      });
+    });
+
+    partnerModal.querySelectorAll('[data-modal-close]').forEach((btn) => {
+      btn.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !partnerModal.hidden) {
+        closeModal();
+      }
+    });
+  }
 })();

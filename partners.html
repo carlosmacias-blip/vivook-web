@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partners Vivook · Administradoras profesionales en LATAM</title>
+  <meta name="description" content="Directorio de partners estratégicos de Vivook: 29 administradoras profesionales en 7 países de LATAM. Encuentra una administradora certificada cerca de ti." />
+  <meta property="og:title" content="Partners Vivook · Administradoras profesionales certificadas" />
+  <meta property="og:description" content="Directorio de partners estratégicos de Vivook en México, Bolivia, Costa Rica, Ecuador, Guatemala, Panamá y República Dominicana." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=40" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Vivook">
+        <img src="assets/logo-blanco.png" alt="Vivook" class="logo__img logo__img--light" />
+        <img src="assets/logo.png" alt="" aria-hidden="true" class="logo__img logo__img--dark" />
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Principal">
+        <button class="nav__close" aria-label="Cerrar menú">
+          <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
+        </button>
+
+        <div class="nav-item has-dropdown">
+          <a href="index.html#caracteristicas" class="nav-trigger">
+            Características
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="index.html#comunicacion"   role="menuitem">Comunicación</a>
+            <a href="index.html#administrativo" role="menuitem">Administrativo</a>
+            <a href="index.html#seguridad"      role="menuitem">Seguridad</a>
+            <a href="index.html#diferenciador"  role="menuitem">¿Qué nos hace diferentes?</a>
+            <a href="index.html#facturacion"    role="menuitem">Facturación</a>
+            <a href="index.html#pagos"          role="menuitem">Pagos en línea</a>
+          </div>
+        </div>
+
+        <a href="precios.html">Precios</a>
+        <a href="partners.html" aria-current="page">Partners</a>
+
+        <div class="nav-item has-dropdown">
+          <a href="capacitaciones.html" class="nav-trigger">
+            Aprende
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="capacitaciones.html" role="menuitem">Capacitaciones</a>
+            <a href="academia.html"       role="menuitem">Academia Vivook</a>
+          </div>
+        </div>
+
+        <a href="contacto.html">Contáctanos</a>
+        <a href="#blog">Blog</a>
+      </nav>
+
+      <a href="#login" class="btn btn--primary btn--sm">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- ============== 1. HERO ============== -->
+  <section class="partners-hero">
+    <div class="container">
+      <header class="section-head reveal">
+        <h1 class="section-title">
+          Partners <span class="text-blue">estratégicos</span><br />
+          de Vivook
+        </h1>
+        <p class="section-sub">
+          29 administradoras profesionales en 7 países de LATAM que confían en Vivook. Filtra por país y encuentra una empresa certificada cerca de ti.
+        </p>
+      </header>
+    </div>
+  </section>
+
+  <!-- ============== 2. FILTRO POR PAÍS ============== -->
+  <section class="partners-filter">
+    <div class="container">
+      <div class="filter-tabs reveal" role="tablist" aria-label="Filtrar por país">
+        <button type="button" class="filter-tab is-active" data-filter="all"        role="tab" aria-selected="true">Todos <span class="filter-tab__count">29</span></button>
+        <button type="button" class="filter-tab"          data-filter="mexico"     role="tab" aria-selected="false">México <span class="filter-tab__count">20</span></button>
+        <button type="button" class="filter-tab"          data-filter="dominicana" role="tab" aria-selected="false">Rep. Dominicana <span class="filter-tab__count">2</span></button>
+        <button type="button" class="filter-tab"          data-filter="ecuador"    role="tab" aria-selected="false">Ecuador <span class="filter-tab__count">2</span></button>
+        <button type="button" class="filter-tab"          data-filter="guatemala"  role="tab" aria-selected="false">Guatemala <span class="filter-tab__count">2</span></button>
+        <button type="button" class="filter-tab"          data-filter="bolivia"    role="tab" aria-selected="false">Bolivia <span class="filter-tab__count">1</span></button>
+        <button type="button" class="filter-tab"          data-filter="costa-rica" role="tab" aria-selected="false">Costa Rica <span class="filter-tab__count">1</span></button>
+        <button type="button" class="filter-tab"          data-filter="panama"     role="tab" aria-selected="false">Panamá <span class="filter-tab__count">1</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 3. GRID DE PARTNERS ============== -->
+  <section class="partners-grid-section">
+    <div class="container">
+      <div class="partners-grid reveal-group" id="partners-grid">
+        <button type="button" class="partner-card" data-country="mexico" data-name="JH ADMINISTRACIÓN" data-city="Ciudad de México y Zona Metropolitana · Querétaro · Hidalgo" data-phones="55 4016 6513" data-whatsapp="525540166513" data-emails="contacto@jhcondominios.com" data-website="https://www.jhcondominios.com">
+          <img src="assets/logos/JH.png" alt="JH Condominios" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="Rokkina Property Care" data-city="Monterrey" data-phones="(81) 8335 3090|(55) 4747 3024|81 1668 9973" data-website="https://www.rokkina.com">
+          <img src="assets/logos/Rokkina-1.png" alt="Rokkina" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="M2BE Administración de Condominios" data-city="D. F. y Querétaro" data-phones="(01 55) 56 69 08 51|(01 55) 56 87 25 29|(01 55) 30 63 03 20" data-emails="mario.gutierrez@m2be.com.mx" data-website="https://www.m2be.com.mx">
+          <img src="assets/logos/m2.png" alt="M2BE Administración de Condominios" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="dominicana" data-name="CONDÓMINE" data-city="" data-contact="Cynthia Pichardo" data-phones="809-543-5433|809-227-3855|809-563-3457" data-website="https://www.facebook.com/search/str/pp.condomine/keywords_search">
+          <img src="assets/logos/pp-1.png" alt="PP Condomine" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="HABITIA" data-city="CDMX" data-phones="(55) 55 45 69 78" data-website="https://www.administraciondecondominios.com.mx">
+          <img src="assets/logos/habitia.png" alt="Habitia" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="Kuma Inmobiliaria Mexicana" data-city="Ciudad de México" data-phones="55 8623 5552|55 2515 1406" data-emails="contacto@administracionkuma.com" data-website="https://www.administracionkuma.com">
+          <img src="assets/logos/kuma-logo.png" alt="KUMA Inmobiliaria Mexicana" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="ecuador" data-name="ADMACOGRA CIA LTDA" data-city="QUITO" data-phones="0987038442|0998674843|0990179425|0998761369" data-emails="admacogra@gmail.com" data-website="https://www.admacogra.com">
+          <img src="assets/logos/adcco.png" alt="Admacogra" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="Servicios Condominales RUBA SAS" data-city="Quinta Roo – Cancún" data-phones="998 735 3393|998 882 6708">
+          <img src="assets/logos/RUBA.png" alt="Servicios Condominales RUBA SAS" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="panama" data-name="BYGA Administrators" data-city="Ciudad de Panamá" data-phones="+507 264-2445|+507 264-2446" data-website="http://ph.byga.in">
+          <img src="assets/logos/byga-2.png" alt="BYGA Administrators" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="ADMINMUEBLES" data-city="CDMX" data-phones="3683 0782" data-emails="info@adminmuebles.com" data-website="https://www.adminmuebles.com">
+          <img src="assets/logos/adminmuebles.png" alt="Adminmuebles" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="Gipca México" data-city="Monterrey, Bajío, D. F. y Área Metropolitana" data-phones="(01 81) 83. 44. 22. 22|(01 442) 161 32 78|(01 55) 19. 97. 00. 51" data-emails="info@gipcamexico.com" data-website="https://www.gipcamexico.com">
+          <img src="assets/logos/inhouse.png" alt="GIPCA México" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="costa-rica" data-name="SERCOND SERVICIOS DE ADMINISTRACION DE PROPIEDADES EN CONDOMINIO S.A." data-city="" data-phones="506 8370-2178" data-website="http://sercond.siefra.net">
+          <img src="assets/logos/SPARC.png" alt="Sercond" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="ecuador" data-name="ADMICONED" data-city="" data-contact="Myriam Rueda" data-phones="593998392334" data-website="https://www.admiconed.com">
+          <img src="assets/logos/admiconed.png" alt="Admiconed" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="CONSORCIO ALMORAMA" data-city="Corporativo Down Town Santa Fe" data-phones="(55) 9688-9168" data-emails="info@consorcioalmorama.com.mx" data-website="https://www.admacogra.com">
+          <img src="assets/logos/logo-adma.png" alt="Consorcio Almorama" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="PACH" data-city="" data-phones="(55) 63-65-53-48|55-38-95-52-34" data-emails="ventas@pach.com.mx">
+          <img src="assets/logos/pach-1.png" alt="PACH Administración SA de CV" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="dominicana" data-name="GRUPO REB" data-city="Av. 27 de Febrero, Edificio Miguel Mejía, · Suite 305, El…" data-phones="809 685 2200|809 484 2200" data-emails="info@gruporeb.com.do" data-website="https://www.gruporeb.com.do">
+          <img src="assets/logos/REB.png" alt="Grupo REB" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="ADYMCO" data-city="Querétaro RM Clemencia Borja Taboada 503-A 11" data-phones="+52 (442) 217 6931" data-emails="contacto@adymco.com" data-website="https://www.adymco.com/">
+          <img src="assets/logos/adymco.png" alt="Adymco" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="Sigma, Servicios Informáticos" data-city="" data-contact="L.A.E. Ricardo Díaz Rojas" data-phones="+52 2227546285" data-emails="ricardodr1@gmail.com">
+          <img src="assets/logos/Sigma-Logo.png" alt="Sigma" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="Arcano Administraciones" data-city="iudad de México" data-phones="55 4632 2039" data-whatsapp="525543308856" data-emails="info@arcanoadmin.com" data-website="https://www.arcanoadmin.com">
+          <img src="assets/logos/Arcano.png" alt="Arcano Administradores" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="guatemala" data-name="Condominnia Administración de Condominios" data-city="" data-phones="(502) 31825678" data-website="https://www.condominnia.com">
+          <img src="assets/logos/condominnia.png" alt="Condominnia" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="DRI Desarrollo Residencial Integral Administraciones, S.C." data-city="Av. Camino Real 17 1-BLuz, · Santiago de Querétaro, Qro." data-phones="+52 (442) 322 8382" data-emails="direccioncomercial@dri.mx" data-website="https://www.dri.mx">
+          <img src="assets/logos/dri.png" alt="DRI Desarrollo Residencial Integral" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="guatemala" data-name="ADMINISTRA S.A." data-city="" data-phones="502 55503525|502 58086045" data-emails="svasquez@administra.com.gt|sergio@administra.com.gt">
+          <img src="assets/logos/logo-adma.png" alt="Administra S.A." loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="GRUPO INMOBILIARIO MARISCAL" data-city="Bosque de los Ciruelos 180" data-contact="Heiner Nuñez" data-phones="55 8034 4392">
+          <img src="assets/logos/grupo-inmobiliario-mariscal.png" alt="Grupo Inmobiliario Mariscal" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="IR Servicios Profesionales en Ingeniería, Legal y Administración" data-city="CDMX" data-phones="55 5524 46462|55 7090 9207|55 7090 9208" data-whatsapp="525626106191" data-emails="gerardo.iturbide@ir-sp.com|laura.alvarez@ir-sp.com" data-website="https://www.ir-sp.com">
+          <img src="assets/logos/ir.png" alt="IR Servicios" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="bolivia" data-name="Tellez Group Servicios Integrales para Condominios" data-city="Santa Cruz de la Sierra, Cochabamba." data-phones="591 770 22251|591 690 99338|591 689 39114" data-emails="atencioncliente@tellezgroup.org|etellez@tellezgroup.org|edtellez@tellezgroup.org" data-website="https://www.tellezgroup.org">
+          <img src="assets/logos/tellez-group.png" alt="Tellez Group" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="KLi Administraciones" data-city="Querétaro" data-phones="(442) 450 7665" data-website="https://kliadmin.com">
+          <img src="assets/logos/kli.png" alt="KLI" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="GRUPO KAP" data-city="Queretaro – San Miguel de Allende, Guanajuato" data-phones="442 237 9839">
+          <img src="assets/logos/Grupo-kap.png" alt="Grupo KAP" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="RM Administraciones" data-city="" data-contact="Ricardo Mateos" data-phones="55-5344-8252|55-5349-0900|55-5343-0732|55-5344-5065">
+          <img src="assets/logos/RM.png" alt="RM Administraciones" loading="lazy" />
+        </button>
+        <button type="button" class="partner-card" data-country="mexico" data-name="ALS Administración" data-city="C.D.M.X. y Área Metropolitana, MX Calle Rabaul no.500, col.…" data-phones="+52 (55) 7094-9685|55 7094-9685">
+          <img src="assets/logos/ALS.png" alt="Harmony Administración" loading="lazy" />
+        </button>
+      </div>
+
+      <p class="partners-empty" id="partners-empty" hidden>
+        No hay partners en este país por el momento. Prueba otro filtro.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== 4. ¿QUÉ ES SER PARTNER? (3 beneficios) ============== -->
+  <section class="features features--alt">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Acompañamos a las<br />
+          <span class="text-blue">mejores administradoras de LATAM</span>
+        </h2>
+        <p class="section-sub">
+          Nuestros partners son empresas profesionales que, además de usar Vivook en sus condominios, han invertido tiempo y experiencia en desarrollar las mejores prácticas en administración inmobiliaria.
+        </p>
+      </header>
+
+      <div class="features__grid reveal-group">
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(7,161,194,.12); color: var(--blue);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>
+          </div>
+          <h3 class="feature-card__title">Experiencia comprobada</h3>
+          <p class="feature-card__desc">
+            Cada partner tiene años de operación con Vivook en múltiples condominios, dominando todas las funcionalidades de la plataforma.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(101,176,59,.12); color: var(--green);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#users-add"/></svg>
+          </div>
+          <h3 class="feature-card__title">Mejores prácticas</h3>
+          <p class="feature-card__desc">
+            Han desarrollado procesos de comunicación, organización y administración que se traducen en condominios bien gestionados.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--svg" style="--icon-bg: rgba(242,162,62,.12); color: var(--orange);">
+            <svg aria-hidden="true"><use href="assets/icons.svg#target"/></svg>
+          </div>
+          <h3 class="feature-card__title">Cobertura regional</h3>
+          <p class="feature-card__desc">
+            Presencia en 7 países de LATAM, conociendo el marco legal y las necesidades específicas de cada región.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 5. CONVIÉRTETE EN PARTNER (CTA final) ============== -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-final__panel reveal">
+        <h2 class="cta-final__title">
+          ¿Eres administradora?<br />Conviértete en partner
+        </h2>
+        <p class="cta-final__sub">
+          Si tu empresa administra condominios profesionalmente y usas Vivook, súmate a la red de partners certificados. Acompañamos tu crecimiento con visibilidad, capacitación y herramientas exclusivas.
+        </p>
+
+        <div class="cta-final__actions">
+          <a href="contacto.html" class="btn btn--primary">Quiero ser partner →</a>
+          <a href="capacitaciones.html" class="btn btn--white">Conocer capacitaciones</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MODAL DE PARTNER ============== -->
+  <div class="partner-modal" id="partner-modal" hidden role="dialog" aria-modal="true" aria-labelledby="partner-modal-name">
+    <div class="partner-modal__backdrop" data-modal-close></div>
+    <div class="partner-modal__panel">
+      <button type="button" class="partner-modal__close" data-modal-close aria-label="Cerrar">
+        <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
+      </button>
+
+      <div class="partner-modal__head">
+        <div class="partner-modal__logo">
+          <img src="" alt="" id="partner-modal-logo" />
+        </div>
+        <div>
+          <h3 class="partner-modal__name" id="partner-modal-name">—</h3>
+          <p class="partner-modal__meta">
+            <span class="partner-modal__country" id="partner-modal-country">—</span>
+            <span class="partner-modal__city-sep" hidden> · </span>
+            <span class="partner-modal__city" id="partner-modal-city"></span>
+          </p>
+          <p class="partner-modal__contact-person" id="partner-modal-contact" hidden></p>
+        </div>
+      </div>
+
+      <ul class="partner-modal__contacts" id="partner-modal-contacts">
+        <!-- Populated by JS -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer" aria-label="Vivook">
+          <img src="assets/logo-web.png" alt="Vivook" />
+        </a>
+        <ul class="footer__contact">
+          <li>📍 CDMX, México</li>
+          <li>📧 ventas@vivook.com</li>
+          <li>📞 +52 55 1234 5678</li>
+        </ul>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/fb.png" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="" /></a>
+          <a href="#" aria-label="TikTok"><img src="assets/tiktok.png" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/youtube.png" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="index.html#administrativo">Administración</a></li>
+          <li><a href="index.html#comunicacion">Comunicación</a></li>
+          <li><a href="index.html#seguridad">Seguridad</a></li>
+          <li><a href="precios.html">Precios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a href="index.html#producto">Administradores</a></li>
+          <li><a href="index.html#producto">Residentes</a></li>
+          <li><a href="index.html#producto">Mesa Directiva</a></li>
+          <li><a href="academia.html">Academia Vivook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__legal">
+      <p>© 2026 Vivook. Todos los derechos reservados.</p>
+      <p><a href="#">Política de Privacidad</a> · <a href="#">Términos de Servicio</a></p>
+    </div>
+  </footer>
+
+  <!-- CTA flotante lateral -->
+  <a href="contacto.html" class="sticky-cta" aria-label="Conviértete en partner">
+    Conviértete en partner
+    <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
+  </a>
+
+  <script src="script.js?v=40" defer></script>
+</body>
+</html>
