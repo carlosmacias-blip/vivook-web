@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Qué nos hace diferentes? · Vivook · Más que un software de condominios</title>
+  <meta name="description" content="No somos solo software: somos un equipo que acompaña a más de 3,000 administradores en 13 países. Soporte real, capacitación constante y una plataforma todo en uno." />
+  <meta property="og:title" content="¿Qué nos hace diferentes? · Vivook" />
+  <meta property="og:description" content="Plataforma todo en uno, soporte por personas reales y acompañamiento desde el primer día. Descubre por qué los administradores eligen Vivook." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=51" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Vivook">
+        <img src="assets/logo-blanco.png" alt="Vivook" class="logo__img logo__img--light" />
+        <img src="assets/logo.png" alt="" aria-hidden="true" class="logo__img logo__img--dark" />
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Principal">
+        <button class="nav__close" aria-label="Cerrar menú">
+          <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
+        </button>
+
+        <div class="nav-item has-dropdown">
+          <a href="caracteristicas.html" class="nav-trigger">
+            Características
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="administrativo.html" role="menuitem">Administrativo</a>
+            <a href="seguridad.html"      role="menuitem">Seguridad</a>
+            <a href="comunicacion.html"   role="menuitem">Comunicación</a>
+            <a href="diferenciador.html"  role="menuitem" aria-current="page">¿Qué nos hace diferentes?</a>
+            <a href="index.html#facturacion"              role="menuitem">Facturación</a>
+            <a href="index.html#pagos"                    role="menuitem">Pagos en línea</a>
+          </div>
+        </div>
+
+        <a href="precios.html">Precios</a>
+        <a href="partners.html">Partners</a>
+
+        <div class="nav-item has-dropdown">
+          <a href="capacitaciones.html" class="nav-trigger">
+            Aprende
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="capacitaciones.html" role="menuitem">Capacitaciones</a>
+            <a href="academia.html"       role="menuitem">Academia Vivook</a>
+          </div>
+        </div>
+
+        <a href="contacto.html">Contáctanos</a>
+        <a href="#blog">Blog</a>
+      </nav>
+
+      <a href="#login" class="btn btn--primary btn--sm">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- ============== 1. HERO (sin imagen) ============== -->
+  <section class="diff-hero">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">PLATAFORMA TODO EN UNO</span>
+        <h1 class="section-title">
+          Más que un software,<br />
+          <span class="text-blue">un equipo que te respalda</span>
+        </h1>
+        <p class="section-sub">
+          Vivook reúne administración, comunicación, seguridad, pagos y app móvil en una sola plataforma intuitiva. Pero lo que de verdad nos hace diferentes es lo que hay detrás: personas reales acompañando a cada administrador.
+        </p>
+        <div class="diff-hero__actions">
+          <a href="#trial" class="btn btn--primary">
+            Comenzar prueba gratis
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="contacto.html" class="btn btn--outline">Hablar con un asesor</a>
+        </div>
+        <ul class="diff-hero__bullets">
+          <li>✓ Líder en el mercado</li>
+          <li>✓ +3,000 condominios</li>
+          <li>✓ 13 países</li>
+        </ul>
+      </header>
+    </div>
+  </section>
+
+  <!-- ============== 2. UNA PLATAFORMA · 9 FUNCIONALIDADES ============== -->
+  <section class="diff-features">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Una plataforma. <span class="text-blue">Todo lo que necesitas.</span>
+        </h2>
+        <p class="section-sub">
+          Vivook integra todas las herramientas que un administrador de condominios necesita para operar eficientemente día a día.
+        </p>
+      </header>
+
+      <div class="diff-features__grid reveal-group">
+
+        <article class="diff-feature diff-feature--blue reveal">
+          <div class="diff-feature__icon"><svg aria-hidden="true"><use href="assets/icons.svg#chat"/></svg></div>
+          <h3 class="diff-feature__title">Comunicación</h3>
+          <p class="diff-feature__desc">Canal oficial para toda la comunidad. Sin grupos de WhatsApp ni información perdida.</p>
+          <ul class="diff-feature__list">
+            <li>Avisos con confirmación de lectura</li>
+            <li>Encuestas y votaciones digitales</li>
+            <li>Mensajería y novedades</li>
+            <li>Calendario de eventos y obras</li>
+          </ul>
+        </article>
+
+        <article class="diff-feature diff-feature--green reveal">
+          <div class="diff-feature__icon"><svg aria-hidden="true"><use href="assets/icons.svg#bars-chart"/></svg></div>
+          <h3 class="diff-feature__title">Control financiero</h3>
+          <p class="diff-feature__desc">Gestión completa de las finanzas del condominio con reportes automáticos.</p>
+          <ul class="diff-feature__list">
+            <li>Cuotas, ingresos y egresos</li>
+            <li>Adeudos y recargos automáticos</li>
+            <li>Presupuesto vs. real</li>
+            <li>Reportes en tiempo real</li>
+          </ul>
+        </article>
+
+        <article class="diff-feature diff-feature--red reveal">
+          <div class="diff-feature__icon"><svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg></div>
+          <h3 class="diff-feature__title">Seguridad y accesos</h3>
+          <p class="diff-feature__desc">Bitácora digital de entradas y salidas. Sin cuadernos, sin información perdida.</p>
+          <ul class="diff-feature__list">
+            <li>Control de accesos con QR</li>
+            <li>Registro de visitas y proveedores</li>
+            <li>Control de paquetería</li>
+            <li>Bitácora de incidencias</li>
+          </ul>
+        </article>
+
+        <article class="diff-feature diff-feature--orange reveal">
+          <div class="diff-feature__icon"><svg aria-hidden="true"><use href="assets/icons.svg#intercom"/></svg></div>
+          <h3 class="diff-feature__title">Help Desk operativo</h3>
+          <p class="diff-feature__desc">Gestión centralizada de tickets y solicitudes, con clasificación por urgencia.</p>
+          <ul class="diff-feature__list">
+            <li>Clasificación urgente / alta / baja</li>
+            <li>Asignación a personal</li>
+            <li>Seguimiento y cierre</li>
+          </ul>
+        </article>
+
+        <article class="diff-feature diff-feature--blue reveal">
+          <div class="diff-feature__icon"><svg aria-hidden="true"><use href="assets/icons.svg#calendar-check"/></svg></div>
+          <h3 class="diff-feature__title">Reserva de amenidades</h3>
+          <p class="diff-feature__desc">Sistema de reservación de áreas comunes: alberca, gym, salón y más.</p>
+          <ul class="diff-feature__list">
+            <li>Configuración por amenidad</li>
+            <li>Restricciones y límites de uso</li>
+            <li>Aprobación automática o manual</li>
+          </ul>
+        </article>
+
+        <article class="diff-feature diff-feature--green reveal">
+          <div class="diff-feature__icon"><svg aria-hidden="true"><use href="assets/icons.svg#bank-card-h"/></svg></div>
+          <h3 class="diff-feature__title">Pagos en línea</h3>
+          <p class="diff-feature__desc">Acepta pagos con tarjeta vía Stripe o transferencias SPEI referenciadas.</p>
+          <ul class="diff-feature__list">
+            <li>Tarjeta de crédito y débito (Stripe)</li>
+            <li>Transferencias referenciadas (SPEI)</li>
+            <li>Conciliación automática</li>
+          </ul>
+        </article>
+
+        <article class="diff-feature diff-feature--red reveal">
+          <div class="diff-feature__icon"><svg aria-hidden="true"><use href="assets/icons.svg#check-square"/></svg></div>
+          <h3 class="diff-feature__title">Mantenimiento</h3>
+          <p class="diff-feature__desc">Programa y registra el mantenimiento preventivo y correctivo de tu condominio.</p>
+          <ul class="diff-feature__list">
+            <li>Calendarización de servicios</li>
+            <li>Control de incidencias</li>
+            <li>Historial del personal</li>
+          </ul>
+        </article>
+
+        <article class="diff-feature diff-feature--orange reveal">
+          <div class="diff-feature__icon"><svg aria-hidden="true"><use href="assets/icons.svg#grid-2x1"/></svg></div>
+          <h3 class="diff-feature__title">App Móvil</h3>
+          <p class="diff-feature__desc">iOS, Android y AppGallery. Residentes y administración siempre conectados.</p>
+          <ul class="diff-feature__list">
+            <li>Notificaciones push en tiempo real</li>
+            <li>Pago de cuotas desde la app</li>
+            <li>Códigos QR para visitantes</li>
+          </ul>
+        </article>
+
+        <article class="diff-feature diff-feature--blue reveal">
+          <div class="diff-feature__icon"><svg aria-hidden="true"><use href="assets/icons.svg#receipt"/></svg></div>
+          <h3 class="diff-feature__title">Estados de cuenta</h3>
+          <p class="diff-feature__desc">Transparencia total para residentes: cada vivienda con su estado de cuenta completo.</p>
+          <ul class="diff-feature__list">
+            <li>Estado de cuenta por vivienda</li>
+            <li>Historial de pagos y adeudos</li>
+            <li>Comprobantes de pago digitales</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 3. SOPORTE · UNA PERSONA REAL ============== -->
+  <section class="diff-support">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">SOPORTE TÉCNICO</span>
+        <h2 class="section-title">
+          Una persona real te responde.<br />
+          <span class="text-blue">Siempre.</span>
+        </h2>
+        <p class="section-sub">
+          No, no es un bot que se repite, ni respuestas genéricas. Nuestro equipo de soporte está disponible en 4 canales para resolver cualquier duda al instante.
+        </p>
+      </header>
+
+      <div class="channels-grid channels-grid--4 reveal-group">
+
+        <article class="channel channel--chat reveal">
+          <div class="channel__icon"><svg aria-hidden="true"><use href="assets/icons.svg#message-circle"/></svg></div>
+          <span class="channel__time">En horario laboral</span>
+          <h3 class="channel__title">Chat en vivo</h3>
+          <p class="channel__desc">Soporte directo desde el panel de Vivook, sin salir de tu sesión de trabajo.</p>
+          <a href="#login" class="channel__btn">Abrir chat</a>
+        </article>
+
+        <article class="channel channel--whatsapp reveal">
+          <div class="channel__icon"><svg aria-hidden="true"><use href="assets/icons.svg#whatsapp"/></svg></div>
+          <span class="channel__time">Respuesta en ~5 min</span>
+          <h3 class="channel__title">WhatsApp</h3>
+          <p class="channel__desc">El canal más rápido. Mándanos un mensaje y respondemos en minutos.</p>
+          <a href="https://wa.me/525512345678?text=Hola%20Vivook%2C%20me%20interesa%20conocer%20más" target="_blank" rel="noopener" class="channel__btn">
+            <svg aria-hidden="true"><use href="assets/icons.svg#whatsapp"/></svg>
+            Abrir WhatsApp
+          </a>
+        </article>
+
+        <article class="channel channel--call reveal">
+          <div class="channel__icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <span class="channel__time">Lun a Vie · 9–19h</span>
+          <h3 class="channel__title">Teléfono</h3>
+          <p class="channel__desc">¿Prefieres una llamada? Marca directo y te canalizamos con quien corresponda.</p>
+          <a href="tel:+525512345678" class="channel__btn">+52 55 1234 5678</a>
+        </article>
+
+        <article class="channel channel--email reveal">
+          <div class="channel__icon"><svg aria-hidden="true"><use href="assets/icons.svg#mail"/></svg></div>
+          <span class="channel__time">Respuesta &lt; 24 h</span>
+          <h3 class="channel__title">Email y videollamada</h3>
+          <p class="channel__desc">Escríbenos los detalles de tu condominio y agendamos una sesión 1:1 si la necesitas.</p>
+          <a href="mailto:soporte@vivook.com?subject=Soporte%20Vivook" class="channel__btn">
+            <svg aria-hidden="true"><use href="assets/icons.svg#mail"/></svg>
+            Escribir correo
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 4. APRENDE · CAPACITACIÓN ============== -->
+  <section class="diff-learn">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill pill--with-dot"><span class="pill__dot" aria-hidden="true"></span>CANAL DE YOUTUBE · VIVOOK</span>
+        <h2 class="section-title">
+          Aprende a sacarle el máximo<br />
+          <span class="text-red">provecho a Vivook</span>
+        </h2>
+        <p class="section-sub">
+          Tutoriales, webinars y casos de uso reales. Todo en español, todo gratis.
+        </p>
+      </header>
+
+      <div class="recorded-grid recorded-grid--3 reveal-group">
+        <a href="https://www.youtube.com/watch?v=EKJriNh_bRY" target="_blank" rel="noopener" class="recorded-card reveal">
+          <div class="recorded-card__thumb">
+            <img src="https://img.youtube.com/vi/EKJriNh_bRY/hqdefault.jpg" alt="Cómo usar la plataforma de Vivook" loading="lazy" />
+            <span class="recorded-card__play" aria-hidden="true">▶</span>
+            <span class="recorded-card__duration">3:28</span>
+          </div>
+          <div class="recorded-card__body">
+            <span class="recorded-card__tag">Residente</span>
+            <h3 class="recorded-card__title">Cómo usar la plataforma de Vivook</h3>
+            <span class="recorded-card__level recorded-card__level--basic">Básico</span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=tIZg93_Gv3g" target="_blank" rel="noopener" class="recorded-card reveal">
+          <div class="recorded-card__thumb">
+            <img src="https://img.youtube.com/vi/tIZg93_Gv3g/hqdefault.jpg" alt="Vivook App" loading="lazy" />
+            <span class="recorded-card__play" aria-hidden="true">▶</span>
+            <span class="recorded-card__duration">10:29</span>
+          </div>
+          <div class="recorded-card__body">
+            <span class="recorded-card__tag">App</span>
+            <h3 class="recorded-card__title">Vivook App</h3>
+            <span class="recorded-card__level recorded-card__level--mid">Intermedio</span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=VMhn30HQCKk" target="_blank" rel="noopener" class="recorded-card reveal">
+          <div class="recorded-card__thumb">
+            <img src="https://img.youtube.com/vi/VMhn30HQCKk/hqdefault.jpg" alt="Solicitudes al administrador" loading="lazy" />
+            <span class="recorded-card__play" aria-hidden="true">▶</span>
+            <span class="recorded-card__duration">1:38</span>
+          </div>
+          <div class="recorded-card__body">
+            <span class="recorded-card__tag">Administrador</span>
+            <h3 class="recorded-card__title">Solicitudes al administrador</h3>
+            <span class="recorded-card__level recorded-card__level--advanced">Avanzado</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="diff-learn__cta">
+        <a href="academia.html" class="btn btn--outline">
+          Ver Academia Vivook
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 5. LO QUE NOS HACE DIFERENTES (oscura) ============== -->
+  <section class="diff-why">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">¿POR QUÉ VIVOOK?</span>
+        <h2 class="section-title">
+          Lo que nos hace<br />
+          <span class="text-orange">verdaderamente diferentes</span>
+        </h2>
+        <p class="section-sub">
+          No somos solo software: somos un equipo detrás de miles de condominios en 13 países de Latinoamérica.
+        </p>
+      </header>
+
+      <div class="diff-why__grid reveal-group">
+        <ul class="diff-why__points reveal">
+          <li class="diff-point diff-point--blue">
+            <span class="diff-point__icon"><svg aria-hidden="true"><use href="assets/icons.svg#users-add"/></svg></span>
+            <div>
+              <h3 class="diff-point__title">En los zapatos del administrador</h3>
+              <p class="diff-point__desc">Diseñado con administradores en mente. Cada herramienta resuelve un problema real de la operación.</p>
+            </div>
+          </li>
+          <li class="diff-point diff-point--green">
+            <span class="diff-point__icon"><svg aria-hidden="true"><use href="assets/icons.svg#calendar-check"/></svg></span>
+            <div>
+              <h3 class="diff-point__title">Te capacitamos desde el primer día</h3>
+              <p class="diff-point__desc">Acompañamiento uno a uno, webinars y tutoriales en español. No te dejamos solo después de la venta.</p>
+            </div>
+          </li>
+          <li class="diff-point diff-point--red">
+            <span class="diff-point__icon"><svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg></span>
+            <div>
+              <h3 class="diff-point__title">Prueba sin riesgo</h3>
+              <p class="diff-point__desc">Sin tarjeta de crédito, sin compromisos. Configura tu condominio y prueba todo el poder de Vivook.</p>
+            </div>
+          </li>
+          <li class="diff-point diff-point--orange">
+            <span class="diff-point__icon"><svg aria-hidden="true"><use href="assets/icons.svg#trending-up"/></svg></span>
+            <div>
+              <h3 class="diff-point__title">Siempre mejorando</h3>
+              <p class="diff-point__desc">Equipo de desarrollo dedicado. Actualizamos y escuchamos a la comunidad en cada nueva versión.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="diff-why__stats reveal">
+          <div class="diff-stat diff-stat--blue">
+            <span class="diff-stat__icon"><svg aria-hidden="true"><use href="assets/icons.svg#intercom"/></svg></span>
+            <div class="diff-stat__num">5 medios</div>
+            <div class="diff-stat__label">de soporte: chat, correo, WhatsApp, teléfono y videollamada</div>
+          </div>
+          <div class="diff-stat diff-stat--green">
+            <span class="diff-stat__icon"><svg aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg></span>
+            <div class="diff-stat__num">13 países</div>
+            <div class="diff-stat__label">de cobertura: México, Colombia, Chile, Ecuador, Guatemala y más</div>
+          </div>
+          <div class="diff-stat diff-stat--orange">
+            <span class="diff-stat__icon"><svg aria-hidden="true"><use href="assets/icons.svg#clock"/></svg></span>
+            <div class="diff-stat__num">+10 años</div>
+            <div class="diff-stat__label">en el mercado: +3,000 condominios confían en Vivook a diario</div>
+          </div>
+          <div class="diff-stat diff-stat--red">
+            <span class="diff-stat__icon"><svg aria-hidden="true"><use href="assets/icons.svg#shield"/></svg></span>
+            <div class="diff-stat__num">Seguridad</div>
+            <div class="diff-stat__label">de tu información: respaldos automáticos y cumplimiento de normativa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 6. DESCUBRE CADA MÓDULO ============== -->
+  <section class="diff-modules">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">EXPLORA VIVOOK</span>
+        <h2 class="section-title">
+          Descubre cada módulo <span class="text-blue">en detalle</span>
+        </h2>
+        <p class="section-sub">
+          Cada módulo tiene su propia página con todas las funcionalidades, mockups y casos de uso.
+        </p>
+      </header>
+
+      <div class="diff-modules__grid reveal-group">
+        <a href="comunicacion.html" class="diff-module diff-module--comm reveal">
+          <div class="diff-module__img"><img src="assets/mac1.png" alt="Módulo de Comunicación de Vivook" loading="lazy" /></div>
+          <h3 class="diff-module__title">Comunicación</h3>
+          <p class="diff-module__desc">Avisos, votaciones, objetos perdidos, calendario de eventos y mensajería directa.</p>
+          <span class="diff-module__cta">Ver módulo →</span>
+        </a>
+
+        <a href="administrativo.html" class="diff-module diff-module--admin reveal">
+          <div class="diff-module__img"><img src="assets/administracion-web-app.png" alt="Módulo Administrativo de Vivook" loading="lazy" /></div>
+          <h3 class="diff-module__title">Administrativo</h3>
+          <p class="diff-module__desc">Control financiero completo: cuotas, adeudos, gastos, presupuesto y reportes automáticos.</p>
+          <span class="diff-module__cta">Ver módulo →</span>
+        </a>
+
+        <a href="seguridad.html" class="diff-module diff-module--security reveal">
+          <div class="diff-module__img"><img src="assets/seguridad-app.png" alt="Módulo de Seguridad de Vivook" loading="lazy" /></div>
+          <h3 class="diff-module__title">Seguridad</h3>
+          <p class="diff-module__desc">Control de accesos en tiempo real, bitácora digital, visitas y gestión de incidentes.</p>
+          <span class="diff-module__cta">Ver módulo →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 7. CTA FINAL ============== -->
+  <section class="features-cta">
+    <div class="container">
+      <div class="features-cta__panel reveal">
+        <h2 class="features-cta__title">
+          ¿Listo para simplificar la<br />
+          administración de tu condominio?
+        </h2>
+        <p class="features-cta__sub">
+          Prueba Vivook sin costo, sin tarjeta de crédito y con soporte en español desde el primer día.
+        </p>
+        <div class="features-cta__actions">
+          <a href="#trial" class="btn btn--primary">
+            Comenzar prueba gratis
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="contacto.html" class="btn btn--white">Hablar con un asesor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer" aria-label="Vivook">
+          <img src="assets/logo-web.png" alt="Vivook" />
+        </a>
+        <ul class="footer__contact">
+          <li>📍 CDMX, México</li>
+          <li>📧 ventas@vivook.com</li>
+          <li>📞 +52 55 1234 5678</li>
+        </ul>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/fb.png" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="" /></a>
+          <a href="#" aria-label="TikTok"><img src="assets/tiktok.png" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/youtube.png" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="administrativo.html">Administración</a></li>
+          <li><a href="comunicacion.html">Comunicación</a></li>
+          <li><a href="seguridad.html">Seguridad</a></li>
+          <li><a href="precios.html">Precios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a href="index.html#producto">Administradores</a></li>
+          <li><a href="index.html#producto">Residentes</a></li>
+          <li><a href="index.html#producto">Mesa Directiva</a></li>
+          <li><a href="academia.html">Academia Vivook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__legal">
+      <p>© 2026 Vivook. Todos los derechos reservados.</p>
+      <p><a href="#">Política de Privacidad</a> · <a href="#">Términos de Servicio</a></p>
+    </div>
+  </footer>
+
+  <!-- CTA flotante lateral -->
+  <a href="#trial" class="sticky-cta" aria-label="Prueba 15 días gratis">
+    Prueba 15 días gratis
+    <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
+  </a>
+
+  <script src="script.js?v=51" defer></script>
+</body>
+</html>
