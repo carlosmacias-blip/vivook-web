@@ -804,7 +804,7 @@ button { font: inherit; cursor: pointer; }
 }
 
 /* ---------- 11. Setup ---------- */
-.setup { padding: 0 0 96px; background: var(--ink-50); }
+.setup { padding: 64px 0 96px; background: var(--ink-50); }
 .setup__panel {
   background: #fff;
   border-radius: var(--radius-lg);
@@ -941,7 +941,7 @@ button { font: inherit; cursor: pointer; }
 .logos__cta { text-align: center; margin-top: 32px; }
 
 /* ---------- 14. CTA final ---------- */
-.cta-final { padding: 0 0 96px; background: #fff; }
+.cta-final { padding: 96px 0; background: #fff; }
 .cta-final__panel {
   background: linear-gradient(135deg, #07A1C2 0%, #07697D 55%, #0A3D4F 100%);
   color: #fff;
@@ -3944,7 +3944,7 @@ body.partner-modal-open {
 
 /* ---------- CTA final con gradiente ---------- */
 .features-cta {
-  padding: 0 0 96px;
+  padding: 64px 0 96px;
   background: #fff;
 }
 .features-cta__panel {
@@ -4007,4 +4007,210 @@ body.partner-modal-open {
   .features-cta__panel { padding: 48px 28px; border-radius: var(--radius-lg); }
   .features-cta__actions { flex-direction: column; }
   .features-cta__actions .btn { width: 100%; }
+}
+
+/* ==================================================================
+   35. PÁGINA DE COMUNICACIÓN (módulo)
+================================================================== */
+
+/* ---------- Hero split de módulo ---------- */
+.modulo-hero {
+  position: relative;
+  padding: 140px 0 72px;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--ink-50) 0%, #fff 100%);
+}
+.modulo-hero__bg {
+  display: none;
+}
+.modulo-hero__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+.modulo-hero__content .section-title {
+  text-align: left;
+  font-size: clamp(28px, 3.6vw, 44px);
+}
+.modulo-hero__content .section-sub {
+  text-align: left;
+  max-width: 520px;
+  margin-top: 16px;
+}
+.modulo-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.modulo-hero__mock {
+  display: grid;
+  place-items: center;
+}
+.modulo-hero__img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 60px -20px rgba(10, 61, 79, .25), 0 8px 16px -8px rgba(10, 61, 79, .08);
+}
+
+/* ---------- Funcionalidades grid (11 cards) ---------- */
+.funcs {
+  padding: 96px 0;
+  background: #fff;
+}
+.funcs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.func-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--ink-200);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  --fc-color: var(--blue);
+  --fc-bg: rgba(7, 161, 194, .12);
+}
+.func-card--blue   { --fc-color: var(--blue);   --fc-bg: rgba(7, 161, 194, .12); }
+.func-card--orange { --fc-color: var(--orange); --fc-bg: rgba(242, 162, 62, .14); }
+.func-card--green  { --fc-color: var(--green);  --fc-bg: rgba(101, 176, 59, .14); }
+.func-card--red    { --fc-color: var(--red);    --fc-bg: rgba(228, 70, 52, .12); }
+.func-card--mid    { --fc-color: var(--mid);    --fc-bg: rgba(7, 105, 125, .12); }
+.func-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--fc-color);
+  box-shadow: 0 20px 40px -16px color-mix(in srgb, var(--fc-color) 25%, transparent);
+}
+.func-card__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--fc-bg);
+  color: var(--fc-color);
+  margin-bottom: 16px;
+}
+.func-card__icon svg {
+  width: 22px;
+  height: 22px;
+}
+.func-card__title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  color: var(--dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.func-card__desc {
+  font-size: 13.5px;
+  color: var(--ink-500);
+  line-height: 1.55;
+}
+
+/* ---------- Explora otros módulos ---------- */
+.other-modules {
+  padding: 96px 0;
+  background: var(--ink-50);
+}
+.other-modules__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.other-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--ink-200);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.other-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-color, var(--blue));
+  box-shadow: 0 20px 40px -16px color-mix(in srgb, var(--card-color, var(--blue)) 28%, transparent);
+}
+.other-card__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--card-color) 12%, transparent);
+  color: var(--card-color);
+  margin-bottom: 18px;
+}
+.other-card__icon svg {
+  width: 24px;
+  height: 24px;
+}
+.other-card__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.other-card__desc {
+  font-size: 13.5px;
+  color: var(--ink-500);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex: 1;
+}
+.other-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--card-color);
+  transition: gap .2s ease;
+}
+.other-card:hover .other-card__link { gap: 10px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .modulo-hero {
+    padding: 120px 0 48px;
+  }
+  .modulo-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .modulo-hero__content .section-title,
+  .modulo-hero__content .section-sub {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modulo-hero__actions {
+    justify-content: center;
+  }
+
+  .funcs__grid { grid-template-columns: repeat(2, 1fr); }
+  .other-modules__grid { grid-template-columns: 1fr; max-width: 480px; }
+}
+@media (max-width: 560px) {
+  .funcs__grid { grid-template-columns: 1fr; }
+  .modulo-hero__actions { flex-direction: column; align-items: stretch; }
+  .modulo-hero__actions .btn { width: 100%; }
 }
