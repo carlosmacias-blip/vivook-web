@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facturación CFDI · Vivook · Factura las cuotas de tu condominio ante el SAT</title>
+  <meta name="description" content="Genera CFDIs timbrados y válidos ante el SAT para las cuotas de tus residentes, directo desde Vivook. Sin contratar otro sistema de facturación." />
+  <meta property="og:title" content="Facturación CFDI · Vivook" />
+  <meta property="og:description" content="Emite facturas electrónicas válidas ante el SAT para las cuotas condominales, sin salir de Vivook. Envío automático en PDF y XML." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=52" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Vivook">
+        <img src="assets/logo-blanco.png" alt="Vivook" class="logo__img logo__img--light" />
+        <img src="assets/logo.png" alt="" aria-hidden="true" class="logo__img logo__img--dark" />
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Principal">
+        <button class="nav__close" aria-label="Cerrar menú">
+          <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
+        </button>
+
+        <div class="nav-item has-dropdown">
+          <a href="caracteristicas.html" class="nav-trigger">
+            Características
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="administrativo.html" role="menuitem">Administrativo</a>
+            <a href="seguridad.html"      role="menuitem">Seguridad</a>
+            <a href="comunicacion.html"   role="menuitem">Comunicación</a>
+            <a href="diferenciador.html"  role="menuitem">¿Qué nos hace diferentes?</a>
+            <a href="facturacion.html"    role="menuitem" aria-current="page">Facturación</a>
+            <a href="index.html#pagos"    role="menuitem">Pagos en línea</a>
+          </div>
+        </div>
+
+        <a href="precios.html">Precios</a>
+        <a href="partners.html">Partners</a>
+
+        <div class="nav-item has-dropdown">
+          <a href="capacitaciones.html" class="nav-trigger">
+            Aprende
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="capacitaciones.html" role="menuitem">Capacitaciones</a>
+            <a href="academia.html"       role="menuitem">Academia Vivook</a>
+          </div>
+        </div>
+
+        <a href="contacto.html">Contáctanos</a>
+        <a href="#blog">Blog</a>
+      </nav>
+
+      <a href="#login" class="btn btn--primary btn--sm">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- ============== 1. HERO SPLIT (con mock de CFDI) ============== -->
+  <section class="modulo-hero">
+    <div class="container modulo-hero__inner">
+
+      <div class="modulo-hero__content reveal">
+        <span class="pill pill--with-dot"><span class="pill__dot" aria-hidden="true"></span>FACTURACIÓN CFDI 4.0</span>
+        <h1 class="section-title">
+          Factura las cuotas de tu<br />
+          condominio <span class="text-blue">ante el SAT</span>
+        </h1>
+        <p class="section-sub">
+          Genera CFDIs timbrados y válidos para los pagos de tus residentes, directo desde Vivook. Sin hojas de cálculo y sin contratar otro sistema de facturación.
+        </p>
+        <div class="modulo-hero__actions">
+          <a href="#trial" class="btn btn--primary">
+            Comenzar prueba gratis
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="contacto.html" class="btn btn--outline">Hablar con un asesor</a>
+        </div>
+      </div>
+
+      <div class="modulo-hero__mock reveal">
+        <div class="invoice" role="img" aria-label="Ejemplo de un CFDI generado en Vivook">
+          <div class="invoice__head">
+            <span class="invoice__brand">Vivook <strong>Invoice</strong></span>
+            <span class="invoice__badge">
+              <svg aria-hidden="true"><use href="assets/icons.svg#check-square"/></svg>
+              CFDI Timbrado
+            </span>
+          </div>
+          <div class="invoice__meta">
+            <span>Folio: VIV-2026-00142</span>
+            <span>Fecha: 03/04/2026</span>
+          </div>
+          <dl class="invoice__parties">
+            <div><dt>Emisor</dt><dd>Condominio Residencial del Valle A.C.</dd></div>
+            <div><dt>RFC Emisor</dt><dd>CRV210315XX0</dd></div>
+            <div><dt>Receptor</dt><dd>Juan Pérez López</dd></div>
+            <div><dt>RFC Receptor</dt><dd>PELJ850101XX1</dd></div>
+          </dl>
+          <div class="invoice__items">
+            <div class="invoice__row">
+              <span>Cuota de mantenimiento — Abril 2026</span>
+              <span>$2,500.00</span>
+            </div>
+            <div class="invoice__row">
+              <span>IVA (16%)</span>
+              <span>$400.00</span>
+            </div>
+          </div>
+          <div class="invoice__total">
+            <span>Total</span>
+            <span>$2,900.00 MXN</span>
+          </div>
+          <div class="invoice__uuid">UUID: 3f2a7b8c-9d1e-4f5a-b6c7-d8e9f0a1b2c3</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============== 2. ¿CÓMO FUNCIONA? (panel setup) ============== -->
+  <section class="setup">
+    <div class="container">
+      <div class="setup__panel reveal">
+        <header class="setup__head">
+          <h2 class="setup__title">
+            Facturar nunca fue tan sencillo<br />
+            <span class="text-blue">para un administrador</span>
+          </h2>
+          <p class="setup__sub">
+            Del pago al CFDI timbrado en cuatro pasos, todo dentro de Vivook.
+          </p>
+        </header>
+
+        <ol class="setup__steps">
+          <li class="setup-step setup-step--1">
+            <div class="setup-step__num">01</div>
+            <div class="setup-step__name">Registra tus datos fiscales</div>
+            <p class="setup-step__desc">Carga el RFC y los certificados CSD del condominio una sola vez.</p>
+          </li>
+          <li class="setup-step setup-step--2">
+            <div class="setup-step__num">02</div>
+            <div class="setup-step__name">Selecciona las cuotas</div>
+            <p class="setup-step__desc">Elige los pagos recibidos que necesitan factura.</p>
+          </li>
+          <li class="setup-step setup-step--3">
+            <div class="setup-step__num">03</div>
+            <div class="setup-step__name">Vivook genera el CFDI</div>
+            <p class="setup-step__desc">Se timbra una factura electrónica válida ante el SAT.</p>
+          </li>
+          <li class="setup-step setup-step--4">
+            <div class="setup-step__num">04</div>
+            <div class="setup-step__name">Envío automático</div>
+            <p class="setup-step__desc">La factura llega por email al residente en PDF y XML.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 3. BENEFICIOS (grid de 6) ============== -->
+  <section class="funcs">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Cumple con el SAT<br />
+          <span class="text-green">sin complicarte</span>
+        </h2>
+        <p class="section-sub">
+          Toda la facturación electrónica integrada en la plataforma que ya usas para administrar.
+        </p>
+      </header>
+
+      <div class="funcs__grid reveal-group">
+
+        <article class="func-card func-card--green reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg></div>
+          <h3 class="func-card__title">Cumplimiento fiscal automático</h3>
+          <p class="func-card__desc">Facturas válidas ante el SAT, timbradas con un PAC autorizado. Tú no te preocupas por la normativa.</p>
+        </article>
+
+        <article class="func-card func-card--blue reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#mail"/></svg></div>
+          <h3 class="func-card__title">Envío automático por email</h3>
+          <p class="func-card__desc">El residente recibe su factura en PDF y XML al instante, sin que tú muevas un dedo.</p>
+        </article>
+
+        <article class="func-card func-card--orange reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#folder-multi"/></svg></div>
+          <h3 class="func-card__title">Historial completo</h3>
+          <p class="func-card__desc">Consulta y descarga todas las facturas emitidas del condominio desde un solo lugar.</p>
+        </article>
+
+        <article class="func-card func-card--red reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#layers"/></svg></div>
+          <h3 class="func-card__title">Sin software adicional</h3>
+          <p class="func-card__desc">Todo integrado en Vivook. No necesitas contratar ni aprender otro sistema de facturación.</p>
+        </article>
+
+        <article class="func-card func-card--mid reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#receipt"/></svg></div>
+          <h3 class="func-card__title">Facturación masiva</h3>
+          <p class="func-card__desc">Genera facturas para múltiples residentes en un solo clic, al cierre de cada mes.</p>
+        </article>
+
+        <article class="func-card func-card--blue reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#bank-card-h"/></svg></div>
+          <h3 class="func-card__title">Compatible con tus pagos</h3>
+          <p class="func-card__desc">Se integra con Stripe y SPEI para facturar directamente los pagos recibidos en Vivook.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 4. EXPLORA OTROS MÓDULOS ============== -->
+  <section class="diff-modules">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Más que <span class="text-orange">facturación</span>
+        </h2>
+        <p class="section-sub">
+          Vivook integra todo lo que un administrador de condominio necesita en una sola plataforma.
+        </p>
+      </header>
+
+      <div class="diff-modules__grid reveal-group">
+
+        <a href="administrativo.html" class="diff-module diff-module--admin reveal">
+          <div class="diff-module__img"><img src="assets/administracion-web-app.png" alt="Módulo Administrativo de Vivook" loading="lazy" /></div>
+          <h3 class="diff-module__title">Administrativo</h3>
+          <p class="diff-module__desc">Cuotas, estados de cuenta, gastos y reportes automáticos en un solo panel financiero.</p>
+          <span class="diff-module__cta">Ver módulo →</span>
+        </a>
+
+        <a href="index.html#pagos" class="diff-module reveal" style="--accent: var(--red); --accent-bg: rgba(228, 70, 52, .12);">
+          <div class="diff-module__img"><img src="assets/pagos-en-linea-anim.png" alt="Módulo de Pagos en línea de Vivook" loading="lazy" /></div>
+          <h3 class="diff-module__title">Pagos en línea</h3>
+          <p class="diff-module__desc">Tus residentes pagan con tarjeta o transferencia. Tú recibes al instante con conciliación automática.</p>
+          <span class="diff-module__cta">Ver módulo →</span>
+        </a>
+
+        <a href="comunicacion.html" class="diff-module diff-module--comm reveal">
+          <div class="diff-module__img"><img src="assets/mac1.png" alt="Módulo de Comunicación de Vivook" loading="lazy" /></div>
+          <h3 class="diff-module__title">Comunicación</h3>
+          <p class="diff-module__desc">Avisos, votaciones, eventos y mensajería directa para conectar a toda tu comunidad.</p>
+          <span class="diff-module__cta">Ver módulo →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 5. ¿QUÉ NECESITAS PARA ACTIVAR? ============== -->
+  <section class="activate">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          ¿Qué necesitas <span class="text-blue">para activar?</span>
+        </h2>
+        <p class="section-sub">
+          Reúne estos datos fiscales del condominio y nuestro equipo te ayuda a dejar la facturación lista.
+        </p>
+      </header>
+
+      <ul class="activate__list reveal">
+        <li class="activate__item">
+          <span class="activate__icon"><svg aria-hidden="true"><use href="assets/icons.svg#document"/></svg></span>
+          RFC del condominio o de la empresa administradora
+        </li>
+        <li class="activate__item">
+          <span class="activate__icon"><svg aria-hidden="true"><use href="assets/icons.svg#document-lines"/></svg></span>
+          Certificado de Sello Digital (CSD) vigente — archivo .cer
+        </li>
+        <li class="activate__item">
+          <span class="activate__icon"><svg aria-hidden="true"><use href="assets/icons.svg#document-blank"/></svg></span>
+          Llave privada del CSD — archivo .key
+        </li>
+        <li class="activate__item">
+          <span class="activate__icon"><svg aria-hidden="true"><use href="assets/icons.svg#shield"/></svg></span>
+          Contraseña de la llave privada
+        </li>
+        <li class="activate__item">
+          <span class="activate__icon"><svg aria-hidden="true"><use href="assets/icons.svg#receipt"/></svg></span>
+          Régimen fiscal y código postal del emisor
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============== 6. CTA FINAL ============== -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-final__panel reveal">
+        <h2 class="cta-final__title">
+          ¿Listo para facturar<br />
+          desde Vivook?
+        </h2>
+        <p class="cta-final__sub">
+          Activa Vivook Invoice y cumple con tus obligaciones fiscales sin esfuerzo, con soporte en español.
+        </p>
+
+        <div class="cta-final__actions">
+          <a href="#trial" class="btn btn--primary">Comenzar prueba gratis →</a>
+          <a href="contacto.html" class="btn btn--white">Hablar con un asesor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer" aria-label="Vivook">
+          <img src="assets/logo-web.png" alt="Vivook" />
+        </a>
+        <ul class="footer__contact">
+          <li>📍 CDMX, México</li>
+          <li>📧 ventas@vivook.com</li>
+          <li>📞 +52 55 1234 5678</li>
+        </ul>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/fb.png" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="" /></a>
+          <a href="#" aria-label="TikTok"><img src="assets/tiktok.png" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/youtube.png" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="administrativo.html">Administración</a></li>
+          <li><a href="comunicacion.html">Comunicación</a></li>
+          <li><a href="seguridad.html">Seguridad</a></li>
+          <li><a href="precios.html">Precios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a href="index.html#producto">Administradores</a></li>
+          <li><a href="index.html#producto">Residentes</a></li>
+          <li><a href="index.html#producto">Mesa Directiva</a></li>
+          <li><a href="academia.html">Academia Vivook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__legal">
+      <p>© 2026 Vivook. Todos los derechos reservados.</p>
+      <p><a href="#">Política de Privacidad</a> · <a href="#">Términos de Servicio</a></p>
+    </div>
+  </footer>
+
+  <!-- CTA flotante lateral -->
+  <a href="#trial" class="sticky-cta" aria-label="Prueba 15 días gratis">
+    Prueba 15 días gratis
+    <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
+  </a>
+
+  <script src="script.js?v=52" defer></script>
+</body>
+</html>
