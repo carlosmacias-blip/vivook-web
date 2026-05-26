@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagos en línea · Vivook · Cobra las cuotas con tarjeta, OXXO y CLABE</title>
+  <meta name="description" content="Acepta pagos con tarjeta y OXXO (Stripe) o transferencia con CLABE referenciada (STP), o ambos a la vez. Tus residentes pagan desde donde sea y tú recibes al instante con conciliación automática." />
+  <meta property="og:title" content="Pagos en línea · Vivook" />
+  <meta property="og:description" content="Pasarela Stripe y cobro con CLABE referenciada (STP) en una sola plataforma. Actívalos juntos y deja que cada residente pague como prefiera." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=53" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Vivook">
+        <img src="assets/logo-blanco.png" alt="Vivook" class="logo__img logo__img--light" />
+        <img src="assets/logo.png" alt="" aria-hidden="true" class="logo__img logo__img--dark" />
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Principal">
+        <button class="nav__close" aria-label="Cerrar menú">
+          <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
+        </button>
+
+        <div class="nav-item has-dropdown">
+          <a href="caracteristicas.html" class="nav-trigger">
+            Características
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="administrativo.html" role="menuitem">Administrativo</a>
+            <a href="seguridad.html"      role="menuitem">Seguridad</a>
+            <a href="comunicacion.html"   role="menuitem">Comunicación</a>
+            <a href="diferenciador.html"  role="menuitem">¿Qué nos hace diferentes?</a>
+            <a href="facturacion.html"    role="menuitem">Facturación</a>
+            <a href="pagos.html"          role="menuitem" aria-current="page">Pagos en línea</a>
+          </div>
+        </div>
+
+        <a href="precios.html">Precios</a>
+        <a href="partners.html">Partners</a>
+
+        <div class="nav-item has-dropdown">
+          <a href="capacitaciones.html" class="nav-trigger">
+            Aprende
+            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="capacitaciones.html" role="menuitem">Capacitaciones</a>
+            <a href="academia.html"       role="menuitem">Academia Vivook</a>
+          </div>
+        </div>
+
+        <a href="contacto.html">Contáctanos</a>
+        <a href="#blog">Blog</a>
+      </nav>
+
+      <a href="#login" class="btn btn--primary btn--sm">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- ============== 1. HERO (limpio) ============== -->
+  <section class="diff-hero">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="pill">PAGOS EN LÍNEA</span>
+        <h1 class="section-title">
+          Cobra las cuotas de tu<br />
+          condominio <span class="text-blue">en línea</span>
+        </h1>
+        <p class="section-sub">
+          Acepta pagos con tarjeta y OXXO o transferencia con CLABE referenciada. Tus residentes pagan desde donde sea y tú recibes al instante, con conciliación automática.
+        </p>
+        <div class="diff-hero__actions">
+          <a href="#trial" class="btn btn--primary">
+            Comenzar prueba gratis
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="contacto.html" class="btn btn--outline">Hablar con un asesor</a>
+        </div>
+        <ul class="pay-chips" aria-label="Métodos de pago aceptados">
+          <li>Visa</li>
+          <li>Mastercard</li>
+          <li>Tarjeta de débito</li>
+          <li>OXXO</li>
+          <li>Transferencia SPEI</li>
+        </ul>
+      </header>
+    </div>
+  </section>
+
+  <!-- ============== 2. DOS FORMAS DE COBRAR (Stripe + STP) ============== -->
+  <section class="pay-methods">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Dos formas de cobrar,<br />
+          <span class="text-green">una sola plataforma</span>
+        </h2>
+        <p class="section-sub">
+          Activa la pasarela con tarjeta (Stripe), el cobro con CLABE referenciada (STP), o los dos al mismo tiempo.
+        </p>
+      </header>
+
+      <div class="pay-methods__grid reveal-group">
+
+        <article class="pay-method pay-method--stripe reveal">
+          <span class="pay-method__eyebrow">Pasarela Stripe</span>
+          <span class="pay-method__icon"><svg aria-hidden="true"><use href="assets/icons.svg#bank-card-h"/></svg></span>
+          <h3 class="pay-method__title">Tarjeta de crédito, débito y OXXO</h3>
+          <p class="pay-method__desc">
+            Ideal para el residente que quiere pagar al instante. El pago se refleja de inmediato en su estado de cuenta.
+          </p>
+          <ul class="pay-method__list">
+            <li>Pago reflejado de forma inmediata</li>
+            <li>Acepta todas las tarjetas (pesos y dólares)</li>
+            <li>Pago en efectivo vía OXXO</li>
+            <li>Sin costo para la administración: la comisión la cubre quien paga</li>
+          </ul>
+        </article>
+
+        <article class="pay-method pay-method--stp reveal">
+          <span class="pay-method__eyebrow">Transferencia STP</span>
+          <span class="pay-method__icon"><svg aria-hidden="true"><use href="assets/icons.svg#transfer"/></svg></span>
+          <h3 class="pay-method__title">CLABE referenciada por vivienda</h3>
+          <p class="pay-method__desc">
+            Cada vivienda recibe una CLABE única. El residente transfiere desde su banco y Vivook identifica el pago solo.
+          </p>
+          <ul class="pay-method__list">
+            <li>Una CLABE única por vivienda</li>
+            <li>Transferencia SPEI desde cualquier banco</li>
+            <li>Identificación automática del pago</li>
+            <li>Conciliación bancaria en tiempo real</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="pay-combo reveal">
+        <span class="pay-combo__icon"><svg aria-hidden="true"><use href="assets/icons.svg#layers"/></svg></span>
+        <div class="pay-combo__body">
+          <h3 class="pay-combo__title">¿No sabes cuál elegir? Actívalos juntos</h3>
+          <p class="pay-combo__desc">
+            Contrata Stripe y STP al mismo tiempo y deja que cada residente pague como prefiera —tarjeta, OXXO o transferencia—. Tú recibes todo conciliado en un solo lugar.
+          </p>
+        </div>
+        <a href="contacto.html" class="btn btn--primary">Hablar con un asesor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 3. BENEFICIOS ============== -->
+  <section class="funcs">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Adiós a la morosidad y a los<br />
+          <span class="text-blue">pagos no identificados</span>
+        </h2>
+        <p class="section-sub">
+          Al ofrecer alternativas de pago cómodas, los residentes pagan a tiempo y tú dejas de perseguir cobros.
+        </p>
+      </header>
+
+      <div class="funcs__grid reveal-group">
+
+        <article class="func-card func-card--blue reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#clock"/></svg></div>
+          <h3 class="func-card__title">Pago reflejado al instante</h3>
+          <p class="func-card__desc">Cada pago en línea se registra automáticamente en el sistema, sin captura manual.</p>
+        </article>
+
+        <article class="func-card func-card--green reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#check-square"/></svg></div>
+          <h3 class="func-card__title">Identificación automática</h3>
+          <p class="func-card__desc">Evita errores y elimina por completo los pagos no identificados.</p>
+        </article>
+
+        <article class="func-card func-card--orange reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#bars-chart"/></svg></div>
+          <h3 class="func-card__title">Conciliación en tiempo real</h3>
+          <p class="func-card__desc">El sistema concilia los pagos contra el estado de cuenta y refleja el saldo al instante.</p>
+        </article>
+
+        <article class="func-card func-card--red reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#document-lines"/></svg></div>
+          <h3 class="func-card__title">Cobro transparente y trazable</h3>
+          <p class="func-card__desc">Todo pago queda documentado, facilitando auditorías y reportes para el comité o la asamblea.</p>
+        </article>
+
+        <article class="func-card func-card--mid reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg></div>
+          <h3 class="func-card__title">Sin terminales ni costos extra</h3>
+          <p class="func-card__desc">No inviertes en terminales punto de venta ni pagas costos de administración por el servicio.</p>
+        </article>
+
+        <article class="func-card func-card--blue reveal">
+          <div class="func-card__icon"><svg aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg></div>
+          <h3 class="func-card__title">Paga desde donde sea, 24/7</h3>
+          <p class="func-card__desc">Desde web o app, los 365 días del año, con solo unos clics y desde cualquier lugar.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 4. MODELO DE COBRO ============== -->
+  <section class="cobro">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Un modelo de cobro <span class="text-orange">claro y justo</span>
+        </h2>
+        <p class="section-sub">
+          Sin sorpresas ni comisiones ocultas para la administración. Esto es lo que cuesta cobrar con Vivook.
+        </p>
+      </header>
+
+      <div class="cobro__tables reveal">
+        <div class="cobro__card">
+          <table class="cobro__table">
+            <thead>
+              <tr><th scope="col">Concepto</th><th scope="col">Costo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>CLABE referenciada por vivienda (STP)</td><td><strong>$7.00 MXN</strong> + IVA / mes</td></tr>
+              <tr><td>Cobro por transferencia SPEI</td><td><strong>$0.00</strong> para el condominio</td></tr>
+              <tr><td>Activación de STP en Vivook</td><td>Sin costo extra</td></tr>
+              <tr><td>Pasarela Stripe (tarjeta / OXXO)</td><td>Sin costo para la administración</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cobro__card">
+          <p class="cobro__card-title">Ejemplo de costos mensuales con STP</p>
+          <table class="cobro__table">
+            <thead>
+              <tr><th scope="col">Viviendas</th><th scope="col">Sin IVA</th><th scope="col">Con IVA</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>100 viviendas</td><td>$700.00</td><td>$812.00</td></tr>
+              <tr><td>250 viviendas</td><td>$1,750.00</td><td>$2,030.00</td></tr>
+              <tr><td>500 viviendas</td><td>$3,500.00</td><td>$4,060.00</td></tr>
+            </tbody>
+          </table>
+          <p class="cobro__note">El costo de STP se calcula por vivienda. Stripe no genera cargo a la administración.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 5. ¿CÓMO CONTRATARLO? (setup) ============== -->
+  <section class="setup">
+    <div class="container">
+      <div class="setup__panel reveal">
+        <header class="setup__head">
+          <h2 class="setup__title">
+            La activación queda lista<br />
+            <span class="text-blue">en minutos</span>
+          </h2>
+          <p class="setup__sub">
+            Se puede dar de alta una persona física, el residencial o la empresa administradora.
+          </p>
+        </header>
+
+        <ol class="setup__steps">
+          <li class="setup-step setup-step--1">
+            <div class="setup-step__num">01</div>
+            <div class="setup-step__name">Actívalo en el panel</div>
+            <p class="setup-step__desc">Entra al panel del administrador y elige Stripe, STP o ambos.</p>
+          </li>
+          <li class="setup-step setup-step--2">
+            <div class="setup-step__num">02</div>
+            <div class="setup-step__name">Adjunta la documentación</div>
+            <p class="setup-step__desc">Sube los datos que se requieren para dar de alta el cobro.</p>
+          </li>
+          <li class="setup-step setup-step--3">
+            <div class="setup-step__num">03</div>
+            <div class="setup-step__name">Firma el contrato</div>
+            <p class="setup-step__desc">Recibes el contrato, lo firmas y se aprueba la activación.</p>
+          </li>
+          <li class="setup-step setup-step--4">
+            <div class="setup-step__num">04</div>
+            <div class="setup-step__name">Empieza a cobrar</div>
+            <p class="setup-step__desc">Cada residente recibe su CLABE o pasarela y empiezas a cobrar sin errores.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 6. EXPLORA OTROS MÓDULOS ============== -->
+  <section class="diff-modules">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          Más que <span class="text-orange">pagos</span>
+        </h2>
+        <p class="section-sub">
+          Vivook integra todo lo que un administrador de condominio necesita en una sola plataforma.
+        </p>
+      </header>
+
+      <div class="diff-modules__grid reveal-group">
+
+        <a href="administrativo.html" class="diff-module diff-module--admin reveal">
+          <div class="diff-module__img"><img src="assets/administracion-web-app.png" alt="Módulo Administrativo de Vivook" loading="lazy" /></div>
+          <h3 class="diff-module__title">Administrativo</h3>
+          <p class="diff-module__desc">Cuotas, estados de cuenta, gastos y reportes automáticos en un solo panel financiero.</p>
+          <span class="diff-module__cta">Ver módulo →</span>
+        </a>
+
+        <a href="facturacion.html" class="diff-module reveal" style="--accent: var(--orange); --accent-bg: rgba(242, 162, 62, .16);">
+          <div class="diff-module__img"><img src="assets/factura-anim.png" alt="Módulo de Facturación CFDI de Vivook" loading="lazy" /></div>
+          <h3 class="diff-module__title">Facturación</h3>
+          <p class="diff-module__desc">Genera CFDIs timbrados de las cuotas y factura los pagos recibidos, directo desde Vivook.</p>
+          <span class="diff-module__cta">Ver módulo →</span>
+        </a>
+
+        <a href="comunicacion.html" class="diff-module diff-module--comm reveal">
+          <div class="diff-module__img"><img src="assets/mac1.png" alt="Módulo de Comunicación de Vivook" loading="lazy" /></div>
+          <h3 class="diff-module__title">Comunicación</h3>
+          <p class="diff-module__desc">Avisos, votaciones, eventos y mensajería directa para conectar a toda tu comunidad.</p>
+          <span class="diff-module__cta">Ver módulo →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 7. CTA FINAL ============== -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-final__panel reveal">
+        <h2 class="cta-final__title">
+          ¿Listo para cobrar<br />
+          en línea sin esfuerzo?
+        </h2>
+        <p class="cta-final__sub">
+          Activa Stripe, STP o ambos y empieza a recibir las cuotas de tu condominio al instante, con soporte en español.
+        </p>
+
+        <div class="cta-final__actions">
+          <a href="#trial" class="btn btn--primary">Comenzar prueba gratis →</a>
+          <a href="contacto.html" class="btn btn--white">Hablar con un asesor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer" aria-label="Vivook">
+          <img src="assets/logo-web.png" alt="Vivook" />
+        </a>
+        <ul class="footer__contact">
+          <li>📍 CDMX, México</li>
+          <li>📧 ventas@vivook.com</li>
+          <li>📞 +52 55 1234 5678</li>
+        </ul>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/fb.png" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="" /></a>
+          <a href="#" aria-label="TikTok"><img src="assets/tiktok.png" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/youtube.png" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="administrativo.html">Administración</a></li>
+          <li><a href="comunicacion.html">Comunicación</a></li>
+          <li><a href="seguridad.html">Seguridad</a></li>
+          <li><a href="precios.html">Precios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a href="index.html#producto">Administradores</a></li>
+          <li><a href="index.html#producto">Residentes</a></li>
+          <li><a href="index.html#producto">Mesa Directiva</a></li>
+          <li><a href="academia.html">Academia Vivook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__legal">
+      <p>© 2026 Vivook. Todos los derechos reservados.</p>
+      <p><a href="#">Política de Privacidad</a> · <a href="#">Términos de Servicio</a></p>
+    </div>
+  </footer>
+
+  <!-- CTA flotante lateral -->
+  <a href="#trial" class="sticky-cta" aria-label="Prueba 15 días gratis">
+    Prueba 15 días gratis
+    <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
+  </a>
+
+  <script src="script.js?v=53" defer></script>
+</body>
+</html>
