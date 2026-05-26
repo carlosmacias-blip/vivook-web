@@ -4297,3 +4297,19 @@ body.partner-modal-open {
   }
   .excel-callout__icon { margin: 0 auto; }
 }
+
+/* Variante del callout para Seguridad (rojo) */
+.excel-callout--security .excel-callout__panel {
+  background: linear-gradient(135deg, rgba(228, 70, 52, .08) 0%, rgba(7, 161, 194, .06) 100%);
+  border-color: rgba(228, 70, 52, .25);
+}
+.excel-callout--security .excel-callout__icon {
+  background: linear-gradient(135deg, var(--red) 0%, #B0301E 100%);
+  box-shadow: 0 10px 24px -6px rgba(228, 70, 52, .35);
+}
+.excel-callout--security .excel-callout__eyebrow {
+  color: var(--red);
+}
+.excel-callout--security .excel-callout__chips li {
+  border-color: rgba(228, 70, 52, .35);
+}
