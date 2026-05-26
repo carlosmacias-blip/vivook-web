@@ -5025,3 +5025,187 @@ body.partner-modal-open {
   .pay-chips { gap: 8px; }
   .pay-chips li { font-size: 12px; padding: 6px 12px; }
 }
+
+/* ==================================================================
+   40. PÁGINA LEGAL (Términos y Condiciones / documento)
+================================================================== */
+
+/* ---------- Hero ---------- */
+.legal-hero {
+  padding: 150px 0 40px;
+  background: linear-gradient(180deg, var(--ink-50) 0%, #fff 100%);
+  border-bottom: 1px solid var(--ink-100);
+  text-align: center;
+}
+.legal-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--dark);
+  margin: 6px 0 10px;
+}
+.legal-hero__sub {
+  font-size: 16px;
+  color: var(--ink-500);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.legal-hero__updated {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-400);
+}
+
+/* ---------- Layout (índice + contenido) ---------- */
+.legal { padding: 56px 0 96px; background: #fff; }
+.legal__layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* Índice lateral fijo */
+.legal__toc {
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+}
+.legal__toc-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--ink-400);
+  margin-bottom: 14px;
+}
+.legal__toc ol {
+  counter-reset: toc;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.legal__toc li {
+  counter-increment: toc;
+  margin-bottom: 2px;
+}
+.legal__toc a {
+  display: block;
+  padding: 6px 10px 6px 30px;
+  position: relative;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ink-500);
+  border-radius: 8px;
+  transition: background .2s ease, color .2s ease;
+}
+.legal__toc a::before {
+  content: counter(toc);
+  position: absolute;
+  left: 10px;
+  font-weight: 700;
+  color: var(--ink-300);
+}
+.legal__toc a:hover {
+  background: var(--ink-50);
+  color: var(--blue);
+}
+.legal__toc a:hover::before { color: var(--blue); }
+
+/* Documento */
+.legal__content {
+  max-width: 760px;
+  color: var(--ink-700);
+}
+.legal__content > p {
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.legal__content h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  color: var(--dark);
+  margin: 44px 0 16px;
+  padding-top: 12px;
+  scroll-margin-top: 96px;
+}
+.legal__content h2:first-of-type { margin-top: 8px; }
+.legal__content h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 28px 0 12px;
+  scroll-margin-top: 96px;
+}
+.legal__content ul {
+  margin: 0 0 16px;
+  padding-left: 4px;
+}
+.legal__content ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.legal__content ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.legal__content ul ul { margin: 8px 0 0; }
+.legal__content ul ul li::before { background: var(--ink-300); }
+.legal__content a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal__content a:hover { color: var(--blue-dark); }
+.legal__content strong { color: var(--dark); font-weight: 700; }
+
+/* Lista de definiciones */
+.legal-def { margin: 0 0 16px; padding: 4px 0; }
+.legal-def dt {
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 16px;
+}
+.legal-def dd {
+  margin: 4px 0 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.legal__back {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ink-100);
+}
+.legal__back a {
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .legal__layout { grid-template-columns: 1fr; gap: 0; }
+  .legal__toc { display: none; }
+}
+@media (max-width: 560px) {
+  .legal-hero { padding: 120px 0 32px; }
+  .legal__content h2 { font-size: 20px; }
+}
