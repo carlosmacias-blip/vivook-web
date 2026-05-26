@@ -4214,3 +4214,86 @@ body.partner-modal-open {
   .modulo-hero__actions { flex-direction: column; align-items: stretch; }
   .modulo-hero__actions .btn { width: 100%; }
 }
+
+/* ==================================================================
+   36. CALLOUT DE EXPORTACIÓN A EXCEL (página administrativo)
+================================================================== */
+.excel-callout {
+  padding: 0 0 96px;
+  background: #fff;
+}
+.excel-callout__panel {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px;
+  background: linear-gradient(135deg, rgba(101, 176, 59, .08) 0%, rgba(7, 161, 194, .06) 100%);
+  border: 1px solid rgba(101, 176, 59, .25);
+  border-radius: var(--radius-lg);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.excel-callout__icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--green) 0%, #4F9128 100%);
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 10px 24px -6px rgba(101, 176, 59, .35);
+}
+.excel-callout__icon svg {
+  width: 32px;
+  height: 32px;
+}
+.excel-callout__eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+.excel-callout__title {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--dark);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.excel-callout__desc {
+  font-size: 14.5px;
+  color: var(--ink-500);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+.excel-callout__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.excel-callout__chips li {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #fff;
+  border: 1px solid rgba(101, 176, 59, .35);
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+@media (max-width: 720px) {
+  .excel-callout__panel {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 36px 28px;
+  }
+  .excel-callout__icon { margin: 0 auto; }
+}
