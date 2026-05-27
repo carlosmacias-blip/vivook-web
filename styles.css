@@ -1030,16 +1030,16 @@ button { font: inherit; cursor: pointer; }
   width: 40px; height: 40px;
   border-radius: 50%;
   display: grid; place-items: center;
-  transition: transform .2s ease, opacity .2s ease;
-  overflow: hidden;
+  background: rgba(255, 255, 255, .08);
+  color: var(--ink-300);
+  transition: transform .2s ease, background .2s ease, color .2s ease;
 }
-.footer__social a:hover { transform: translateY(-2px); opacity: .85; }
-.footer__social img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
+.footer__social a:hover {
+  transform: translateY(-2px);
+  background: var(--blue);
+  color: #fff;
 }
+.footer__social svg { width: 18px; height: 18px; }
 .footer__col h4 {
   color: #fff;
   font-size: 14px;
@@ -1923,16 +1923,21 @@ body.menu-open { overflow: hidden; }
     box-shadow: -20px 0 60px rgba(10, 61, 79, .18);
   }
 
-  /* En mobile el footer alineado a la derecha para no quedar bajo el sticky-cta */
-  .site-footer { text-align: right; }
+  /* En mobile el footer va centrado (el sticky-cta queda en el borde izquierdo) */
+  .site-footer { text-align: center; }
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .footer__contact li {
-    justify-content: flex-end;
+    justify-content: center;
   }
   .footer__social {
-    justify-content: flex-end;
+    justify-content: center;
   }
   .footer__col ul { padding-left: 0; }
-  .footer__legal { text-align: right; }
+  .footer__legal { justify-content: center; text-align: center; }
 }
 
 /* ==================================================================
