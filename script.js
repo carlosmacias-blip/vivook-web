@@ -130,6 +130,28 @@
     updateStickyCta();
   }
 
+  /* ---------- 4c. Tilt 3D en .browser-frame (sigue el cursor) ---------- */
+  const tiltEls = document.querySelectorAll('.browser-frame');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (tiltEls.length && !reducedMotion && window.matchMedia('(hover: hover)').matches) {
+    const MAX = 9; // grados máximos de inclinación
+    tiltEls.forEach((el) => {
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width;   // 0..1
+        const py = (e.clientY - r.top) / r.height;   // 0..1
+        const rotY = (px - 0.5) * 2 * MAX;
+        const rotX = -(py - 0.5) * 2 * MAX;
+        el.classList.add('is-tilting');
+        el.style.transform = `perspective(900px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.classList.remove('is-tilting');
+        el.style.transform = '';
+      });
+    });
+  }
+
   /* ---------- 5. Pricing calculator (viviendas + moneda) ---------- */
   const pricingInput = document.querySelector('#pricing-units');
   const currencySelect = document.querySelector('#pricing-currency');
