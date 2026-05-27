@@ -358,7 +358,7 @@ button { font: inherit; cursor: pointer; }
 .hero__bg {
   position: absolute; inset: 0;
   background:
-    url("assets/hero-bg.png") center/cover no-repeat,
+    url("assets/hero-bg.jpg") center/cover no-repeat,
     #1f3b2e;
 }
 .hero__overlay {
@@ -949,7 +949,7 @@ button { font: inherit; cursor: pointer; }
 .cta-final__panel {
   background:
     linear-gradient(135deg, rgba(7, 161, 194, .78) 0%, rgba(7, 105, 125, .82) 55%, rgba(10, 61, 79, .9) 100%),
-    url("assets/edificios.png") center/cover no-repeat;
+    url("assets/edificios.jpg") center/cover no-repeat;
   color: #fff;
   text-shadow: 0 1px 18px rgba(10, 61, 79, .5);
   border-radius: var(--radius-xl);
@@ -3983,7 +3983,7 @@ body.partner-modal-open {
   border-radius: var(--radius-xl);
   background:
     linear-gradient(135deg, rgba(7, 161, 194, .78) 0%, rgba(7, 105, 125, .82) 55%, rgba(10, 61, 79, .9) 100%),
-    url("assets/edificios.png") center/cover no-repeat;
+    url("assets/edificios.jpg") center/cover no-repeat;
   color: #fff;
   text-shadow: 0 1px 18px rgba(10, 61, 79, .5);
   text-align: center;

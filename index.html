@@ -8,7 +8,69 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=57" />
+  <link rel="stylesheet" href="styles.css?v=58" />
+  <link rel="canonical" href="https://www.vivook.com/" />
+  <meta property="og:url" content="https://www.vivook.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vivook · El software #1 en administración de condominios" />
+  <meta property="og:description" content="Vivook es la plataforma líder en LATAM para administración, comunicación y seguridad de condominios y residenciales." />
+  <meta property="og:site_name" content="Vivook" />
+  <meta property="og:image" content="https://www.vivook.com/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.vivook.com/assets/og-image.jpg" />
+  <meta name="twitter:site" content="@MundoVivook" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Datos estructurados (Organization + WebSite + SoftwareApplication) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.vivook.com/#organization",
+        "name": "Vivook",
+        "legalName": "AGS Software, S.A. de C.V.",
+        "url": "https://www.vivook.com/",
+        "logo": "https://www.vivook.com/assets/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/MundoVivook",
+          "https://www.instagram.com/mundovivook",
+          "https://www.youtube.com/@vivook4214",
+          "https://www.linkedin.com/company/65901356/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+525610456174",
+          "contactType": "sales",
+          "email": "ventas@vivook.com",
+          "areaServed": "MX",
+          "availableLanguage": "es"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.vivook.com/#website",
+        "url": "https://www.vivook.com/",
+        "name": "Vivook",
+        "inLanguage": "es",
+        "publisher": { "@id": "https://www.vivook.com/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Vivook",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "offers": { "@type": "Offer", "price": "460", "priceCurrency": "MXN" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "3000", "bestRating": "5" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -99,17 +161,17 @@
 
       <div class="hero__stores">
         <a href="#appstore" class="store-badge" aria-label="Descargar en App Store">
-          <img src="assets/app-store-dark.png" alt="" />
+          <img src="assets/app-store-dark.png" alt="" width="120" height="40" />
         </a>
         <a href="#googleplay" class="store-badge" aria-label="Disponible en Google Play">
-          <img src="assets/google-play-dark.png" alt="" />
+          <img src="assets/google-play-dark.png" alt="" width="120" height="40" />
         </a>
       </div>
     </div>
 
     <!-- Mockup del producto -->
     <div class="hero__mockup" aria-hidden="true">
-      <img src="assets/panel-comunicacion.png" alt="" class="hero__mockup-img" />
+      <img src="assets/panel-comunicacion.png" alt="" class="hero__mockup-img" width="1200" height="663" />
     </div>
     </div>
   </section>
@@ -152,7 +214,7 @@
       <div class="features__grid reveal-group">
         <article class="feature-card reveal">
           <div class="feature-card__icon">
-            <img src="assets/admin-naranja.png" alt="" />
+            <img src="assets/admin-naranja.png" alt="" width="88" height="88" loading="lazy" />
           </div>
           <h3 class="feature-card__title">Administración</h3>
           <p class="feature-card__desc">
@@ -160,10 +222,10 @@
           </p>
           <ul class="feature-card__list">
             <li>Cuotas y cobranza automática</li>
-            <li>Ingresos, pagos y presupuestos</li>
-            <li>Fondos y reservas</li>
+            <li>Ingresos y control de presupuesto</li>
+            <li>Gestión de cuentas y fondos</li>
             <li>Reportes en tiempo real</li>
-            <li>Panel del administrador</li>
+            <li>Gestión de permisos y roles</li>
           </ul>
           <a href="administrativo.html" class="feature-card__link">
             Ver más
@@ -173,18 +235,18 @@
 
         <article class="feature-card reveal">
           <div class="feature-card__icon">
-            <img src="assets/com-azul.png" alt="" />
+            <img src="assets/com-azul.png" alt="" width="88" height="88" loading="lazy" />
           </div>
           <h3 class="feature-card__title">Comunicación</h3>
           <p class="feature-card__desc">
             Conecta administradores y residentes con canales claros y eficientes.
           </p>
           <ul class="feature-card__list">
-            <li>Avisos y comunicación directa</li>
-            <li>Chats y notificaciones</li>
-            <li>Documentos accesibles para todos</li>
+            <li>Comunicados y archivos compartidos</li>
             <li>Calendario de eventos</li>
+            <li>Solicitudes al administrador</li>
             <li>Encuestas y votaciones</li>
+            <li>Canales exclusivos</li>
           </ul>
           <a href="comunicacion.html" class="feature-card__link">
             Ver más
@@ -194,18 +256,18 @@
 
         <article class="feature-card reveal">
           <div class="feature-card__icon">
-            <img src="assets/seg-verde.png" alt="" />
+            <img src="assets/seg-verde.png" alt="" width="88" height="88" loading="lazy" />
           </div>
           <h3 class="feature-card__title">Seguridad</h3>
           <p class="feature-card__desc">
             Controla accesos y protege la comunidad con tecnología moderna.
           </p>
           <ul class="feature-card__list">
-            <li>Control de accesos con QR</li>
-            <li>Visitas y proveedores</li>
+            <li>Control de acceso con QR</li>
+            <li>Accesos para eventos</li>
             <li>Control de paquetería</li>
-            <li>Pase doméstico</li>
-            <li>Control de infantes</li>
+            <li>Registro de visitas sin QR</li>
+            <li>QR para residentes</li>
           </ul>
           <a href="seguridad.html" class="feature-card__link">
             Ver más
@@ -276,7 +338,7 @@
           </div>
         </div>
         <div class="role-content__image">
-          <img src="assets/reporte-ingresos-lap.png" alt="Panel de reportes de Vivook" />
+          <img src="assets/reporte-ingresos-lap.jpg" alt="Panel de reportes de Vivook" width="1300" height="749" loading="lazy" />
         </div>
       </div>
 
@@ -316,15 +378,15 @@
           </ul>
           <div class="role-content__cta">
             <a href="https://apps.apple.com/mx/app/vivook/id1449471008" target="_blank" rel="noopener" class="store-badge" aria-label="Descargar en App Store">
-              <img src="assets/app-store-dark.png" alt="" />
+              <img src="assets/app-store-dark.png" alt="" width="120" height="40" />
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.vivook" target="_blank" rel="noopener" class="store-badge" aria-label="Disponible en Google Play">
-              <img src="assets/google-play-dark.png" alt="" />
+              <img src="assets/google-play-dark.png" alt="" width="120" height="40" />
             </a>
           </div>
         </div>
         <div class="role-content__image">
-          <img src="assets/vivook-app.png" alt="App móvil de Vivook" />
+          <img src="assets/vivook-app.png" alt="App móvil de Vivook" width="1361" height="784" loading="lazy" />
         </div>
       </div>
 
@@ -367,7 +429,7 @@
           </div>
         </div>
         <div class="role-content__image">
-          <img src="assets/graficas-mac.png" alt="Gráficas de fondos de Vivook" />
+          <img src="assets/graficas-mac.jpg" alt="Gráficas de fondos de Vivook" width="1300" height="749" loading="lazy" />
         </div>
       </div>
     </div>
@@ -389,7 +451,7 @@
       <div class="boost__grid reveal-group">
         <article class="boost-card reveal">
           <div class="boost-card__img boost-card__img--1">
-            <img src="assets/pagos-en-linea-anim.png" alt="Pagos en línea de Vivook" />
+            <img src="assets/pagos-en-linea-anim.png" alt="Pagos en línea de Vivook" width="1536" height="1024" loading="lazy" />
           </div>
           <h3 class="boost-card__title">Pagos en Línea</h3>
           <p class="boost-card__desc">
@@ -403,7 +465,7 @@
 
         <article class="boost-card reveal">
           <div class="boost-card__img boost-card__img--2">
-            <img src="assets/factura-anim.png" alt="Facturación CFDI con Vivook" />
+            <img src="assets/factura-anim.png" alt="Facturación CFDI con Vivook" width="900" height="600" loading="lazy" />
           </div>
           <h3 class="boost-card__title">Facturación CFDI</h3>
           <p class="boost-card__desc">
@@ -417,7 +479,7 @@
 
         <article class="boost-card reveal">
           <div class="boost-card__img boost-card__img--3">
-            <img src="assets/academia-anim.png" alt="Academia Vivook" />
+            <img src="assets/academia-anim.png" alt="Academia Vivook" width="1536" height="1024" loading="lazy" />
           </div>
           <h3 class="boost-card__title">Academia Vivook</h3>
           <p class="boost-card__desc">
@@ -490,7 +552,7 @@
             "Vivook para nosotros ya es indispensable, y con el módulo financiero es aún mejor"
           </p>
           <div class="testimonial__author">
-            <img class="testimonial__avatar" src="assets/logos/BE.jpg" alt="Bo Wallsten" />
+            <img class="testimonial__avatar" src="assets/logos/BE.jpg" alt="Bo Wallsten" loading="lazy" />
             <div>
               <div class="testimonial__name">Bo Wallsten</div>
               <div class="testimonial__role">Administrador de Bosques de los Encinos · Ex director Century 21 México · Ex presidente nacional AMPI</div>
@@ -504,7 +566,7 @@
             «Con Vivook llevamos toda la información de nuestros proyectos, convirtiéndola en una herramienta indispensable para nuestra empresa, muy completa, de fácil uso e intuitiva.»
           </p>
           <div class="testimonial__author">
-            <img class="testimonial__avatar" src="assets/logos/dg-rubrik.jpg" alt="Arq. Ricardo Barbosa" />
+            <img class="testimonial__avatar" src="assets/logos/dg-rubrik.jpg" alt="Arq. Ricardo Barbosa" loading="lazy" />
             <div>
               <div class="testimonial__name">Arq. Ricardo Barbosa</div>
               <div class="testimonial__role">Director General · Rubrik, administración de inmuebles</div>
@@ -518,7 +580,7 @@
             "Vivook se ha convertido en una herramienta fundamental para nosotros, la cual es de gran ayuda y con la que todos están muy contentos."
           </p>
           <div class="testimonial__author">
-            <img class="testimonial__avatar" src="assets/logos/beatriz.jpg" alt="Ing. Beatriz Padrés Pérez-Verdía" />
+            <img class="testimonial__avatar" src="assets/logos/beatriz.jpg" alt="Ing. Beatriz Padrés Pérez-Verdía" loading="lazy" />
             <div>
               <div class="testimonial__name">Ing. Beatriz Padrés Pérez-Verdía</div>
               <div class="testimonial__role">CEO · ACS Administración de Condominios y Servicios</div>
@@ -537,70 +599,70 @@
       <div class="logos-marquee" role="region" aria-label="Logotipos de empresas asociadas">
         <div class="logos-marquee__track">
           <!-- Set 1 -->
-          <div class="logos-marquee__item"><img src="assets/logos/ALS.png"                          alt="ALS" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/Arcano.png"                       alt="Arcano" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/Grupo-kap.png"                    alt="Grupo Kap" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/JH.png"                           alt="JH" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/REB.png"                          alt="REB" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/RM.png"                           alt="RM" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/RUBA.png"                         alt="RUBA" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/Rokkina-1.png"                    alt="Rokkina" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/SPARC.png"                        alt="SPARC" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/Sigma-Logo.png"                   alt="Sigma" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/adcco.png"                        alt="ADCCO" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/admiconed.png"                    alt="Admiconed" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/adminmuebles.png"                 alt="Adminmuebles" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/adymco.png"                       alt="Adymco" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/byga-2.png"                       alt="Byga" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/condominnia.png"                  alt="Condominnia" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/dri.png"                          alt="DRI" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/grupo-inmobiliario-mariscal.png"  alt="Grupo Inmobiliario Mariscal" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/habitia.png"                      alt="Habitia" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/harmony-1.png"                    alt="Harmony" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/inhouse.png"                      alt="Inhouse" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/ir.png"                           alt="IR" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/kli.png"                          alt="KLI" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/kuma-logo.png"                    alt="Kuma" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/logo-adma.png"                    alt="ADMA" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/m2.png"                           alt="M2" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/pach-1.png"                       alt="Pach" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/pp-1.png"                         alt="PP" /></div>
-          <div class="logos-marquee__item"><img src="assets/logos/tellez-group.png"                 alt="Tellez Group" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/ALS.png"                          alt="ALS" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/Arcano.png"                       alt="Arcano" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/Grupo-kap.png"                    alt="Grupo Kap" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/JH.png"                           alt="JH" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/REB.png"                          alt="REB" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/RM.png"                           alt="RM" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/RUBA.png"                         alt="RUBA" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/Rokkina-1.png"                    alt="Rokkina" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/SPARC.png"                        alt="SPARC" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/Sigma-Logo.png"                   alt="Sigma" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/adcco.png"                        alt="ADCCO" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/admiconed.png"                    alt="Admiconed" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/adminmuebles.png"                 alt="Adminmuebles" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/adymco.png"                       alt="Adymco" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/byga-2.png"                       alt="Byga" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/condominnia.png"                  alt="Condominnia" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/dri.png"                          alt="DRI" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/grupo-inmobiliario-mariscal.png"  alt="Grupo Inmobiliario Mariscal" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/habitia.png"                      alt="Habitia" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/harmony-1.png"                    alt="Harmony" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/inhouse.png"                      alt="Inhouse" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/ir.png"                           alt="IR" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/kli.png"                          alt="KLI" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/kuma-logo.png"                    alt="Kuma" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/logo-adma.png"                    alt="ADMA" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/m2.png"                           alt="M2" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/pach-1.png"                       alt="Pach" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/pp-1.png"                         alt="PP" loading="lazy" /></div>
+          <div class="logos-marquee__item"><img src="assets/logos/tellez-group.png"                 alt="Tellez Group" loading="lazy" /></div>
           <!-- Set 2 (duplicado, aria-hidden para que no se lea dos veces) -->
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/ALS.png"                          alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Arcano.png"                       alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Grupo-kap.png"                    alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/JH.png"                           alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/REB.png"                          alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/RM.png"                           alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/RUBA.png"                         alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Rokkina-1.png"                    alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/SPARC.png"                        alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Sigma-Logo.png"                   alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/adcco.png"                        alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/admiconed.png"                    alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/adminmuebles.png"                 alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/adymco.png"                       alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/byga-2.png"                       alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/condominnia.png"                  alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/dri.png"                          alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/grupo-inmobiliario-mariscal.png"  alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/habitia.png"                      alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/harmony-1.png"                    alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/inhouse.png"                      alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/ir.png"                           alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/kli.png"                          alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/kuma-logo.png"                    alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/logo-adma.png"                    alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/m2.png"                           alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/pach-1.png"                       alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/pp-1.png"                         alt="" /></div>
-          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/tellez-group.png"                 alt="" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/ALS.png"                          alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Arcano.png"                       alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Grupo-kap.png"                    alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/JH.png"                           alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/REB.png"                          alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/RM.png"                           alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/RUBA.png"                         alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Rokkina-1.png"                    alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/SPARC.png"                        alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/Sigma-Logo.png"                   alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/adcco.png"                        alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/admiconed.png"                    alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/adminmuebles.png"                 alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/adymco.png"                       alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/byga-2.png"                       alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/condominnia.png"                  alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/dri.png"                          alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/grupo-inmobiliario-mariscal.png"  alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/habitia.png"                      alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/harmony-1.png"                    alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/inhouse.png"                      alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/ir.png"                           alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/kli.png"                          alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/kuma-logo.png"                    alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/logo-adma.png"                    alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/m2.png"                           alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/pach-1.png"                       alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/pp-1.png"                         alt="" loading="lazy" /></div>
+          <div class="logos-marquee__item" aria-hidden="true"><img src="assets/logos/tellez-group.png"                 alt="" loading="lazy" /></div>
         </div>
       </div>
 
       <div class="logos__cta">
-        <a href="#" class="btn btn--outline btn--sm">Ver más →</a>
+        <a href="partners.html" class="btn btn--outline btn--sm">Ver más →</a>
       </div>
     </div>
   </section>
@@ -707,6 +769,6 @@
     <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
   </a>
 
-  <script src="script.js?v=57" defer></script>
+  <script src="script.js?v=58" defer></script>
 </body>
 </html>
