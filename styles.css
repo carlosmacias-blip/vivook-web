@@ -171,6 +171,14 @@ button { font: inherit; cursor: pointer; }
   box-shadow: 0 6px 18px rgba(7, 161, 194, .35);
 }
 .btn--primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+/* En la sección de CTA final el botón primario es verde */
+.cta-final__panel .btn--primary,
+.features-cta__panel .btn--primary {
+  background: var(--green);
+  box-shadow: 0 6px 18px rgba(101, 176, 59, .4);
+}
+.cta-final__panel .btn--primary:hover,
+.features-cta__panel .btn--primary:hover { background: #4F9128; }
 .btn:active { transform: scale(.97); transition-duration: .1s; }
 .btn--ghost {
   background: rgba(255,255,255,.14);
@@ -497,17 +505,6 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- 8. Features ---------- */
 .features { padding: 96px 0; background: var(--ink-50); position: relative; }
-.features::before, .features::after {
-  content: "";
-  position: absolute;
-  width: 280px; height: 280px;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: .25;
-  z-index: 0;
-}
-.features::before { left: -80px; top: 20%; background: var(--blue); }
-.features::after  { right: -80px; bottom: 10%; background: var(--mid); }
 .features .container { position: relative; z-index: 1; }
 
 .features__grid {
@@ -1115,8 +1112,11 @@ button:focus-visible,
 
   transform-origin: 0 0;
   transform: rotate(-90deg) translate(-50%, 0);
-  transition: padding .25s ease, box-shadow .25s ease, background .2s ease;
+  opacity: 0;
+  visibility: hidden;
+  transition: padding .25s ease, box-shadow .25s ease, background .2s ease, opacity .3s ease, visibility .3s;
 }
+.sticky-cta.is-visible { opacity: 1; visibility: visible; }
 .sticky-cta:hover {
   padding: 14px 36px;
   background: #DA8B2D;
@@ -4491,16 +4491,6 @@ body.partner-modal-open {
   position: relative;
   overflow: hidden;
 }
-.diff-why::before, .diff-why::after {
-  content: "";
-  position: absolute;
-  width: 300px; height: 300px;
-  border-radius: 50%;
-  filter: blur(90px);
-  pointer-events: none;
-}
-.diff-why::before { left: -110px; top: 12%; background: var(--blue); opacity: .16; }
-.diff-why::after  { right: -110px; bottom: 6%; background: var(--orange); opacity: .14; }
 .diff-why .container { position: relative; z-index: 1; }
 .diff-why__grid {
   display: grid;
