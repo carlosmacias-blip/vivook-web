@@ -430,6 +430,13 @@ button { font: inherit; cursor: pointer; }
   .hero__mockup { display: none; }
   .hero__content { max-width: 760px; }
 }
+/* En celular el hero va centrado para no quedar bajo el sticky-cta */
+@media (max-width: 640px) {
+  .hero__content { text-align: center; margin: 0 auto; }
+  .hero__actions,
+  .hero__bullets,
+  .hero__stores { justify-content: center; }
+}
 .hero__title {
   font-size: clamp(32px, 5vw, 56px);
   font-weight: 800;
@@ -1825,8 +1832,20 @@ body.modal-open { overflow: hidden; }
 
 body.menu-open { overflow: hidden; }
 
+/* Botón de login dentro del drawer: oculto en desktop, visible en mobile */
+.nav__login { display: none; }
+
 @media (max-width: 980px) {
   .menu-toggle { display: flex; }
+
+  /* En mobile, el login del header se mueve al drawer (abajo) */
+  .header__inner > .btn { display: none; }
+  .nav__login {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+  }
 
   /* Convertir el nav en drawer lateral */
   .nav {
@@ -1851,7 +1870,7 @@ body.menu-open { overflow: hidden; }
   .nav__close { display: inline-flex; }
 
   /* Links en versión vertical, full width */
-  .nav > a,
+  .nav > a:not(.nav__login),
   .nav-trigger {
     display: flex;
     width: 100%;
@@ -1862,7 +1881,7 @@ body.menu-open { overflow: hidden; }
     border-radius: 12px;
     transition: background .2s ease;
   }
-  .nav > a:hover,
+  .nav > a:not(.nav__login):hover,
   .nav-trigger:hover {
     background: rgba(10, 61, 79, .06);
   }
