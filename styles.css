@@ -950,8 +950,11 @@ button { font: inherit; cursor: pointer; }
 /* ---------- 14. CTA final ---------- */
 .cta-final { padding: 96px 0; background: #fff; }
 .cta-final__panel {
-  background: linear-gradient(135deg, #07A1C2 0%, #07697D 55%, #0A3D4F 100%);
+  background:
+    linear-gradient(135deg, rgba(7, 161, 194, .78) 0%, rgba(7, 105, 125, .82) 55%, rgba(10, 61, 79, .9) 100%),
+    url("assets/edificios.png") center/cover no-repeat;
   color: #fff;
+  text-shadow: 0 1px 18px rgba(10, 61, 79, .5);
   border-radius: var(--radius-xl);
   padding: 64px 48px;
   text-align: center;
@@ -959,6 +962,7 @@ button { font: inherit; cursor: pointer; }
   position: relative;
   overflow: hidden;
 }
+.cta-final__panel .btn { text-shadow: none; }
 .cta-final__panel::before {
   content: "";
   position: absolute; inset: 0;
@@ -3977,12 +3981,16 @@ body.partner-modal-open {
   margin: 0 auto;
   padding: 64px 56px;
   border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, var(--green) 0%, var(--mid) 100%);
+  background:
+    linear-gradient(135deg, rgba(7, 161, 194, .78) 0%, rgba(7, 105, 125, .82) 55%, rgba(10, 61, 79, .9) 100%),
+    url("assets/edificios.png") center/cover no-repeat;
   color: #fff;
+  text-shadow: 0 1px 18px rgba(10, 61, 79, .5);
   text-align: center;
   overflow: hidden;
   box-shadow: 0 30px 60px -20px rgba(7, 105, 125, .35);
 }
+.features-cta__panel .btn { text-shadow: none; }
 .features-cta__panel::before {
   content: "";
   position: absolute;
