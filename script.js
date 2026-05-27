@@ -127,6 +127,27 @@
     }
   }
 
+  /* ---------- 4b. Sticky CTA: aparece tras pasar el hero ---------- */
+  const stickyCta = document.querySelector('.sticky-cta');
+  if (stickyCta) {
+    const heroEl = document.querySelector(
+      '.hero, .modulo-hero, .diff-hero, .legal-hero, .contact-hero, .features-hero, .learn-hero, .academy-hero, .pricing-hero, .partners-hero'
+    );
+    let ctaTicking = false;
+    const updateStickyCta = () => {
+      const threshold = heroEl ? heroEl.offsetHeight - 120 : window.innerHeight * 0.6;
+      stickyCta.classList.toggle('is-visible', window.scrollY > threshold);
+      ctaTicking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ctaTicking) {
+        requestAnimationFrame(updateStickyCta);
+        ctaTicking = true;
+      }
+    }, { passive: true });
+    updateStickyCta();
+  }
+
   /* ---------- 5. Pricing calculator (viviendas + moneda) ---------- */
   const pricingInput = document.querySelector('#pricing-units');
   const currencySelect = document.querySelector('#pricing-currency');

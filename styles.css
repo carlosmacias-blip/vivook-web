@@ -166,11 +166,19 @@ button { font: inherit; cursor: pointer; }
 }
 .btn--sm { padding: 10px 18px; font-size: 14px; }
 .btn--primary {
-  background: var(--orange);
+  background: var(--blue);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(242, 162, 62, .4);
+  box-shadow: 0 6px 18px rgba(7, 161, 194, .35);
 }
-.btn--primary:hover { background: #E08E1F; transform: translateY(-1px); }
+.btn--primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+/* En la sección de CTA final el botón primario es verde */
+.cta-final__panel .btn--primary,
+.features-cta__panel .btn--primary {
+  background: var(--green);
+  box-shadow: 0 6px 18px rgba(101, 176, 59, .4);
+}
+.cta-final__panel .btn--primary:hover,
+.features-cta__panel .btn--primary:hover { background: #4F9128; }
 .btn:active { transform: scale(.97); transition-duration: .1s; }
 .btn--ghost {
   background: rgba(255,255,255,.14);
@@ -1104,8 +1112,11 @@ button:focus-visible,
 
   transform-origin: 0 0;
   transform: rotate(-90deg) translate(-50%, 0);
-  transition: padding .25s ease, box-shadow .25s ease, background .2s ease;
+  opacity: 0;
+  visibility: hidden;
+  transition: padding .25s ease, box-shadow .25s ease, background .2s ease, opacity .3s ease, visibility .3s;
 }
+.sticky-cta.is-visible { opacity: 1; visibility: visible; }
 .sticky-cta:hover {
   padding: 14px 36px;
   background: #DA8B2D;
