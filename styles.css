@@ -101,24 +101,8 @@ button { font: inherit; cursor: pointer; }
 .text-red    { color: var(--red); }
 .text-dark   { color: var(--dark); }
 
-/* Scroll reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
-  will-change: opacity, transform;
-}
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Stagger para hijos del mismo padre */
-.reveal-group > .reveal:nth-child(2) { transition-delay: .08s; }
-.reveal-group > .reveal:nth-child(3) { transition-delay: .16s; }
-.reveal-group > .reveal:nth-child(4) { transition-delay: .24s; }
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-}
+/* Scroll reveal — desactivado: el contenido se muestra de inmediato al cargar */
+.reveal { opacity: 1; transform: none; }
 
 .section-head {
   text-align: center;
@@ -3850,50 +3834,27 @@ body.partner-modal-open {
   box-shadow: 0 30px 60px -20px color-mix(in srgb, var(--modulo-color) 25%, transparent);
 }
 
-/* Borde superior coloreado */
-.modulo-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: var(--modulo-color);
-}
-
 .modulo-card__head {
   padding: 32px 28px 0;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-.modulo-card__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  align-self: flex-start;
-  padding: 6px 14px;
-  background: var(--modulo-pill-bg);
-  color: var(--modulo-pill-fg);
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .02em;
-  margin-bottom: 20px;
-}
-.modulo-card__dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--modulo-color);
-  flex-shrink: 0;
-}
 .modulo-card__title {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 800;
   letter-spacing: -.02em;
   color: var(--dark);
-  line-height: 1.25;
-  margin-bottom: 14px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.modulo-card__tagline {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--modulo-color);
+  line-height: 1.35;
+  margin-bottom: 16px;
 }
 .modulo-card__desc {
   font-size: 14.5px;

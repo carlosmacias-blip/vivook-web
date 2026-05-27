@@ -81,25 +81,7 @@
     }
   }
 
-  /* ---------- 3. Scroll reveal ---------- */
-  const reveals = document.querySelectorAll('.reveal');
-  if (reveals.length && 'IntersectionObserver' in window) {
-    const revealObs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            revealObs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
-    );
-    reveals.forEach((el) => revealObs.observe(el));
-  } else {
-    // Fallback: si no hay observer, mostrar todo
-    reveals.forEach((el) => el.classList.add('is-visible'));
-  }
+  /* ---------- 3. Scroll reveal: desactivado (el contenido se muestra de inmediato) ---------- */
 
   /* ---------- 4. Sticky header ---------- */
   const header = document.querySelector('.site-header');
