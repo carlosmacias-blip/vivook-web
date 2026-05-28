@@ -820,6 +820,11 @@ button { font: inherit; cursor: pointer; }
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
+.setup__steps--3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 780px;
+  margin: 0 auto;
+}
 .setup-step {
   padding: 22px;
   border-radius: var(--radius-md);
@@ -4356,22 +4361,11 @@ body.partner-modal-open {
   overflow: hidden;
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-.diff-feature::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .3s ease;
-}
 .diff-feature:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
   box-shadow: 0 24px 48px -16px color-mix(in srgb, var(--accent) 28%, transparent);
 }
-.diff-feature:hover::before { transform: scaleX(1); }
 .diff-feature--blue   { --accent: var(--blue);   --accent-bg: rgba(7, 161, 194, .12); }
 .diff-feature--green  { --accent: var(--green);  --accent-bg: rgba(101, 176, 59, .14); }
 .diff-feature--red    { --accent: var(--red);    --accent-bg: rgba(228, 70, 52, .12); }
@@ -4385,9 +4379,7 @@ body.partner-modal-open {
   background: var(--accent-bg);
   color: var(--accent);
   margin-bottom: 18px;
-  transition: transform .35s cubic-bezier(.34, 1.56, .64, 1);
 }
-.diff-feature:hover .diff-feature__icon { transform: scale(1.1) rotate(-6deg); }
 .diff-feature__icon svg { width: 24px; height: 24px; }
 .diff-feature__title {
   font-family: var(--font-display);
@@ -4427,6 +4419,11 @@ body.partner-modal-open {
 .channels-grid--4 {
   grid-template-columns: repeat(4, 1fr);
 }
+.channels-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+}
 .channel--chat { --channel-color: var(--orange); }
 
 /* ---------- Aprende (reusa .recorded-card) ---------- */
@@ -4441,6 +4438,24 @@ body.partner-modal-open {
 .diff-learn__cta {
   text-align: center;
   margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.btn--youtube {
+  background: #FF0000;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(255, 0, 0, .28);
+}
+.btn--youtube:hover {
+  background: #d40000;
+  transform: translateY(-1px);
+}
+.btn__yt-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 /* ---------- Lo que nos hace diferentes ---------- */
@@ -4628,6 +4643,7 @@ body.partner-modal-open {
 @media (max-width: 980px) {
   .diff-features__grid { grid-template-columns: repeat(2, 1fr); }
   .channels-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .channels-grid--3 { grid-template-columns: repeat(2, 1fr); }
   .recorded-grid--3 { grid-template-columns: repeat(2, 1fr); }
   .diff-why__grid { grid-template-columns: 1fr; gap: 36px; }
   .diff-modules__grid { grid-template-columns: 1fr; max-width: 480px; }
@@ -4636,6 +4652,7 @@ body.partner-modal-open {
   .diff-hero { padding: 130px 0 32px; }
   .diff-features__grid { grid-template-columns: 1fr; }
   .channels-grid--4 { grid-template-columns: 1fr; }
+  .channels-grid--3 { grid-template-columns: 1fr; }
   .recorded-grid--3 { grid-template-columns: 1fr; }
   .diff-why__stats { grid-template-columns: 1fr; }
   .diff-hero__bullets { gap: 12px; }
@@ -5249,6 +5266,22 @@ body.partner-modal-open {
 }
 .browser-frame__body { display: block; line-height: 0; }
 .browser-frame__body img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Variante para imagen de celular: sin chrome de navegador, conserva tilt 3D */
+.browser-frame--phone {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  max-width: 360px;
+  filter: drop-shadow(0 30px 40px rgba(10, 61, 79, .22)) drop-shadow(0 8px 14px rgba(10, 61, 79, .08));
+}
+.browser-frame--phone > img {
   width: 100%;
   height: auto;
   display: block;
