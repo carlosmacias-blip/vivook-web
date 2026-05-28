@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=100" />
+  <link rel="stylesheet" href="styles.css?v=101" />
   <link rel="canonical" href="https://www.vivook.com/contacto.html" />
   <meta property="og:url" content="https://www.vivook.com/contacto.html" />
   <meta property="og:site_name" content="Vivook" />
@@ -171,7 +171,7 @@
 
         <form class="contact-form reveal" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
           <!-- Web3Forms config: reemplazar YOUR_ACCESS_KEY con la key real -->
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+          <input type="hidden" name="access_key" value="e5965b68-fbe7-416a-a85b-6948d9a19861" />
           <input type="hidden" name="subject" value="Nuevo mensaje desde Vivook.com" />
           <input type="hidden" name="from_name" value="Vivook · Formulario de contacto" />
           <input type="hidden" name="redirect" value="false" />
@@ -219,6 +219,14 @@
             Al enviar aceptas nuestra <a href="#">política de privacidad</a>. Solo usamos tus datos para contactarte.
           </p>
 
+          <!-- Panel de error (oculto por default, lo muestra script.js si falla el submit) -->
+          <div class="contact-form__status contact-form__status--error" hidden>
+            <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
+            <div>
+              <strong>Algo salió mal.</strong>
+              <p>Intenta de nuevo o escríbenos por WhatsApp.</p>
+            </div>
+          </div>
         </form>
       </div>
     </div>
@@ -313,7 +321,7 @@
     <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
   </a>
 
-  <script src="script.js?v=100" defer></script>
+  <script src="script.js?v=101" defer></script>
   <!-- Boton flotante de WhatsApp -->
   <a href="https://wa.me/message/7OT53LROGZRCI1" class="wa-float" target="_blank" rel="noopener" aria-label="Chatea con nosotros por WhatsApp">
     <svg class="wa-float__icon" aria-hidden="true"><use href="assets/icons.svg#whatsapp"/></svg>
