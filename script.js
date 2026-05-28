@@ -374,15 +374,16 @@
     });
   }
 
-  /* ---------- 8. Contact form (Web3Forms via AJAX) ---------- */
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    const submitBtn = document.getElementById('contact-submit');
-    const submitLabel = contactForm.querySelector('.contact-form__submit-label');
-    const successBox = contactForm.querySelector('.contact-form__status--success');
-    const errorBox = contactForm.querySelector('.contact-form__status--error');
+  /* ---------- 8. Web3Forms handler (cualquier <form action="...web3forms...">) ---------- */
+  const w3Forms = document.querySelectorAll('form[action*="web3forms"]');
+  w3Forms.forEach((form) => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (!submitBtn) return;
+    const submitLabel = submitBtn.querySelector('.contact-form__submit-label') || submitBtn;
+    const successBox = form.querySelector('.contact-form__status--success');
+    const errorBox = form.querySelector('.contact-form__status--error');
 
-    contactForm.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       // Reset UI
@@ -395,8 +396,8 @@
       submitLabel.textContent = 'Enviando...';
 
       try {
-        const formData = new FormData(contactForm);
-        const response = await fetch(contactForm.action, {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
           method: 'POST',
           body: formData,
           headers: { Accept: 'application/json' },
@@ -405,7 +406,7 @@
         const data = await response.json().catch(() => ({}));
 
         if (response.ok && data.success !== false) {
-          contactForm.reset();
+          form.reset();
           if (successBox) successBox.hidden = false;
           submitLabel.textContent = 'Enviado ✓';
           // Volver al estado normal después de 3 segundos
@@ -420,10 +421,10 @@
         if (errorBox) errorBox.hidden = false;
         submitLabel.textContent = originalLabel;
         submitBtn.disabled = false;
-        console.error('Contact form error:', err);
+        console.error('Form submission error:', err);
       }
     });
-  }
+  });
 
   /* ---------- 9a. Toggle "Ver calendario completo" ---------- */
   const calendarToggle = document.getElementById('toggle-calendar');
