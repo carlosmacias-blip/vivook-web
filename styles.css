@@ -2698,6 +2698,7 @@ svg {
   font-size: 14px;
   margin-top: 4px;
 }
+.contact-form__status[hidden] { display: none; }
 .contact-form__status svg {
   width: 28px; height: 28px;
   flex-shrink: 0;
