@@ -451,7 +451,7 @@
   -------------------------------------------------------------- */
   const upcomingList = document.getElementById('upcoming-list');
   if (upcomingList) {
-    const GOOGLE_API_KEY = 'YOUR_GOOGLE_API_KEY_HERE';
+    const GOOGLE_API_KEY = 'AIzaSyCBmf6Dlpqy7A7zzHoSBDb0CGt961EwzRw';
     const CALENDAR_ID = 'abits.com_pm2aj26u62lbr2fck2i9343khk@group.calendar.google.com';
     const MAX_EVENTS = 3;
 
