@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=101" />
+  <link rel="stylesheet" href="styles.css?v=102" />
   <link rel="canonical" href="https://www.vivook.com/landing.html" />
   <meta property="og:url" content="https://www.vivook.com/landing.html" />
   <meta property="og:type" content="website" />
@@ -27,58 +27,13 @@
 </head>
 <body>
 
-  <!-- ============== HEADER ============== -->
-  <header class="site-header is-scrolled">
+  <!-- ============== HEADER (minimal: solo logo) ============== -->
+  <header class="site-header site-header--minimal is-scrolled">
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="Vivook">
         <img src="assets/logo-blanco.png" alt="Vivook" class="logo__img logo__img--light" />
         <img src="assets/logo.png" alt="" aria-hidden="true" class="logo__img logo__img--dark" />
       </a>
-
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" id="main-nav" aria-label="Principal">
-        <button class="nav__close" aria-label="Cerrar menú">
-          <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
-        </button>
-
-        <div class="nav-item has-dropdown">
-          <a href="caracteristicas.html" class="nav-trigger">
-            Características
-            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
-          </a>
-          <div class="nav-dropdown" role="menu">
-            <a href="administrativo.html" role="menuitem">Administrativo</a>
-            <a href="seguridad.html"      role="menuitem">Seguridad</a>
-            <a href="comunicacion.html"   role="menuitem">Comunicación</a>
-            <a href="diferenciador.html"  role="menuitem">¿Qué nos hace diferentes?</a>
-            <a href="facturacion.html"    role="menuitem">Facturación</a>
-            <a href="pagos.html"          role="menuitem">Pagos en línea</a>
-          </div>
-        </div>
-
-        <a href="precios.html">Precios</a>
-        <a href="partners.html">Partners</a>
-
-        <div class="nav-item has-dropdown">
-          <a href="capacitaciones.html" class="nav-trigger">
-            Aprende
-            <svg class="nav-caret" aria-hidden="true"><use href="assets/icons.svg#caret-down"/></svg>
-          </a>
-          <div class="nav-dropdown" role="menu">
-            <a href="capacitaciones.html" role="menuitem">Capacitaciones</a>
-            <a href="academia.html"       role="menuitem">Academia Vivook</a>
-          </div>
-        </div>
-
-        <a href="contacto.html">Contáctanos</a>
-        <a href="#blog">Blog</a>
-        <a href="https://webapp.vivook.com/2025/sessions/signin" class="btn btn--primary nav__login">Iniciar Sesión</a>
-      </nav>
-
-      <a href="https://webapp.vivook.com/2025/sessions/signin" class="btn btn--primary btn--sm">Iniciar Sesión</a>
     </div>
   </header>
 
@@ -113,18 +68,59 @@
         </ul>
       </div>
 
-      <!-- Mockup del producto -->
-      <div class="hero__mockup" aria-hidden="true">
-        <div class="browser-frame">
-          <div class="browser-frame__bar">
-            <span class="browser-frame__dots"><span></span><span></span><span></span></span>
-            <span class="browser-frame__url">webapp.vivook.com</span>
-          </div>
-          <div class="browser-frame__body">
-            <img src="assets/panel-comunicacion.png" alt="" width="1200" height="663" />
+      <!-- Form de captura de lead -->
+      <form class="hero-form" action="https://api.web3forms.com/submit" method="POST" id="landing-form">
+        <input type="hidden" name="access_key" value="e5965b68-fbe7-416a-a85b-6948d9a19861" />
+        <input type="hidden" name="subject" value="Nuevo lead desde landing de Vivook" />
+        <input type="hidden" name="from_name" value="Vivook · Landing" />
+        <input type="hidden" name="redirect" value="false" />
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <header class="hero-form__head">
+          <h2 class="hero-form__title">Empieza tu prueba gratis</h2>
+          <p class="hero-form__sub">Cuéntanos sobre tu condominio. Te contactamos hoy.</p>
+        </header>
+
+        <div class="hero-form__field">
+          <label for="landing-name">Nombre completo</label>
+          <input type="text" id="landing-name" name="nombre" placeholder="Nombre completo" required autocomplete="name" />
+        </div>
+
+        <div class="hero-form__field">
+          <label for="landing-email">Correo electrónico</label>
+          <input type="email" id="landing-email" name="email" placeholder="tu@correo.com" required autocomplete="email" />
+        </div>
+
+        <div class="hero-form__field">
+          <label for="landing-phone">Teléfono</label>
+          <input type="tel" id="landing-phone" name="telefono" placeholder="55 1234 5678" required autocomplete="tel" />
+        </div>
+
+        <div class="hero-form__field">
+          <label for="landing-condo">Nombre del condominio</label>
+          <input type="text" id="landing-condo" name="condominio" placeholder="Ej. Residencial Polanco" />
+        </div>
+
+        <div class="hero-form__field">
+          <label for="landing-units">¿Cuántos condominios administras?</label>
+          <input type="text" id="landing-units" name="condominios" placeholder="Ej. 3" />
+        </div>
+
+        <button type="submit" class="btn btn--primary hero-form__submit">
+          <span class="contact-form__submit-label">Quiero mi prueba gratis</span>
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </button>
+
+        <p class="hero-form__legal">Sin tarjeta de crédito · Sin compromiso · Respuesta en &lt; 24 h</p>
+
+        <div class="contact-form__status contact-form__status--error" hidden>
+          <svg aria-hidden="true"><use href="assets/icons.svg#close"/></svg>
+          <div>
+            <strong>Algo salió mal.</strong>
+            <p>Intenta de nuevo o escríbenos por WhatsApp.</p>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </section>
 
@@ -586,7 +582,7 @@
     <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
   </a>
 
-  <script src="script.js?v=101" defer></script>
+  <script src="script.js?v=102" defer></script>
   <!-- Boton flotante de WhatsApp -->
   <a href="https://wa.me/message/7OT53LROGZRCI1" class="wa-float" target="_blank" rel="noopener" aria-label="Chatea con nosotros por WhatsApp">
     <svg class="wa-float__icon" aria-hidden="true"><use href="assets/icons.svg#whatsapp"/></svg>
