@@ -454,6 +454,9 @@
     const GOOGLE_API_KEY = 'AIzaSyCBmf6Dlpqy7A7zzHoSBDb0CGt961EwzRw';
     const CALENDAR_ID = 'abits.com_pm2aj26u62lbr2fck2i9343khk@group.calendar.google.com';
     const MAX_EVENTS = 3;
+    // Link de registro por defecto. Si un evento tiene una URL en su campo
+    // "Ubicación" de Google Calendar, esa tiene prioridad sobre este.
+    const WEBINAR_FORM_URL = 'https://forms.gle/JLhMgpktaL9iaB8YA';
 
     // Si aún no se configuró la key, no llamar al API
     if (GOOGLE_API_KEY === 'YOUR_GOOGLE_API_KEY_HERE') return;
@@ -477,7 +480,9 @@
       const desc = event.description
         ? event.description.replace(/<[^>]*>/g, '').slice(0, 120) + (event.description.length > 120 ? '...' : '')
         : 'Únete a este webinar en vivo.';
-      const link = event.htmlLink || '#';
+      const link = (event.location && /^https?:\/\//i.test(event.location))
+        ? event.location
+        : WEBINAR_FORM_URL;
 
       return `
         <a href="${link}" target="_blank" rel="noopener" class="next-card">
