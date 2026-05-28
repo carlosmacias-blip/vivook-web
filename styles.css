@@ -505,6 +505,11 @@ button { font: inherit; cursor: pointer; }
   border: 1px solid transparent;
   cursor: pointer;
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  column-gap: 18px;
+  row-gap: 0;
+  align-items: start;
 }
 .feature-card:hover {
   transform: translateY(-6px);
@@ -525,7 +530,10 @@ button { font: inherit; cursor: pointer; }
 }
 .feature-card__icon {
   width: 56px; height: 56px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
   transition: transform .35s cubic-bezier(.34, 1.56, .64, 1);
 }
 .feature-card:hover .feature-card__icon {
@@ -540,14 +548,21 @@ button { font: inherit; cursor: pointer; }
 .feature-card__title {
   font-size: 22px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   color: var(--dark);
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
 }
 .feature-card__desc {
   color: var(--ink-500);
-  margin-bottom: 20px;
+  margin: 16px 0 20px;
   font-size: 15px;
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
+.feature-card__list { grid-column: 1 / -1; }
+.feature-card__link { grid-column: 1 / -1; }
 .feature-card__list li {
   position: relative;
   padding: 8px 0 8px 24px;
