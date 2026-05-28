@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=91" />
+  <link rel="stylesheet" href="styles.css?v=96" />
   <link rel="canonical" href="https://www.vivook.com/facturacion.html" />
   <meta property="og:url" content="https://www.vivook.com/facturacion.html" />
   <meta property="og:site_name" content="Vivook" />
@@ -28,7 +28,7 @@
 <body>
 
   <!-- ============== HEADER ============== -->
-  <header class="site-header">
+  <header class="site-header is-scrolled">
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="Vivook">
         <img src="assets/logo-blanco.png" alt="Vivook" class="logo__img logo__img--light" />
@@ -87,7 +87,6 @@
     <div class="container modulo-hero__inner">
 
       <div class="modulo-hero__content reveal">
-        <span class="pill pill--with-dot"><span class="pill__dot" aria-hidden="true"></span>FACTURACIÓN CFDI 4.0</span>
         <h1 class="section-title">
           Factura las cuotas de tu<br />
           condominio <span class="text-blue">ante el SAT</span>
@@ -315,7 +314,57 @@
     </div>
   </section>
 
-  <!-- ============== 6. CTA FINAL ============== -->
+  <!-- ============== 6. PRICING / TIMBRES ============== -->
+  <section class="invoice-pricing">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 class="section-title">
+          ¿Cómo activar Vivook Invoice<br />
+          <span class="text-blue">en tus residenciales?</span>
+        </h2>
+      </header>
+
+      <div class="invoice-pricing__grid reveal-group">
+        <article class="invoice-pricing__card invoice-pricing__card--free reveal">
+          <span class="invoice-pricing__icon">
+            <svg aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>
+          </span>
+          <h3 class="invoice-pricing__title">Activación gratis</h3>
+          <p class="invoice-pricing__desc">
+            No pagas por configurar tu cuenta. Nuestro equipo te acompaña en el alta y la configuración fiscal sin costo adicional.
+          </p>
+        </article>
+
+        <article class="invoice-pricing__card invoice-pricing__card--price reveal">
+          <span class="invoice-pricing__eyebrow">Costo por timbre</span>
+          <div class="invoice-pricing__price">
+            <span class="invoice-pricing__currency">$</span>
+            <span class="invoice-pricing__amount">1.99</span>
+          </div>
+          <p class="invoice-pricing__desc">
+            Cada timbre equivale a un CFDI validado ante el SAT. El precio baja según el volumen que adquieras.
+          </p>
+        </article>
+
+        <article class="invoice-pricing__card invoice-pricing__card--volume reveal">
+          <span class="invoice-pricing__icon">
+            <svg aria-hidden="true"><use href="assets/icons.svg#layers"/></svg>
+          </span>
+          <h3 class="invoice-pricing__title">Adquiere por volumen</h3>
+          <p class="invoice-pricing__desc">
+            Te sugerimos comprar el aproximado de CFDIs que emitirás en un año. A mayor volumen, mejor precio por timbre.
+          </p>
+        </article>
+      </div>
+
+      <p class="invoice-pricing__note reveal">
+        Los precios no incluyen IVA. Contacta a tu asesor o escríbenos a
+        <a href="mailto:ventas@vivook.com">ventas@vivook.com</a> para una cotización.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== 7. CTA FINAL ============== -->
   <section class="cta-final">
     <div class="container">
       <div class="cta-final__panel reveal">
@@ -397,7 +446,7 @@
     <svg class="sticky-cta__icon" aria-hidden="true"><use href="assets/icons.svg#buildings"/></svg>
   </a>
 
-  <script src="script.js?v=91" defer></script>
+  <script src="script.js?v=96" defer></script>
   <!-- Boton flotante de WhatsApp -->
   <a href="https://wa.me/message/7OT53LROGZRCI1" class="wa-float" target="_blank" rel="noopener" aria-label="Chatea con nosotros por WhatsApp">
     <svg class="wa-float__icon" aria-hidden="true"><use href="assets/icons.svg#whatsapp"/></svg>
